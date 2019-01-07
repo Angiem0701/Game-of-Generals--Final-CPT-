@@ -31,6 +31,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	
 	JTextArea HowToPlay = new JTextArea();
 	
+	JLabel addAddress = new JLabel();
+	
 	SuperSocketMaster ssm;
 	
 	
@@ -71,8 +73,12 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		}else if(evt.getSource() == CreateServerButton){
 			ssm = new SuperSocketMaster(2468, this);
 			System.out.println("My server IP is: "+ssm.getMyAddress());
+			addAddress.setVisible(true);
+			String strAddAddress = ("This is your IP Address: " + ssm.getMyAddress());
+			addAddress.setText(strAddAddress);
 			System.out.println("Server created");
 			ssm.connect();	
+			
 			CreateServerButton.setVisible(false);
 			JoinServerButton.setVisible(false);
 			
@@ -246,6 +252,10 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		JoinServerButton.setBounds(540,360,200,50);
 		JoinServerButton.setVisible(false);
 		
+		addAddress = new JLabel();
+		addAddress.setBounds(100,100,100,100);
+		addAddress.setVisible(false);
+		
 		thepanel.add(StartGameButton);
 		thepanel.add(HelpButton);
 		thepanel.add(CreateServerButton);
@@ -255,6 +265,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		thepanel.add(Next1Button);
 		thepanel.add(MainMenuButton);
 		thepanel.add(PreviousButton);
+		thepanel.add(addAddress);
 		
 		theframe.setContentPane(thepanel);
 		theframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
