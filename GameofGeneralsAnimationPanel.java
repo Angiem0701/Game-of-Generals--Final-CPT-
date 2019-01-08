@@ -16,6 +16,7 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 	BufferedImage Player1Tile;
 	BufferedImage Player2Tile;
 	
+	boolean blnStart = false;
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
 	
 	// METHODS
@@ -24,9 +25,10 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 		g.drawImage(Player1Tile,0,0,64,36,null);
 		g.drawImage(Player2Tile,100,100,64,36,null);
 		
-		if(bln)
-		g.setColor(Color.WHITE);
-		g.fillRect(0,0,1280,720);
+		if(blnStart){
+			g.setColor(Color.WHITE);
+			g.fillRect(0,0,1280,720);
+		}
 	}
 	
 	
