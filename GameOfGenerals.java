@@ -73,17 +73,25 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		}else if(evt.getSource() == CreateServerButton){
 			ssm = new SuperSocketMaster(2468, this);
 			System.out.println("My server IP is: "+ssm.getMyAddress());
+			thepanel.blnStart = true;
 			addAddress.setVisible(true);
 			String strAddAddress = ("This is your IP Address: " + ssm.getMyAddress());
 			addAddress.setText(strAddAddress);
 			System.out.println("Server created");
-			ssm.connect();	
+			ssm.connect();
 			
 			CreateServerButton.setVisible(false);
 			JoinServerButton.setVisible(false);
 			
 		}else if(evt.getSource() == JoinServerButton){
-			ssm = new SuperSocketMaster("10.8.41.3", 2468, this);
+			addAddress.setVisible(true);
+			String strAddress = ("Enter your friend's IP Address.");
+			//make a text field
+			String strFriendIP;
+			strFriendIP =
+			
+			ssm = new SuperSocketMaster(strFriendIP, 2468, this);
+			thepanel.blnStart = true;
 			System.out.println("Server joined");
 			ssm.connect();
 			CreateServerButton.setVisible(false);
@@ -253,7 +261,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		JoinServerButton.setVisible(false);
 		
 		addAddress = new JLabel();
-		addAddress.setBounds(100,100,100,100);
+		addAddress.setBounds(100,100,600,100);
 		addAddress.setVisible(false);
 		
 		thepanel.add(StartGameButton);
