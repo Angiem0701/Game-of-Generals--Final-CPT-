@@ -26,7 +26,7 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 		g.drawImage(Player2Tile,100,100,64,36,null);
 		
 		if(blnStart){
-			g.setColor(Color.WHITE);
+			g.setColor(Color.GRAY);
 			g.fillRect(0,0,1280,720);
 		}
 	}

@@ -32,6 +32,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	JTextArea HowToPlay = new JTextArea();
 	
 	JLabel addAddress = new JLabel();
+	JTextArea addFriend = new JTextArea();
+	JButton enterButton = new JButton();
 	
 	SuperSocketMaster ssm;
 	
@@ -57,6 +59,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	String strGameEnd = "1. The game ends when:"+"\n"+"- the Flag is eliminated or captured"+"\n"+"- a Flag reaches the opposite end of the board"+"\n"+"- a player resigns"+"\n"+"- both players agree on a drawn position";
 	String strGameEnd2 = "2. A Flag reaching the opposite end of the board may still be eliminated by any opposing piece occupying a square adjacent to the one reached by the Flag. In order to win, the Flag should at least be two squares or two ahead of any opposing piece.";
 	
+	boolean blnEnter = false;
+	
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -		
 	
 	// METHODS - ACTIONLISTENER (Action Performed)
@@ -71,29 +75,40 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			JoinServerButton.setVisible(true);
 			
 		}else if(evt.getSource() == CreateServerButton){
+			thepanel.blnStart = true;
 			ssm = new SuperSocketMaster(2468, this);
 			System.out.println("My server IP is: "+ssm.getMyAddress());
-			thepanel.blnStart = true;
 			addAddress.setVisible(true);
 			String strAddAddress = ("This is your IP Address: " + ssm.getMyAddress());
 			addAddress.setText(strAddAddress);
-			System.out.println("Server created");
-			ssm.connect();
+			if(ssm.connect() == true){
+				System.out.println("Server created");
+			}
 			
 			CreateServerButton.setVisible(false);
 			JoinServerButton.setVisible(false);
 			
 		}else if(evt.getSource() == JoinServerButton){
-			addAddress.setVisible(true);
-			String strAddress = ("Enter your friend's IP Address.");
-			//make a text field
-			String strFriendIP;
-			strFriendIP =
-			
-			ssm = new SuperSocketMaster(strFriendIP, 2468, this);
 			thepanel.blnStart = true;
-			System.out.println("Server joined");
-			ssm.connect();
+			String strAddAddress = ("Enter your friend's IP Address.");
+			
+			addAddress.setText(strAddAddress);
+			addAddress.setVisible(true);
+			addFriend.setVisible(true);
+			enterButton.setVisible(true);
+			String strFriendIP = "-1";
+			//System.out.println("test");
+			while(strFriendIP.equals("-1")){
+				if(blnEnter == true){
+					strFriendIP = addFriend.getText();
+					System.out.println(strFriendIP);
+				}
+			}
+		
+			ssm = new SuperSocketMaster(strFriendIP, 2468, this);
+			if(ssm.connect() == true){
+				System.out.println("Server joined");
+			}
 			CreateServerButton.setVisible(false);
 			JoinServerButton.setVisible(false);
 			
@@ -152,6 +167,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 					HowToPlay.setText(strGameEndTitle+"\n"+"\n"+strGameEnd+"\n"+"\n"+strGameEnd2);
 					Next1Button.setVisible(false);
 			}
+		}else if(evt.getSource() == enterButton){
+			blnEnter = true;
 		}
 
 	}
@@ -261,8 +278,17 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		JoinServerButton.setVisible(false);
 		
 		addAddress = new JLabel();
-		addAddress.setBounds(100,100,600,100);
+		addAddress.setBounds(500,300,600,100);
 		addAddress.setVisible(false);
+		
+		addFriend = new JTextArea();
+		addFriend.setBounds(500,400,600,100);
+		addFriend.setVisible(false);
+		
+		enterButton = new JButton("Enter");
+		enterButton.setBounds(500,600,100,50);
+		enterButton.setVisible(false);
+		enterButton.addActionListener(this);
 		
 		thepanel.add(StartGameButton);
 		thepanel.add(HelpButton);
@@ -274,6 +300,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		thepanel.add(MainMenuButton);
 		thepanel.add(PreviousButton);
 		thepanel.add(addAddress);
+		thepanel.add(addFriend);
+		thepanel.add(enterButton);
 		
 		theframe.setContentPane(thepanel);
 		theframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
