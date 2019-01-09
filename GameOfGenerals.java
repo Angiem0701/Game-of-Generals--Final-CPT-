@@ -59,8 +59,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	String strGameEnd = "1. The game ends when:"+"\n"+"- the Flag is eliminated or captured"+"\n"+"- a Flag reaches the opposite end of the board"+"\n"+"- a player resigns"+"\n"+"- both players agree on a drawn position";
 	String strGameEnd2 = "2. A Flag reaching the opposite end of the board may still be eliminated by any opposing piece occupying a square adjacent to the one reached by the Flag. In order to win, the Flag should at least be two squares or two ahead of any opposing piece.";
 	
-	boolean blnEnter = false;
-	
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -		
 	
 	// METHODS - ACTIONLISTENER (Action Performed)
@@ -73,6 +71,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			HelpButton.setVisible(false);
 			CreateServerButton.setVisible(true);
 			JoinServerButton.setVisible(true);
+			gameBackground.setVisible(false);
 			
 		}else if(evt.getSource() == CreateServerButton){
 			thepanel.blnStart = true;
@@ -95,19 +94,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			addAddress.setVisible(true);
 			addFriend.setVisible(true);
 			enterButton.setVisible(true);
-			String strFriendIP = "-1";
-			//System.out.println("test");
-			while(strFriendIP.equals("-1")){
-				if(blnEnter == true){
-					strFriendIP = addFriend.getText();
-					System.out.println(strFriendIP);
-				}
-			}
-		
-			ssm = new SuperSocketMaster(strFriendIP, 2468, this);
-			ssm.connect();
-			System.out.println("Server joined");
-			
+						
 			CreateServerButton.setVisible(false);
 			JoinServerButton.setVisible(false);
 			
@@ -167,7 +154,17 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 					Next1Button.setVisible(false);
 			}
 		}else if(evt.getSource() == enterButton){
-			blnEnter = true;
+			
+			String strFriendIP = addFriend.getText();
+			System.out.println(strFriendIP);
+			
+		
+			ssm = new SuperSocketMaster(strFriendIP, 2468, this);
+			ssm.connect();
+			System.out.println("Server joined");
+			
+			gameBackground.setVisible(true);
+			
 		}
 
 	}
