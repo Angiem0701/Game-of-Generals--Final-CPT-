@@ -1,7 +1,7 @@
 // Game of Generals [Demo]
-// Created by: Angelica C. F. Manansala
+// Created by: Angelica C. F. Manansala, Ivan Lau, Caitlin Kwan
 // Created on: December 21, 2018
-// Last Updated: December 25, 2018
+// Last Updated: January 9, 2019
 
 // OTHER NOTES
 // - figure a way to have the program automatically find the ip address - no need for manual input
@@ -81,9 +81,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			addAddress.setVisible(true);
 			String strAddAddress = ("This is your IP Address: " + ssm.getMyAddress());
 			addAddress.setText(strAddAddress);
-			if(ssm.connect() == true){
-				System.out.println("Server created");
-			}
+			ssm.connect();
+			System.out.println("Server created");
 			
 			CreateServerButton.setVisible(false);
 			JoinServerButton.setVisible(false);
@@ -106,9 +105,9 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			}
 		
 			ssm = new SuperSocketMaster(strFriendIP, 2468, this);
-			if(ssm.connect() == true){
-				System.out.println("Server joined");
-			}
+			ssm.connect();
+			System.out.println("Server joined");
+			
 			CreateServerButton.setVisible(false);
 			JoinServerButton.setVisible(false);
 			
