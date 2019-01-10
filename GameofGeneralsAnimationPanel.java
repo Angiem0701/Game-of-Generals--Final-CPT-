@@ -33,7 +33,7 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 		}
 		
 		if(blnPlay){
-			g.setColor(Color.WHITE);
+			g.setColor(new Color(232, 255, 232));
 			g.fillRect(0,0,1280,720);
 		}
 		

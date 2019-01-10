@@ -30,7 +30,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	JLabel ObjectiveLabel = new JLabel();
 	
 	JTextArea HowToPlay = new JTextArea();
-	JScrollPane theScroll = new JScrollPane;
+	JScrollPane theScroll = new JScrollPane();
 	
 	JLabel addAddress = new JLabel();
 	JTextArea addFriend = new JTextArea();
@@ -170,6 +170,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			addFriend.setVisible(false);
 			enterButton.setVisible(false);
 			thepanel.blnStart = false;
+			chatBox.setVisible(true);
 			
 		}
 
@@ -292,8 +293,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		enterButton.setVisible(false);
 		enterButton.addActionListener(this);
 		
-		chatBox = new JTextArea;
-		chatBox.setBounds(600,120);
+		chatBox = new JTextArea();
+		chatBox.setBounds(650,450,600,120);
 		chatBox.setVisible(false);
 		
 		thepanel.add(StartGameButton);
@@ -308,6 +309,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		thepanel.add(addAddress);
 		thepanel.add(addFriend);
 		thepanel.add(enterButton);
+		thepanel.add(chatBox);
 		
 		theframe.setContentPane(thepanel);
 		theframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
