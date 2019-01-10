@@ -30,10 +30,13 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	JLabel ObjectiveLabel = new JLabel();
 	
 	JTextArea HowToPlay = new JTextArea();
+	JScrollPane theScroll = new JScrollPane;
 	
 	JLabel addAddress = new JLabel();
 	JTextArea addFriend = new JTextArea();
 	JButton enterButton = new JButton();
+	
+	JTextArea chatBox = new JTextArea();
 	
 	SuperSocketMaster ssm;
 	
@@ -71,7 +74,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			HelpButton.setVisible(false);
 			CreateServerButton.setVisible(true);
 			JoinServerButton.setVisible(true);
-			gameBackground.setVisible(false);
 			
 		}else if(evt.getSource() == CreateServerButton){
 			thepanel.blnStart = true;
@@ -163,7 +165,11 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			ssm.connect();
 			System.out.println("Server joined");
 			
-			gameBackground.setVisible(true);
+			thepanel.blnPlay = true;
+			addAddress.setVisible(false);
+			addFriend.setVisible(false);
+			enterButton.setVisible(false);
+			thepanel.blnStart = false;
 			
 		}
 
@@ -285,6 +291,10 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		enterButton.setBounds(500,600,100,50);
 		enterButton.setVisible(false);
 		enterButton.addActionListener(this);
+		
+		chatBox = new JTextArea;
+		chatBox.setBounds(600,120);
+		chatBox.setVisible(false);
 		
 		thepanel.add(StartGameButton);
 		thepanel.add(HelpButton);
