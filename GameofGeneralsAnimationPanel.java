@@ -15,7 +15,7 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 	BufferedImage MainMenuScreen;
 	BufferedImage Player1Tile;
 	BufferedImage Player2Tile;
-	BufferedImage gameBackground;
+	BufferedImage gameBoard;
 	
 	boolean blnStart = false;
 	boolean blnPlay = false;
@@ -35,6 +35,7 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 		if(blnPlay){
 			g.setColor(new Color(165, 178, 198));
 			g.fillRect(0,0,1280,720);
+			g.drawImage(gameBoard,10,80,630,560,null);
 		}
 		
 	}
@@ -49,6 +50,8 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 			MainMenuScreen = ImageIO.read(new File("GoGBackground1.jpg"));
 			//Player1Tile = ImageIO.read(new File("Player1Tile.png"));
 			//Player2Tile = ImageIO.read(new File("Player2Tile.png"));
+			gameBoard = ImageIO.read(new File("Board.png"));
+			
 		}catch(IOException e){
 			System.out.println("Unable to load image");
 		

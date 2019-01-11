@@ -1,7 +1,7 @@
 // Game of Generals [Demo]
 // Created by: Angelica C. F. Manansala, Ivan Lau, Caitlin Kwan
 // Created on: December 21, 2018
-// Last Updated: January 9, 2019
+// Last Updated: January 11, 2019
 
 // OTHER NOTES
 // - figure a way to have the program automatically find the ip address - no need for manual input
@@ -38,7 +38,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	
 	JTextArea chatBoxReceive = new JTextArea();
 	JScrollPane chatBoxScroll = new JScrollPane();
-	JTextArea chatBoxSend = new JTextArea();
+	JTextField chatBoxSend = new JTextField();
 	
 	SuperSocketMaster ssm;
 	
@@ -179,6 +179,14 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			chatBoxScroll.setVisible(true);
 			
 		}
+		
+		if(evt.getSource() == chatBoxSend){
+			ssm.sendText(chatBoxSend.getText());
+			chatBoxSend.setText("");
+		}else if(evt.getSource() == ssm){
+			String strData = ssm.readText();
+			chatBoxReceive.append(strData + "\n");
+		}
 
 	}
 	
@@ -308,10 +316,12 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		//chatBoxReceive.setBounds(650,450,600,180);
 		// ^^ bounds set in Scroll pane
 		chatBoxReceive.setVisible(false);
+		chatBoxReceive.setEditable(false);
 
-		chatBoxSend = new JTextArea();
+		chatBoxSend = new JTextField();
 		chatBoxSend.setBounds(650,640,600,30);
 		chatBoxSend.setVisible(false);
+		chatBoxSend.addActionListener(this);
 		
 		chatBoxScroll = new JScrollPane(chatBoxReceive);
 		chatBoxScroll.setSize(600,180);
