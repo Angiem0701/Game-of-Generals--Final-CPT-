@@ -30,13 +30,15 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	JLabel ObjectiveLabel = new JLabel();
 	
 	JTextArea HowToPlay = new JTextArea();
-	JScrollPane theScroll = new JScrollPane();
+	JScrollPane HTPScroll = new JScrollPane();
 	
 	JLabel addAddress = new JLabel();
 	JTextArea addFriend = new JTextArea();
 	JButton enterButton = new JButton();
 	
-	JTextArea chatBox = new JTextArea();
+	JTextArea chatBoxReceive = new JTextArea();
+	JScrollPane chatBoxScroll = new JScrollPane();
+	JTextArea chatBoxSend = new JTextArea();
 	
 	SuperSocketMaster ssm;
 	
@@ -106,6 +108,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			HelpButton.setVisible(false);
 			ObjectiveLabel.setVisible(true);
 			HowToPlay.setVisible(true);
+			HTPScroll.setVisible(true);
 			Next1Button.setVisible(true);
 			MainMenuButton.setVisible(true);
 			
@@ -115,6 +118,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			HelpButton.setVisible(true);
 			ObjectiveLabel.setVisible(false);
 			HowToPlay.setVisible(false);
+			HTPScroll.setVisible(false);
 			Next1Button.setVisible(false);
 			MainMenuButton.setVisible(false);
 			PreviousButton.setVisible(false);
@@ -170,7 +174,9 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			addFriend.setVisible(false);
 			enterButton.setVisible(false);
 			thepanel.blnStart = false;
-			chatBox.setVisible(true);
+			chatBoxReceive.setVisible(true);
+			chatBoxSend.setVisible(true);
+			chatBoxScroll.setVisible(true);
 			
 		}
 
@@ -255,9 +261,14 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		HowToPlay = new JTextArea(strObjectiveTitle+"\n"+"\n"+strObjective+"\n"+"\n"+strObjective2+"\n"+"\n"+strPieces+"\n"+"\n"+strPiecesNote);
 		HowToPlay.setLineWrap(true);
 		HowToPlay.setWrapStyleWord(true);
-		HowToPlay.setBounds(390,50,500,550);
+		//HowToPlay.setBounds(390,50,500,550);
+		// ^^ Bounds set in Scroll pane instead
 		HowToPlay.setVisible(false);
 		HowToPlay.setEditable(false);
+		HTPScroll = new JScrollPane(HowToPlay);
+		HTPScroll.setSize(500,500);
+		HTPScroll.setLocation(390,50);
+		HTPScroll.setVisible(false);
 		MainMenuButton = new JButton("Main Menu");
 		MainMenuButton.addActionListener(this);
 		MainMenuButton.setBounds(390,610,160,50);
@@ -293,23 +304,38 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		enterButton.setVisible(false);
 		enterButton.addActionListener(this);
 		
-		chatBox = new JTextArea();
-		chatBox.setBounds(650,450,600,120);
-		chatBox.setVisible(false);
+		chatBoxReceive = new JTextArea();
+		//chatBoxReceive.setBounds(650,450,600,180);
+		// ^^ bounds set in Scroll pane
+		chatBoxReceive.setVisible(false);
+
+		chatBoxSend = new JTextArea();
+		chatBoxSend.setBounds(650,640,600,30);
+		chatBoxSend.setVisible(false);
+		
+		chatBoxScroll = new JScrollPane(chatBoxReceive);
+		chatBoxScroll.setSize(600,180);
+		chatBoxScroll.setLocation(650,450);
+		chatBoxScroll.setVisible(false);
 		
 		thepanel.add(StartGameButton);
 		thepanel.add(HelpButton);
 		thepanel.add(CreateServerButton);
 		thepanel.add(JoinServerButton);
 		thepanel.add(ObjectiveLabel);
-		thepanel.add(HowToPlay);
+		//thepanel.add(HowToPlay);
+		// ^^ Scroll pane including HowToPlay is added below already
+		thepanel.add(HTPScroll);
 		thepanel.add(Next1Button);
 		thepanel.add(MainMenuButton);
 		thepanel.add(PreviousButton);
 		thepanel.add(addAddress);
 		thepanel.add(addFriend);
 		thepanel.add(enterButton);
-		thepanel.add(chatBox);
+		//thepanel.add(chatBoxReceive);
+		// scroll pane includes chatBoxReceive already
+		thepanel.add(chatBoxSend);
+		thepanel.add(chatBoxScroll);
 		
 		theframe.setContentPane(thepanel);
 		theframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
