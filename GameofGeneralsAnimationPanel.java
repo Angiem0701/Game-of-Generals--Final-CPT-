@@ -19,6 +19,9 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 	BufferedImage Player1Tile;
 	BufferedImage Player2Tile;
 	BufferedImage gameBackground;
+<<<<<<< HEAD
+>>>>>>> parent of 1c3a13a... Working on chat system and adding graphics
+=======
 >>>>>>> parent of 1c3a13a... Working on chat system and adding graphics
 	
 	boolean blnStart = false;
@@ -56,6 +59,9 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 			MainMenuScreen = ImageIO.read(new File("GoGBackground1.jpg"));
 			//Player1Tile = ImageIO.read(new File("Player1Tile.png"));
 			//Player2Tile = ImageIO.read(new File("Player2Tile.png"));
+<<<<<<< HEAD
+>>>>>>> parent of 1c3a13a... Working on chat system and adding graphics
+=======
 >>>>>>> parent of 1c3a13a... Working on chat system and adding graphics
 		}catch(IOException e){
 			System.out.println("Unable to load image");
