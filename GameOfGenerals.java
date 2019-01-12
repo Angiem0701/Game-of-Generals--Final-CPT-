@@ -1,7 +1,7 @@
 // Game of Generals [Demo]
 // Created by: Angelica C. F. Manansala, Ivan Lau, Caitlin Kwan
 // Created on: December 21, 2018
-// Last Updated: January 11, 2019
+// Last Updated: January 12, 2019
 
 // OTHER NOTES
 // - figure a way to have the program automatically find the ip address - no need for manual input
@@ -39,6 +39,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	JTextArea chatBoxReceive = new JTextArea();
 	JScrollPane chatBoxScroll = new JScrollPane();
 	JTextField chatBoxSend = new JTextField();
+	
+	JButton sReadyButton = new JButton();
 	
 	SuperSocketMaster ssm;
 	
@@ -86,6 +88,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			addAddress.setText(strAddAddress);
 			ssm.connect();
 			System.out.println("Server created");
+			sReadyButton.setVisible(true);
 			
 			CreateServerButton.setVisible(false);
 			JoinServerButton.setVisible(false);
@@ -159,7 +162,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 					HowToPlay.setText(strGameEndTitle+"\n"+"\n"+strGameEnd+"\n"+"\n"+strGameEnd2);
 					Next1Button.setVisible(false);
 			}
-		}else if(evt.getSource() == enterButton){
+		}
+		if(evt.getSource() == enterButton){
 			
 			String strFriendIP = addFriend.getText();
 			System.out.println(strFriendIP);
@@ -182,10 +186,22 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		
 		if(evt.getSource() == chatBoxSend){
 			ssm.sendText(chatBoxSend.getText());
+			chatBoxReceive.append("Me: " + chatBoxSend.getText() + "\n");
 			chatBoxSend.setText("");
 		}else if(evt.getSource() == ssm){
 			String strData = ssm.readText();
-			chatBoxReceive.append(strData + "\n");
+			chatBoxReceive.append("Opponent: " + strData + "\n");
+		}
+		
+		if(evt.getSource() == sReadyButton){
+			addAddress.setVisible(false);
+			sReadyButton.setVisible(false);
+			
+			thepanel.blnPlay = true;
+			chatBoxReceive.setVisible(true);
+			chatBoxSend.setVisible(true);
+			chatBoxScroll.setVisible(true);
+			
 		}
 
 	}
@@ -328,6 +344,11 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		chatBoxScroll.setLocation(650,450);
 		chatBoxScroll.setVisible(false);
 		
+		sReadyButton = new JButton("Ready");
+		sReadyButton.setBounds(500,500, 200,50);
+		sReadyButton.setVisible(false);
+		sReadyButton.addActionListener(this);
+		
 		thepanel.add(StartGameButton);
 		thepanel.add(HelpButton);
 		thepanel.add(CreateServerButton);
@@ -346,6 +367,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		// scroll pane includes chatBoxReceive already
 		thepanel.add(chatBoxSend);
 		thepanel.add(chatBoxScroll);
+		thepanel.add(sReadyButton);
 		
 		theframe.setContentPane(thepanel);
 		theframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
