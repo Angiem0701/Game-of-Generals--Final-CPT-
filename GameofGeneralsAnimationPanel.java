@@ -13,16 +13,9 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 	
 	// PROPERTIES
 	BufferedImage MainMenuScreen;
-<<<<<<< HEAD
-	BufferedImage gameBoard;
-=======
 	BufferedImage Player1Tile;
 	BufferedImage Player2Tile;
-	BufferedImage gameBackground;
-<<<<<<< HEAD
->>>>>>> parent of 1c3a13a... Working on chat system and adding graphics
-=======
->>>>>>> parent of 1c3a13a... Working on chat system and adding graphics
+	BufferedImage gameBoard;
 	
 	boolean blnStart = false;
 	boolean blnPlay = false;
@@ -31,6 +24,8 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 	// METHODS
 	public void paintComponent(Graphics g){
 		g.drawImage(MainMenuScreen,0,0,1280,720,null);
+		g.drawImage(Player1Tile,0,0,64,36,null);
+		g.drawImage(Player2Tile,100,100,64,36,null);
 		
 		if(blnStart){
 			g.setColor(Color.GRAY);
@@ -40,6 +35,7 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 		if(blnPlay){
 			g.setColor(new Color(165, 178, 198));
 			g.fillRect(0,0,1280,720);
+			g.drawImage(gameBoard,10,80,630,560,null);
 		}
 		
 	}
@@ -51,18 +47,11 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 	public GameofGeneralsAnimationPanel(){
 		super();
 		try{
-<<<<<<< HEAD
-			MainMenuScreen = ImageIO.read(new File("GoGBackground.jpg"));
-			gameBoard = ImageIO.read(new File("Board.png"));
-			
-=======
 			MainMenuScreen = ImageIO.read(new File("GoGBackground1.jpg"));
 			//Player1Tile = ImageIO.read(new File("Player1Tile.png"));
 			//Player2Tile = ImageIO.read(new File("Player2Tile.png"));
-<<<<<<< HEAD
->>>>>>> parent of 1c3a13a... Working on chat system and adding graphics
-=======
->>>>>>> parent of 1c3a13a... Working on chat system and adding graphics
+			gameBoard = ImageIO.read(new File("Board.png"));
+			
 		}catch(IOException e){
 			System.out.println("Unable to load image");
 		
