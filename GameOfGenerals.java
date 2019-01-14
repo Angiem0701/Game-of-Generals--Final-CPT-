@@ -174,6 +174,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			System.out.println("Server joined");
 			
 			thepanel.blnPlay = true;
+			thepanel.blnClientView = true;
+			
 			addAddress.setVisible(false);
 			addFriend.setVisible(false);
 			enterButton.setVisible(false);
@@ -198,6 +200,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			sReadyButton.setVisible(false);
 			
 			thepanel.blnPlay = true;
+			thepanel.blnServerView = true;
+			
 			chatBoxReceive.setVisible(true);
 			chatBoxSend.setVisible(true);
 			chatBoxScroll.setVisible(true);
