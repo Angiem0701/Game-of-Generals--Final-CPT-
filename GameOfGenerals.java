@@ -1,7 +1,7 @@
 // Game of Generals [Demo]
 // Created by: Angelica C. F. Manansala, Ivan Lau, Caitlin Kwan
 // Created on: December 21, 2018
-// Last Updated: January 12, 2019
+// Last Updated: January 14, 2019
 
 // OTHER NOTES
 // - figure a way to have the program automatically find the ip address - no need for manual input
@@ -205,7 +205,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			chatBoxReceive.setVisible(true);
 			chatBoxSend.setVisible(true);
 			chatBoxScroll.setVisible(true);
-			
 		}
 
 	}

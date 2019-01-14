@@ -1,7 +1,7 @@
 // Game of Generals [Demo]
 // Created by: Angelica C. F. Manansala, Ivan Lau, Caitlin Kwan
 // Created on: December 21, 2018
-// Last Updated: January 12, 2019
+// Last Updated: January 14, 2019
 
 import javax.swing.*;
 import java.awt.*;
@@ -47,6 +47,9 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 	BufferedImage BL2Star;
 	BufferedImage BL3Star;
 	
+	BufferedImage Black;
+	BufferedImage White;
+	
 	boolean blnStart = false;
 	boolean blnPlay = false;
 	
@@ -70,12 +73,102 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 		}
 		
 		if(blnClientView){
-			g.drawImage(WH1Lieutenant,10,640,65,20,null);
+			g.drawImage(WH1Lieutenant,10,642,65,20,null);
+			g.drawImage(WH2Lieutenant,77,642,65,20,null);
+			g.drawImage(WHCaptain,144,642,65,20,null);
+			g.drawImage(WHColonel,211,642,65,20,null);
+			g.drawImage(WH5Star,278,642,65,20,null);
+			g.drawImage(WHFlag,345,642,65,20,null);
+			g.drawImage(WH4Star,412,642,65,20,null);
+			g.drawImage(WHLColonel,479,642,65,20,null);
+			g.drawImage(WHMajor,546,642,65,20,null);
 			
+			g.drawImage(WH1Star,10,664,65,20,null);
+			g.drawImage(WHPrivate,77,664,65,20,null);
+			g.drawImage(WHPrivate,144,664,65,20,null);
+			g.drawImage(WHPrivate,211,664,65,20,null);
+			g.drawImage(WHPrivate,278,664,65,20,null);
+			g.drawImage(WHPrivate,345,664,65,20,null);
+			g.drawImage(WHPrivate,412,664,65,20,null);
+			g.drawImage(WHSergeant,479,664,65,20,null);
+			g.drawImage(WHSpy,546,664,65,20,null);
 			
+			g.drawImage(WHSpy,10,686,65,20,null);
+			g.drawImage(WH2Star,77,686,65,20,null);
+			g.drawImage(WH3Star,144,686,65,20,null);
+			
+			g.drawImage(Black,10,10,65,20,null);
+			g.drawImage(Black,77,10,65,20,null);
+			g.drawImage(Black,144,10,65,20,null);
+			g.drawImage(Black,211,10,65,20,null);
+			g.drawImage(Black,278,10,65,20,null);
+			g.drawImage(Black,345,10,65,20,null);
+			g.drawImage(Black,412,10,65,20,null);
+			g.drawImage(Black,479,10,65,20,null);
+			g.drawImage(Black,546,10,65,20,null);
+			
+			g.drawImage(Black,10,32,65,20,null);
+			g.drawImage(Black,77,32,65,20,null);
+			g.drawImage(Black,144,32,65,20,null);
+			g.drawImage(Black,211,32,65,20,null);
+			g.drawImage(Black,278,32,65,20,null);
+			g.drawImage(Black,345,32,65,20,null);
+			g.drawImage(Black,412,32,65,20,null);
+			g.drawImage(Black,479,32,65,20,null);
+			g.drawImage(Black,546,32,65,20,null);
+			
+			g.drawImage(Black,10,54,65,20,null);
+			g.drawImage(Black,77,54,65,20,null);
+			g.drawImage(Black,144,54,65,20,null);
 			
 		}else if(blnServerView){
+			g.drawImage(BL1Lieutenant,10,642,65,20,null);
+			g.drawImage(BL2Lieutenant,77,642,65,20,null);
+			g.drawImage(BLCaptain,144,642,65,20,null);
+			g.drawImage(BLColonel,211,642,65,20,null);
+			g.drawImage(BL5Star,278,642,65,20,null);
+			g.drawImage(BLFlag,345,642,65,20,null);
+			g.drawImage(BL4Star,412,642,65,20,null);
+			g.drawImage(BLLColonel,479,642,65,20,null);
+			g.drawImage(BLMajor,546,642,65,20,null);
 			
+			g.drawImage(BL1Star,10,664,65,20,null);
+			g.drawImage(BLPrivate,77,664,65,20,null);
+			g.drawImage(BLPrivate,144,664,65,20,null);
+			g.drawImage(BLPrivate,211,664,65,20,null);
+			g.drawImage(BLPrivate,278,664,65,20,null);
+			g.drawImage(BLPrivate,345,664,65,20,null);
+			g.drawImage(BLPrivate,412,664,65,20,null);
+			g.drawImage(BLSergeant,479,664,65,20,null);
+			g.drawImage(BLSpy,546,664,65,20,null);
+			
+			g.drawImage(BLSpy,10,686,65,20,null);
+			g.drawImage(BL2Star,77,686,65,20,null);
+			g.drawImage(BL3Star,144,686,65,20,null);
+			
+			g.drawImage(White,10,10,65,20,null);
+			g.drawImage(White,77,10,65,20,null);
+			g.drawImage(White,144,10,65,20,null);
+			g.drawImage(White,211,10,65,20,null);
+			g.drawImage(White,278,10,65,20,null);
+			g.drawImage(White,345,10,65,20,null);
+			g.drawImage(White,412,10,65,20,null);
+			g.drawImage(White,479,10,65,20,null);
+			g.drawImage(White,546,10,65,20,null);
+			
+			g.drawImage(White,10,32,65,20,null);
+			g.drawImage(White,77,32,65,20,null);
+			g.drawImage(White,144,32,65,20,null);
+			g.drawImage(White,211,32,65,20,null);
+			g.drawImage(White,278,32,65,20,null);
+			g.drawImage(White,345,32,65,20,null);
+			g.drawImage(White,412,32,65,20,null);
+			g.drawImage(White,479,32,65,20,null);
+			g.drawImage(White,546,32,65,20,null);
+			
+			g.drawImage(White,10,54,65,20,null);
+			g.drawImage(White,77,54,65,20,null);
+			g.drawImage(White,144,54,65,20,null);
 			
 			
 		}
@@ -128,7 +221,8 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 			BL2Star = ImageIO.read(new File("BL2Star.png"));
 			BL3Star = ImageIO.read(new File("BL3Star.png"));
 			
-			
+			Black = ImageIO.read(new File("Black.png"));
+			White = ImageIO.read(new File("White.png"));
 			
 		}catch(IOException e){
 			System.out.println("Unable to load image");
