@@ -40,7 +40,7 @@ public class pieces{
 		rank WHSergeant = new rank(true,3,0,0);
 		rank WHLColonel = new rank(true,3,0,0);
 		rank WH2Lieutenant = new rank(true,4,0,0);
-		rank WH1Lieutenant = new rank(true,5,0,0);
+		rank WH1Lieutenant = new rank(true,5,10,642);
 		rank WHCaptain = new rank(true,6,0,0);
 		rank WHColonel = new rank(true,9,0,0);
 		rank WH1Star = new rank(true,10,0,0);

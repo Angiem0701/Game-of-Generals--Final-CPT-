@@ -66,6 +66,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	String strGameEnd = "1. The game ends when:"+"\n"+"- the Flag is eliminated or captured"+"\n"+"- a Flag reaches the opposite end of the board"+"\n"+"- a player resigns"+"\n"+"- both players agree on a drawn position";
 	String strGameEnd2 = "2. A Flag reaching the opposite end of the board may still be eliminated by any opposing piece occupying a square adjacent to the one reached by the Flag. In order to win, the Flag should at least be two squares or two ahead of any opposing piece.";
 	
+	boolean blnSettingUp;
+	
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -		
 	
 	// METHODS - ACTIONLISTENER (Action Performed)
@@ -205,6 +207,9 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			chatBoxReceive.setVisible(true);
 			chatBoxSend.setVisible(true);
 			chatBoxScroll.setVisible(true);
+			
+			blnSettingUp = true;
+			
 		}
 
 	}
@@ -238,6 +243,16 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	
 	// METHODS - MOUSELISTENER (Mouse Released)
 	public void mouseReleased(MouseEvent evt){
+		int intResultX = evt.getX();
+		int intResultY = evt.getY();
+		intResultX = intResultX - 10;
+		int intModX = intResultX/70;
+		intResultX = intModX * 70 + 12;
+		thepanel.WH1LieutenantOBJ.intX = intResultX;
+		intResultY = intResultY - 80;
+		int intModY = intResultY/70;
+		intResultY = intModY * 70 + 105;
+		thepanel.WH1LieutenantOBJ.intY = intResultY;
 		
 	}
 	
@@ -260,6 +275,9 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	
 	// METHODS - MOUSEMOTIONLISTENER (Mouse Dragged)
 	public void mouseDragged(MouseEvent evt){	
+		System.out.println("Testing if the dragging is detected");
+		thepanel.WH1LieutenantOBJ.intX = evt.getX();
+		thepanel.WH1LieutenantOBJ.intY = evt.getY();
 	}
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -268,6 +286,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	public GameOfGenerals(){
 		theframe = new JFrame("~ Game of Generals ~");
 		thepanel = new GameofGeneralsAnimationPanel();
+		thepanel.addMouseListener(this);
+		thepanel.addMouseMotionListener(this);
 		thepanel.setLayout(null);
 		thepanel.setPreferredSize(new Dimension(1280,720));
 		theframe.setResizable(false);

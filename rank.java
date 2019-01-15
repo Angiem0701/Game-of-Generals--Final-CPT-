@@ -3,6 +3,9 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.awt.image.*;
+import java.io.*;
+import javax.imageio.*;
 
 public class rank{
 
@@ -14,6 +17,7 @@ public class rank{
 	boolean blnAlive = true;
 	boolean blnGameEnd = false;
 	int intEnemyRank;
+	BufferedImage pieceImage = null;
 	
 	//methods
 	public int moveforwards(){
@@ -63,5 +67,6 @@ public class rank{
 		this.intRank = intRank;
 		this.intX = intX;
 		this.intY = intY;
+		
 	}
 }
