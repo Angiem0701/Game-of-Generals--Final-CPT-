@@ -68,6 +68,9 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	
 	boolean blnSettingUp;
 	
+	String strWBoard[][];
+	String strBBoard[][];
+	
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -		
 	
 	// METHODS - ACTIONLISTENER (Action Performed)
@@ -189,12 +192,15 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		}
 		
 		if(evt.getSource() == chatBoxSend){
-			ssm.sendText(chatBoxSend.getText());
+			ssm.sendText("Sent: " + chatBoxSend.getText());
 			chatBoxReceive.append("Me: " + chatBoxSend.getText() + "\n");
 			chatBoxSend.setText("");
 		}else if(evt.getSource() == ssm){
 			String strData = ssm.readText();
-			chatBoxReceive.append("Opponent: " + strData + "\n");
+			int intDataLength = strData.length();
+			if(strData.substring(0,6).equals("Sent: ")){
+				chatBoxReceive.append("Opponent: " + strData.substring(6,intDataLength) + "\n");
+			}
 		}
 		
 		if(evt.getSource() == sReadyButton){
@@ -247,7 +253,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		int intResultY = evt.getY();
 		intResultX = intResultX - 10;
 		int intModX = intResultX/70;
-		intResultX = intModX * 70 + 12;
+		intResultX = intModX * 70 + 13;
 		thepanel.WH1LieutenantOBJ.intX = intResultX;
 		intResultY = intResultY - 80;
 		int intModY = intResultY/70;
