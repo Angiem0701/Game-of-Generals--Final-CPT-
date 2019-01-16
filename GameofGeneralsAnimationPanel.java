@@ -59,28 +59,28 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 
 
 	// PIECES
-			// BLACK PIECES
-		//rank BLFlag = new rank(true,0,0,0);
-		//rank BLPrivate1 = new rank(true,1,0,0);
-		//rank BLPrivate2 = new rank(true,1,0,0);
-		//rank BLPrivate3 = new rank(true,1,0,0);
-		//rank BLPrivate4 = new rank(true,1,0,0);
-		//rank BLPrivate5 = new rank(true,1,0,0);
-		//rank BLPrivate6 = new rank(true,1,0,0);
-		//rank BLSpy1 = new rank(true,2,0,0);
-		//rank BLSpy2 = new rank(true,2,0,0);
-		//rank BLSergeant = new rank(true,3,0,0);
-		//rank BLLColonel = new rank(true,3,0,0);
-		//rank BL2Lieutenant = new rank(true,4,0,0);
-		//rank BL1Lieutenant = new rank(true,5,0,0);
-		//rank BLCaptain = new rank(true,6,0,0);
-		//rank BLColonel = new rank(true,9,0,0);
-		//rank BL1Star = new rank(true,10,0,0);
-		//rank BL2Star = new rank(true,11,0,0);
-		//rank BL3Star = new rank(true,12,0,0);
-		//rank BL4Star = new rank(true,13,0,0);
-		//rank BL5Star = new rank(true,14,0,0);
-		//rank BLMajor = new rank(true,15,0,0);
+		// BLACK PIECES
+		rank BLFlagOBJ = new rank(true,0,345,642);
+		rank BLPrivate1OBJ = new rank(true,1,77,664);
+		rank BLPrivate2OBJ = new rank(true,1,144,664);
+		rank BLPrivate3OBJ = new rank(true,1,211,664);
+		rank BLPrivate4OBJ = new rank(true,1,278,664);
+		rank BLPrivate5OBJ = new rank(true,1,345,664);
+		rank BLPrivate6OBJ = new rank(true,1,412,664);
+		rank BLSpy1OBJ = new rank(true,2,10,686);
+		rank BLSpy2OBJ = new rank(true,2,546,664);
+		rank BLSergeantOBJ = new rank(true,3,479,664);
+		rank BLLColonelOBJ = new rank(true,3,479,642);
+		rank BL2LieutenantOBJ = new rank(true,4,77,642);
+		rank BL1LieutenantOBJ = new rank(true,5,10,642);
+		rank BLCaptainOBJ = new rank(true,6,144,642);
+		rank BLColonelOBJ = new rank(true,9,211,642);
+		rank BL1StarOBJ = new rank(true,10,10,664);
+		rank BL2StarOBJ = new rank(true,11,77,686);
+		rank BL3StarOBJ = new rank(true,12,144,686);
+		rank BL4StarOBJ = new rank(true,13,412,642);
+		rank BL5StarOBJ = new rank(true,14,278,642);
+		rank BLMajorOBJ = new rank(true,15,546,642);
 		
 		// WHITE PIECES
 		rank WHFlagOBJ = new rank(true,0,345,642);
@@ -172,29 +172,29 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 			g.drawImage(Black,144,54,65,20,null);
 			
 		}else if(blnServerView){
-			g.drawImage(BL1Lieutenant,10,642,65,20,null);
-			g.drawImage(BL2Lieutenant,77,642,65,20,null);
-			g.drawImage(BLCaptain,144,642,65,20,null);
-			g.drawImage(BLColonel,211,642,65,20,null);
-			g.drawImage(BL5Star,278,642,65,20,null);
-			g.drawImage(BLFlag,345,642,65,20,null);
-			g.drawImage(BL4Star,412,642,65,20,null);
-			g.drawImage(BLLColonel,479,642,65,20,null);
-			g.drawImage(BLMajor,546,642,65,20,null);
+			g.drawImage(BL1Lieutenant,BL1LieutenantOBJ.intX,BL1LieutenantOBJ.intY,65,20,null);
+			g.drawImage(BL2Lieutenant,BL2LieutenantOBJ.intX,BL2LieutenantOBJ.intY,65,20,null);
+			g.drawImage(BLCaptain,BLCaptainOBJ.intX,BLCaptainOBJ.intY,65,20,null);
+			g.drawImage(BLColonel,BLColonelOBJ.intX,BLColonelOBJ.intY,65,20,null);
+			g.drawImage(BL5Star,BL5StarOBJ.intX,BL5StarOBJ.intY,65,20,null);
+			g.drawImage(BLFlag,BLFlagOBJ.intX,BLFlagOBJ.intY,65,20,null);
+			g.drawImage(BL4Star,BL4StarOBJ.intX,BL4StarOBJ.intY,65,20,null);
+			g.drawImage(BLLColonel,BLLColonelOBJ.intX,BLLColonelOBJ.intY,65,20,null);
+			g.drawImage(BLMajor,BLMajorOBJ.intX,BLMajorOBJ.intY,65,20,null);
 			
-			g.drawImage(BL1Star,10,664,65,20,null);
-			g.drawImage(BLPrivate,77,664,65,20,null);
-			g.drawImage(BLPrivate,144,664,65,20,null);
-			g.drawImage(BLPrivate,211,664,65,20,null);
-			g.drawImage(BLPrivate,278,664,65,20,null);
-			g.drawImage(BLPrivate,345,664,65,20,null);
-			g.drawImage(BLPrivate,412,664,65,20,null);
-			g.drawImage(BLSergeant,479,664,65,20,null);
-			g.drawImage(BLSpy,546,664,65,20,null);
+			g.drawImage(BL1Star,BL1StarOBJ.intX,BL1StarOBJ.intY,65,20,null);
+			g.drawImage(BLPrivate,BLPrivate1OBJ.intX,BLPrivate1OBJ.intY,65,20,null); //private 1
+			g.drawImage(BLPrivate,BLPrivate2OBJ.intX,BLPrivate2OBJ.intY,65,20,null); //private 2
+			g.drawImage(BLPrivate,BLPrivate3OBJ.intX,BLPrivate3OBJ.intY,65,20,null); //private 3
+			g.drawImage(BLPrivate,BLPrivate4OBJ.intX,BLPrivate4OBJ.intY,65,20,null); //private 4
+			g.drawImage(BLPrivate,BLPrivate5OBJ.intX,BLPrivate5OBJ.intY,65,20,null); //private 5
+			g.drawImage(BLPrivate,BLPrivate6OBJ.intX,BLPrivate6OBJ.intY,65,20,null); //private 6
+			g.drawImage(BLSergeant,BLSergeantOBJ.intX,BLSergeantOBJ.intY,65,20,null);
+			g.drawImage(BLSpy,BLSpy2OBJ.intX,BLSpy2OBJ.intY,65,20,null); //spy 2
 			
-			g.drawImage(BLSpy,10,686,65,20,null);
-			g.drawImage(BL2Star,77,686,65,20,null);
-			g.drawImage(BL3Star,144,686,65,20,null);
+			g.drawImage(BLSpy,BLSpy1OBJ.intX,BLSpy1OBJ.intY,65,20,null); //spy 1
+			g.drawImage(BL2Star,BL2StarOBJ.intX,BL2StarOBJ.intY,65,20,null);
+			g.drawImage(BL3Star,BL3StarOBJ.intX,BL3StarOBJ.intY,65,20,null);
 			
 			g.drawImage(White,10,10,65,20,null);
 			g.drawImage(White,77,10,65,20,null);

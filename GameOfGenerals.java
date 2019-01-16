@@ -530,6 +530,281 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				thepanel.WHPrivate6OBJ.intY = intResultY;
 				blnMoveWHP6 = false;
 			}
+			
+			if(blnMoveBL1L){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BL1LieutenantOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BL1LieutenantOBJ.intY = intResultY;
+				blnMoveBL1L = false;
+			}
+			if(blnMoveBL2L){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BL2LieutenantOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BL2LieutenantOBJ.intY = intResultY;
+				blnMoveBL2L = false;
+			}
+			if(blnMoveBLCap){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BLCaptainOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BLCaptainOBJ.intY = intResultY;
+				blnMoveBLCap = false;
+			}
+			if(blnMoveBLCol){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BLColonelOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BLColonelOBJ.intY = intResultY;
+				blnMoveBLCol = false;
+			}
+			if(blnMoveBL1S){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BL1StarOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BL1StarOBJ.intY = intResultY;
+				blnMoveBL1S = false;
+			}
+			if(blnMoveBL2S){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BL2StarOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BL2StarOBJ.intY = intResultY;
+				blnMoveBL2S = false;
+			}
+			if(blnMoveBL3S){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BL3StarOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BL3StarOBJ.intY = intResultY;
+				blnMoveBL3S = false;
+			}
+			if(blnMoveBL4S){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BL4StarOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BL4StarOBJ.intY = intResultY;
+				blnMoveBL4S = false;
+			}
+			if(blnMoveBL5S){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BL5StarOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BL5StarOBJ.intY = intResultY;
+				blnMoveBL5S = false;
+			}
+			if(blnMoveBLM){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BLMajorOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BLMajorOBJ.intY = intResultY;
+				blnMoveBLM = false;
+			}
+			if(blnMoveBLF){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BLFlagOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BLFlagOBJ.intY = intResultY;
+				blnMoveBLF = false;
+			}
+			if(blnMoveBLLC){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BLLColonelOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BLLColonelOBJ.intY = intResultY;
+				blnMoveBLLC = false;
+			}
+			if(blnMoveBLSer){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BLSergeantOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BLSergeantOBJ.intY = intResultY;
+				blnMoveBLSer = false;
+			}
+			if(blnMoveBLSpy1){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BLSpy1OBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BLSpy1OBJ.intY = intResultY;
+				blnMoveBLSpy1 = false;
+			}
+			if(blnMoveBLSpy2){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BLSpy2OBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BLSpy2OBJ.intY = intResultY;
+				blnMoveBLSpy2 = false;
+			}
+			if(blnMoveBLP1){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BLPrivate1OBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BLPrivate1OBJ.intY = intResultY;
+				blnMoveBLP1 = false;
+			}
+			if(blnMoveBLP2){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BLPrivate2OBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BLPrivate2OBJ.intY = intResultY;
+				blnMoveBLP2 = false;
+			}
+			if(blnMoveBLP3){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BLPrivate3OBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BLPrivate3OBJ.intY = intResultY;
+				blnMoveBLP3 = false;
+			}
+			if(blnMoveBLP4){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BLPrivate4OBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BLPrivate4OBJ.intY = intResultY;
+				blnMoveBLP4 = false;
+			}
+			if(blnMoveBLP5){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BLPrivate5OBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BLPrivate5OBJ.intY = intResultY;
+				blnMoveBLP5 = false;
+			}
+			if(blnMoveBLP6){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.BLPrivate6OBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.BLPrivate6OBJ.intY = intResultY;
+				blnMoveBLP6 = false;
+			}
+			
 		}
 		
 	}
@@ -555,6 +830,28 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	boolean blnMoveWHP4 = false;
 	boolean blnMoveWHP5 = false;
 	boolean blnMoveWHP6 = false;
+	
+	boolean blnMoveBL1L = false;
+	boolean blnMoveBL2L = false;
+	boolean blnMoveBLCap = false;
+	boolean blnMoveBLCol = false;
+	boolean blnMoveBL1S = false;
+	boolean blnMoveBL2S = false;
+	boolean blnMoveBL3S = false;
+	boolean blnMoveBL4S = false;
+	boolean blnMoveBL5S = false;
+	boolean blnMoveBLM = false;
+	boolean blnMoveBLF = false;
+	boolean blnMoveBLLC = false;
+	boolean blnMoveBLSer = false;
+	boolean blnMoveBLSpy1 = false;
+	boolean blnMoveBLSpy2 = false;
+	boolean blnMoveBLP1 = false;
+	boolean blnMoveBLP2 = false;
+	boolean blnMoveBLP3 = false;
+	boolean blnMoveBLP4 = false;
+	boolean blnMoveBLP5 = false;
+	boolean blnMoveBLP6 = false;
 	
 	// METHODS - MOUSELISTENER (Mouse Pressed)
 	public void mousePressed(MouseEvent evt){
@@ -620,6 +917,72 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		}
 		if(evt.getX() > thepanel.WHPrivate6OBJ.intX && evt.getX() < thepanel.WHPrivate6OBJ.intX + 65 && evt.getY() > thepanel.WHPrivate6OBJ.intY && evt.getY() < thepanel.WHPrivate6OBJ.intY + 20){
 			blnMoveWHP6 = true;
+		}
+		
+		//BLACK
+		
+		if(evt.getX() > thepanel.BL1LieutenantOBJ.intX && evt.getX() < thepanel.BL1LieutenantOBJ.intX + 65 && evt.getY() > thepanel.BL1LieutenantOBJ.intY && evt.getY() < thepanel.BL1LieutenantOBJ.intY + 20){
+			blnMoveBL1L = true;
+		}
+		if(evt.getX() > thepanel.BL2LieutenantOBJ.intX && evt.getX() < thepanel.BL2LieutenantOBJ.intX + 65 && evt.getY() > thepanel.BL2LieutenantOBJ.intY && evt.getY() < thepanel.BL2LieutenantOBJ.intY + 20){
+			blnMoveBL2L = true;
+		}
+		if(evt.getX() > thepanel.BLCaptainOBJ.intX && evt.getX() < thepanel.BLCaptainOBJ.intX + 65 && evt.getY() > thepanel.BLCaptainOBJ.intY && evt.getY() < thepanel.BLCaptainOBJ.intY + 20){
+			blnMoveBLCap = true;
+		}
+		if(evt.getX() > thepanel.BLColonelOBJ.intX && evt.getX() < thepanel.BLColonelOBJ.intX + 65 && evt.getY() > thepanel.BLColonelOBJ.intY && evt.getY() < thepanel.BLColonelOBJ.intY + 20){
+			blnMoveBLCol = true;
+		}
+		if(evt.getX() > thepanel.BL1StarOBJ.intX && evt.getX() < thepanel.BL1StarOBJ.intX + 65 && evt.getY() > thepanel.BL1StarOBJ.intY && evt.getY() < thepanel.BL1StarOBJ.intY + 20){
+			blnMoveBL1S = true;
+		}
+		if(evt.getX() > thepanel.BL2StarOBJ.intX && evt.getX() < thepanel.BL2StarOBJ.intX + 65 && evt.getY() > thepanel.BL2StarOBJ.intY && evt.getY() < thepanel.BL2StarOBJ.intY + 20){
+			blnMoveBL2S = true;
+		}
+		if(evt.getX() > thepanel.BL3StarOBJ.intX && evt.getX() < thepanel.BL3StarOBJ.intX + 65 && evt.getY() > thepanel.BL3StarOBJ.intY && evt.getY() < thepanel.BL3StarOBJ.intY + 20){
+			blnMoveBL3S = true;
+		}
+		if(evt.getX() > thepanel.BL4StarOBJ.intX && evt.getX() < thepanel.BL4StarOBJ.intX + 65 && evt.getY() > thepanel.BL4StarOBJ.intY && evt.getY() < thepanel.BL4StarOBJ.intY + 20){
+			blnMoveBL4S = true;
+		}
+		if(evt.getX() > thepanel.BL5StarOBJ.intX && evt.getX() < thepanel.BL5StarOBJ.intX + 65 && evt.getY() > thepanel.BL5StarOBJ.intY && evt.getY() < thepanel.BL5StarOBJ.intY + 20){
+			blnMoveBL5S = true;
+		}
+		if(evt.getX() > thepanel.BLMajorOBJ.intX && evt.getX() < thepanel.BLMajorOBJ.intX + 65 && evt.getY() > thepanel.BLMajorOBJ.intY && evt.getY() < thepanel.BLMajorOBJ.intY + 20){
+			blnMoveBLM = true;
+		}
+		if(evt.getX() > thepanel.BLFlagOBJ.intX && evt.getX() < thepanel.BLFlagOBJ.intX + 65 && evt.getY() > thepanel.BLFlagOBJ.intY && evt.getY() < thepanel.BLFlagOBJ.intY + 20){
+			blnMoveBLF = true;
+		}
+		if(evt.getX() > thepanel.BLLColonelOBJ.intX && evt.getX() < thepanel.BLLColonelOBJ.intX + 65 && evt.getY() > thepanel.BLLColonelOBJ.intY && evt.getY() < thepanel.BLLColonelOBJ.intY + 20){
+			blnMoveBLLC = true;
+		}
+		if(evt.getX() > thepanel.BLSergeantOBJ.intX && evt.getX() < thepanel.BLSergeantOBJ.intX + 65 && evt.getY() > thepanel.BLSergeantOBJ.intY && evt.getY() < thepanel.BLSergeantOBJ.intY + 20){
+			blnMoveBLSer = true;
+		}
+		if(evt.getX() > thepanel.BLSpy1OBJ.intX && evt.getX() < thepanel.BLSpy1OBJ.intX + 65 && evt.getY() > thepanel.BLSpy1OBJ.intY && evt.getY() < thepanel.BLSpy1OBJ.intY + 20){
+			blnMoveBLSpy1 = true;
+		}
+		if(evt.getX() > thepanel.BLSpy2OBJ.intX && evt.getX() < thepanel.BLSpy2OBJ.intX + 65 && evt.getY() > thepanel.BLSpy2OBJ.intY && evt.getY() < thepanel.BLSpy2OBJ.intY + 20){
+			blnMoveBLSpy2 = true;
+		}
+		if(evt.getX() > thepanel.BLPrivate1OBJ.intX && evt.getX() < thepanel.BLPrivate1OBJ.intX + 65 && evt.getY() > thepanel.BLPrivate1OBJ.intY && evt.getY() < thepanel.BLPrivate1OBJ.intY + 20){
+			blnMoveBLP1 = true;
+		}
+		if(evt.getX() > thepanel.BLPrivate2OBJ.intX && evt.getX() < thepanel.BLPrivate2OBJ.intX + 65 && evt.getY() > thepanel.BLPrivate2OBJ.intY && evt.getY() < thepanel.BLPrivate2OBJ.intY + 20){
+			blnMoveBLP2 = true;
+		}
+		if(evt.getX() > thepanel.BLPrivate3OBJ.intX && evt.getX() < thepanel.BLPrivate3OBJ.intX + 65 && evt.getY() > thepanel.BLPrivate3OBJ.intY && evt.getY() < thepanel.BLPrivate3OBJ.intY + 20){
+			blnMoveBLP3 = true;
+		}
+		if(evt.getX() > thepanel.BLPrivate4OBJ.intX && evt.getX() < thepanel.BLPrivate4OBJ.intX + 65 && evt.getY() > thepanel.BLPrivate4OBJ.intY && evt.getY() < thepanel.BLPrivate4OBJ.intY + 20){
+			blnMoveBLP4 = true;
+		}
+		if(evt.getX() > thepanel.BLPrivate5OBJ.intX && evt.getX() < thepanel.BLPrivate5OBJ.intX + 65 && evt.getY() > thepanel.BLPrivate5OBJ.intY && evt.getY() < thepanel.BLPrivate5OBJ.intY + 20){
+			blnMoveBLP5 = true;
+		}
+		if(evt.getX() > thepanel.BLPrivate6OBJ.intX && evt.getX() < thepanel.BLPrivate6OBJ.intX + 65 && evt.getY() > thepanel.BLPrivate6OBJ.intY && evt.getY() < thepanel.BLPrivate6OBJ.intY + 20){
+			blnMoveBLP6 = true;
 		}
 	}
 	
@@ -723,6 +1086,93 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				thepanel.WHPrivate6OBJ.intX = evt.getX();
 				thepanel.WHPrivate6OBJ.intY = evt.getY();
 			}
+			
+			//BLACK
+			if(blnMoveBL1L){
+				thepanel.BL1LieutenantOBJ.intX = evt.getX();
+				thepanel.BL1LieutenantOBJ.intY = evt.getY();
+			}
+			if(blnMoveBL2L){
+				thepanel.BL2LieutenantOBJ.intX = evt.getX();
+				thepanel.BL2LieutenantOBJ.intY = evt.getY();
+			}
+			if(blnMoveBLCap){
+				thepanel.BLCaptainOBJ.intX = evt.getX();
+				thepanel.BLCaptainOBJ.intY = evt.getY();
+			}
+			if(blnMoveBLCol){
+				thepanel.BLColonelOBJ.intX = evt.getX();
+				thepanel.BLColonelOBJ.intY = evt.getY();
+			}
+			if(blnMoveBL1S){
+				thepanel.BL1StarOBJ.intX = evt.getX();
+				thepanel.BL1StarOBJ.intY = evt.getY();
+			}
+			if(blnMoveBL2S){
+				thepanel.BL2StarOBJ.intX = evt.getX();
+				thepanel.BL2StarOBJ.intY = evt.getY();
+			}
+			if(blnMoveBL3S){
+				thepanel.BL3StarOBJ.intX = evt.getX();
+				thepanel.BL3StarOBJ.intY = evt.getY();
+			}
+			if(blnMoveBL4S){
+				thepanel.BL4StarOBJ.intX = evt.getX();
+				thepanel.BL4StarOBJ.intY = evt.getY();
+			}
+			if(blnMoveBL5S){
+				thepanel.BL5StarOBJ.intX = evt.getX();
+				thepanel.BL5StarOBJ.intY = evt.getY();
+			}
+			if(blnMoveBLM){
+				thepanel.BLMajorOBJ.intX = evt.getX();
+				thepanel.BLMajorOBJ.intY = evt.getY();
+			}
+			if(blnMoveBLF){
+				thepanel.BLFlagOBJ.intX = evt.getX();
+				thepanel.BLFlagOBJ.intY = evt.getY();
+			}
+			if(blnMoveBLLC){
+				thepanel.BLLColonelOBJ.intX = evt.getX();
+				thepanel.BLLColonelOBJ.intY = evt.getY();
+			}
+			if(blnMoveBLSer){
+				thepanel.BLSergeantOBJ.intX = evt.getX();
+				thepanel.BLSergeantOBJ.intY = evt.getY();
+			}
+			if(blnMoveBLSpy1){
+				thepanel.BLSpy1OBJ.intX = evt.getX();
+				thepanel.BLSpy1OBJ.intY = evt.getY();
+			}
+			if(blnMoveBLSpy2){
+				thepanel.BLSpy2OBJ.intX = evt.getX();
+				thepanel.BLSpy2OBJ.intY = evt.getY();
+			}
+			if(blnMoveBLP1){
+				thepanel.BLPrivate1OBJ.intX = evt.getX();
+				thepanel.BLPrivate1OBJ.intY = evt.getY();
+			}
+			if(blnMoveBLP2){
+				thepanel.BLPrivate2OBJ.intX = evt.getX();
+				thepanel.BLPrivate2OBJ.intY = evt.getY();
+			}
+			if(blnMoveBLP3){
+				thepanel.BLPrivate3OBJ.intX = evt.getX();
+				thepanel.BLPrivate3OBJ.intY = evt.getY();
+			}
+			if(blnMoveBLP4){
+				thepanel.BLPrivate4OBJ.intX = evt.getX();
+				thepanel.BLPrivate4OBJ.intY = evt.getY();
+			}
+			if(blnMoveBLP5){
+				thepanel.BLPrivate5OBJ.intX = evt.getX();
+				thepanel.BLPrivate5OBJ.intY = evt.getY();
+			}
+			if(blnMoveBLP6){
+				thepanel.BLPrivate6OBJ.intX = evt.getX();
+				thepanel.BLPrivate6OBJ.intY = evt.getY();
+			}
+			
 		}
 	}
 
