@@ -60,50 +60,50 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 
 	// PIECES
 		// BLACK PIECES
-		rank BLFlagOBJ = new rank(true,0,345,642);
-		rank BLPrivate1OBJ = new rank(true,1,77,664);
-		rank BLPrivate2OBJ = new rank(true,1,144,664);
-		rank BLPrivate3OBJ = new rank(true,1,211,664);
-		rank BLPrivate4OBJ = new rank(true,1,278,664);
-		rank BLPrivate5OBJ = new rank(true,1,345,664);
-		rank BLPrivate6OBJ = new rank(true,1,412,664);
-		rank BLSpy1OBJ = new rank(true,2,10,686);
-		rank BLSpy2OBJ = new rank(true,2,546,664);
-		rank BLSergeantOBJ = new rank(true,3,479,664);
-		rank BLLColonelOBJ = new rank(true,3,479,642);
-		rank BL2LieutenantOBJ = new rank(true,4,77,642);
-		rank BL1LieutenantOBJ = new rank(true,5,10,642);
-		rank BLCaptainOBJ = new rank(true,6,144,642);
-		rank BLColonelOBJ = new rank(true,9,211,642);
-		rank BL1StarOBJ = new rank(true,10,10,664);
-		rank BL2StarOBJ = new rank(true,11,77,686);
-		rank BL3StarOBJ = new rank(true,12,144,686);
-		rank BL4StarOBJ = new rank(true,13,412,642);
-		rank BL5StarOBJ = new rank(true,14,278,642);
-		rank BLMajorOBJ = new rank(true,15,546,642);
+		rank BLFlagOBJ = new rank(true,0,345,642,-1,-1);
+		rank BLPrivate1OBJ = new rank(true,1,77,664,null,null);
+		rank BLPrivate2OBJ = new rank(true,1,144,664,null,null);
+		rank BLPrivate3OBJ = new rank(true,1,211,664,null,null);
+		rank BLPrivate4OBJ = new rank(true,1,278,664,null,null);
+		rank BLPrivate5OBJ = new rank(true,1,345,664,null,null);
+		rank BLPrivate6OBJ = new rank(true,1,412,664,null,null);
+		rank BLSpy1OBJ = new rank(true,2,10,686,null,null);
+		rank BLSpy2OBJ = new rank(true,2,546,664,null,null);
+		rank BLSergeantOBJ = new rank(true,3,479,664,null,null);
+		rank BLLColonelOBJ = new rank(true,3,479,642,null,null);
+		rank BL2LieutenantOBJ = new rank(true,4,77,642,null,null);
+		rank BL1LieutenantOBJ = new rank(true,5,10,642,null,null);
+		rank BLCaptainOBJ = new rank(true,6,144,642,null,null);
+		rank BLColonelOBJ = new rank(true,9,211,642,null,null);
+		rank BL1StarOBJ = new rank(true,10,10,664,null,null);
+		rank BL2StarOBJ = new rank(true,11,77,686,null,null);
+		rank BL3StarOBJ = new rank(true,12,144,686,null,null);
+		rank BL4StarOBJ = new rank(true,13,412,642,null,null);
+		rank BL5StarOBJ = new rank(true,14,278,642,null,null);
+		rank BLMajorOBJ = new rank(true,15,546,642,null,null);
 		
 		// WHITE PIECES
-		rank WHFlagOBJ = new rank(true,0,345,642);
-		rank WHPrivate1OBJ = new rank(true,1,77,664);
-		rank WHPrivate2OBJ = new rank(true,1,144,664);
-		rank WHPrivate3OBJ = new rank(true,1,211,664);
-		rank WHPrivate4OBJ = new rank(true,1,278,664);
-		rank WHPrivate5OBJ = new rank(true,1,345,664);
-		rank WHPrivate6OBJ = new rank(true,1,412,664);
-		rank WHSpy1OBJ = new rank(true,2,10,686);
-		rank WHSpy2OBJ = new rank(true,2,546,664);
-		rank WHSergeantOBJ = new rank(true,3,479,664);
-		rank WHLColonelOBJ = new rank(true,3,479,642);
-		rank WH2LieutenantOBJ = new rank(true,4,77,642);
-		rank WH1LieutenantOBJ = new rank(true,5,10,642);
-		rank WHCaptainOBJ = new rank(true,6,144,642);
-		rank WHColonelOBJ = new rank(true,9,211,642);
-		rank WH1StarOBJ = new rank(true,10,10,664);
-		rank WH2StarOBJ = new rank(true,11,77,686);
-		rank WH3StarOBJ = new rank(true,12,144,686);
-		rank WH4StarOBJ = new rank(true,13,412,642);
-		rank WH5StarOBJ = new rank(true,14,278,642);
-		rank WHMajorOBJ = new rank(true,15,546,642);
+		rank WHFlagOBJ = new rank(true,0,345,642,null,null);
+		rank WHPrivate1OBJ = new rank(true,1,77,664,null,null);
+		rank WHPrivate2OBJ = new rank(true,1,144,664,null,null);
+		rank WHPrivate3OBJ = new rank(true,1,211,664,null,null);
+		rank WHPrivate4OBJ = new rank(true,1,278,664,null,null);
+		rank WHPrivate5OBJ = new rank(true,1,345,664,null,null);
+		rank WHPrivate6OBJ = new rank(true,1,412,664,null,null);
+		rank WHSpy1OBJ = new rank(true,2,10,686,null,null);
+		rank WHSpy2OBJ = new rank(true,2,546,664,null,null);
+		rank WHSergeantOBJ = new rank(true,3,479,664,null,null);
+		rank WHLColonelOBJ = new rank(true,3,479,642,null,null);
+		rank WH2LieutenantOBJ = new rank(true,4,77,642,null,null);
+		rank WH1LieutenantOBJ = new rank(true,5,10,642,null,null);
+		rank WHCaptainOBJ = new rank(true,6,144,642,null,null);
+		rank WHColonelOBJ = new rank(true,9,211,642,null,null);
+		rank WH1StarOBJ = new rank(true,10,10,664,null,null);
+		rank WH2StarOBJ = new rank(true,11,77,686,null,null);
+		rank WH3StarOBJ = new rank(true,12,144,686,null,null);
+		rank WH4StarOBJ = new rank(true,13,412,642,null,null);
+		rank WH5StarOBJ = new rank(true,14,278,642,null,null);
+		rank WHMajorOBJ = new rank(true,15,546,642,null,null);
 		
 		// END PICES
 	

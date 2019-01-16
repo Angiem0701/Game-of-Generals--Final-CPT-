@@ -68,8 +68,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	
 	boolean blnSettingUp;
 	
-	String strWBoard[][];
-	String strBBoard[][];
+	String strWBoard[][] = new String[9][8];
+	String strBBoard[][] = new String[9][8];
 	
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -		
 	

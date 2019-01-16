@@ -16,8 +16,9 @@ public class rank{
 	int intY;
 	boolean blnAlive = true;
 	boolean blnGameEnd = false;
-	int intEnemyRank;
-	BufferedImage pieceImage = null;
+	int intArrayX;
+	int intArrayY;
+	
 	
 	//methods
 	public int moveforwards(){
@@ -37,22 +38,22 @@ public class rank{
 		return intX;
 	}
 	public int attack(){
-		if(intRank > intEnemyRank){
+		//if(intRank > intEnemyRank){
 			//method enemy die
-		}
-		else if(intRank < intEnemyRank){
+		//}
+		//else if(intRank < intEnemyRank){
 			//method die
-		}
-		else if(intRank == 2 && intRank < intEnemyRank){
+		//}
+		//else if(intRank == 2 && intRank < intEnemyRank){
 			//method kill
-		}
-		else if(intRank == 2 && intEnemyRank == 1){
+		//}
+		//else if(intRank == 2 && intEnemyRank == 1){
 			//method die
-		}
-		else if(intEnemyRank == 0){
-			System.out.println("Congratulations! You Won!!!"); // will add the Players later
-			blnGameEnd = true;
-		}
+		//}
+		//else if(intEnemyRank == 0){
+		//	System.out.println("Congratulations! You Won!!!"); // will add the Players later
+		//	blnGameEnd = true;
+		//}
 		return 0;
 	}
 	public void die(){
@@ -62,11 +63,13 @@ public class rank{
 	public void placepiece(){
 	}
 	//constructor
-	public rank(boolean blnAlive, int intRank, int intX, int intY){
+	public rank(boolean blnAlive, int intRank, int intX, int intY, int intArrayX, int intArrayY){
 		this.blnAlive = blnAlive;
 		this.intRank = intRank;
 		this.intX = intX;
 		this.intY = intY;
+		this.intArrayX = intArrayX;
+		this.intArrayY = intArrayY;
 		
 	}
 }
