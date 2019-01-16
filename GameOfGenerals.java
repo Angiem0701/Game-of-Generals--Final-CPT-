@@ -1,7 +1,7 @@
-// Game of Generals [Demo]
+// Game of the Generals [Demo]
 // Created by: Angelica C. F. Manansala, Ivan Lau, Caitlin Kwan
 // Created on: December 21, 2018
-// Last Updated: January 14, 2019
+// Last Updated: January 15, 2019
 
 // OTHER NOTES
 // - figure a way to have the program automatically find the ip address - no need for manual input
@@ -189,6 +189,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			chatBoxSend.setVisible(true);
 			chatBoxScroll.setVisible(true);
 			
+			blnSettingUp = true;
+			
 		}
 		
 		if(evt.getSource() == chatBoxSend){
@@ -249,22 +251,54 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	
 	// METHODS - MOUSELISTENER (Mouse Released)
 	public void mouseReleased(MouseEvent evt){
-		int intResultX = evt.getX();
-		int intResultY = evt.getY();
-		intResultX = intResultX - 10;
-		int intModX = intResultX/70;
-		intResultX = intModX * 70 + 13;
-		thepanel.WH1LieutenantOBJ.intX = intResultX;
-		intResultY = intResultY - 80;
-		int intModY = intResultY/70;
-		intResultY = intModY * 70 + 105;
-		thepanel.WH1LieutenantOBJ.intY = intResultY;
+		if(blnSettingUp){
+			int intResultX;
+			int intResultY;
+			int intModX;
+			int intModY;
+			
+			if(blnMoveWH1L){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WH1LieutenantOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WH1LieutenantOBJ.intY = intResultY;
+				blnMoveWH1L = false;
+			}
+			
+			if(blnMoveWH2L){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WH2LieutenantOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WH2LieutenantOBJ.intY = intResultY;
+				blnMoveWH2L = false;
+			}
+		}
 		
 	}
 	
+	boolean blnMoveWH1L = false;
+	boolean blnMoveWH2L = false;
+	
 	// METHODS - MOUSELISTENER (Mouse Pressed)
 	public void mousePressed(MouseEvent evt){
-		
+		if(evt.getX() > thepanel.WH1LieutenantOBJ.intX && evt.getX() < thepanel.WH1LieutenantOBJ.intX + 65 && evt.getY() > thepanel.WH1LieutenantOBJ.intY && evt.getY() < thepanel.WH1LieutenantOBJ.intY + 20){
+			blnMoveWH1L = true;
+		}
+		if(evt.getX() > thepanel.WH2LieutenantOBJ.intX && evt.getX() < thepanel.WH2LieutenantOBJ.intX + 65 && evt.getY() > thepanel.WH2LieutenantOBJ.intY && evt.getY() < thepanel.WH2LieutenantOBJ.intY + 20){
+			blnMoveWH2L = true;
+		}
 	}
 	
 	// METHODS - MOUSELISTENER (Mouse Clicked)
@@ -281,16 +315,24 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	
 	// METHODS - MOUSEMOTIONLISTENER (Mouse Dragged)
 	public void mouseDragged(MouseEvent evt){	
-		System.out.println("Testing if the dragging is detected");
-		thepanel.WH1LieutenantOBJ.intX = evt.getX();
-		thepanel.WH1LieutenantOBJ.intY = evt.getY();
+		if(blnSettingUp){
+			//System.out.println("Testing if the dragging is detected");
+			if(blnMoveWH1L){
+				thepanel.WH1LieutenantOBJ.intX = evt.getX();
+				thepanel.WH1LieutenantOBJ.intY = evt.getY();
+			}
+			if(blnMoveWH2L){
+				thepanel.WH2LieutenantOBJ.intX = evt.getX();
+				thepanel.WH2LieutenantOBJ.intY = evt.getY();
+			}
+		}
 	}
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	
 	// CONSTRUCTOR
 	public GameOfGenerals(){
-		theframe = new JFrame("~ Game of Generals ~");
+		theframe = new JFrame("~ Game of the Generals ~");
 		thepanel = new GameofGeneralsAnimationPanel();
 		thepanel.addMouseListener(this);
 		thepanel.addMouseMotionListener(this);

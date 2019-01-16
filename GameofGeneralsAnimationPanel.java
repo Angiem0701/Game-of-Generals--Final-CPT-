@@ -1,7 +1,7 @@
-// Game of Generals [Demo]
+// Game of the Generals [Demo]
 // Created by: Angelica C. F. Manansala, Ivan Lau, Caitlin Kwan
 // Created on: December 21, 2018
-// Last Updated: January 14, 2019
+// Last Updated: January 15, 2019
 
 import javax.swing.*;
 import java.awt.*;
@@ -94,9 +94,9 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 		//rank WHSpy2 = new rank(true,2,0,0);
 		//rank WHSergeant = new rank(true,3,0,0);
 		//rank WHLColonel = new rank(true,3,0,0);
-		//rank WH2Lieutenant = new rank(true,4,0,0);
+		rank WH2LieutenantOBJ = new rank(true,4,77,642);
 		rank WH1LieutenantOBJ = new rank(true,5,10,642);
-		//rank WHCaptain = new rank(true,6,0,0);
+		rank WHCaptainOBJ = new rank(true,6,0,0);
 		//rank WHColonel = new rank(true,9,0,0);
 		//rank WH1Star = new rank(true,10,0,0);
 		//rank WH2Star = new rank(true,11,0,0);
@@ -124,7 +124,7 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 		
 		if(blnClientView){
 			g.drawImage(WH1Lieutenant,WH1LieutenantOBJ.intX,WH1LieutenantOBJ.intY,65,20,null);
-			g.drawImage(WH2Lieutenant,77,642,65,20,null);
+			g.drawImage(WH2Lieutenant,WH2LieutenantOBJ.intX,WH2LieutenantOBJ.intY,65,20,null);
 			g.drawImage(WHCaptain,144,642,65,20,null);
 			g.drawImage(WHColonel,211,642,65,20,null);
 			g.drawImage(WH5Star,278,642,65,20,null);
