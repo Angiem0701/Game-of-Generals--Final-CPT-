@@ -270,7 +270,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				thepanel.WH1LieutenantOBJ.intY = intResultY;
 				blnMoveWH1L = false;
 			}
-			
 			if(blnMoveWH2L){
 				intResultX = evt.getX();
 				intResultY = evt.getY();
@@ -284,12 +283,278 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				thepanel.WH2LieutenantOBJ.intY = intResultY;
 				blnMoveWH2L = false;
 			}
+			if(blnMoveWHCap){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WHCaptainOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WHCaptainOBJ.intY = intResultY;
+				blnMoveWHCap = false;
+			}
+			if(blnMoveWHCol){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WHColonelOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WHColonelOBJ.intY = intResultY;
+				blnMoveWHCol = false;
+			}
+			if(blnMoveWH1S){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WH1StarOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WH1StarOBJ.intY = intResultY;
+				blnMoveWH1S = false;
+			}
+			if(blnMoveWH2S){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WH2StarOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WH2StarOBJ.intY = intResultY;
+				blnMoveWH2S = false;
+			}
+			if(blnMoveWH3S){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WH3StarOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WH3StarOBJ.intY = intResultY;
+				blnMoveWH3S = false;
+			}
+			if(blnMoveWH4S){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WH4StarOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WH4StarOBJ.intY = intResultY;
+				blnMoveWH4S = false;
+			}
+			if(blnMoveWH5S){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WH5StarOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WH5StarOBJ.intY = intResultY;
+				blnMoveWH5S = false;
+			}
+			if(blnMoveWHM){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WHMajorOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WHMajorOBJ.intY = intResultY;
+				blnMoveWHM = false;
+			}
+			if(blnMoveWHF){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WHFlagOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WHFlagOBJ.intY = intResultY;
+				blnMoveWHF = false;
+			}
+			if(blnMoveWHLC){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WHLColonelOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WHLColonelOBJ.intY = intResultY;
+				blnMoveWHLC = false;
+			}
+			if(blnMoveWHSer){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WHSergeantOBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WHSergeantOBJ.intY = intResultY;
+				blnMoveWHSer = false;
+			}
+			if(blnMoveWHSpy1){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WHSpy1OBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WHSpy1OBJ.intY = intResultY;
+				blnMoveWHSpy1 = false;
+			}
+			if(blnMoveWHSpy2){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WHSpy2OBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WHSpy2OBJ.intY = intResultY;
+				blnMoveWHSpy2 = false;
+			}
+			if(blnMoveWHP1){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WHPrivate1OBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WHPrivate1OBJ.intY = intResultY;
+				blnMoveWHP1 = false;
+			}
+			if(blnMoveWHP2){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WHPrivate2OBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WHPrivate2OBJ.intY = intResultY;
+				blnMoveWHP2 = false;
+			}
+			if(blnMoveWHP3){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WHPrivate3OBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WHPrivate3OBJ.intY = intResultY;
+				blnMoveWHP3 = false;
+			}
+			if(blnMoveWHP4){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WHPrivate4OBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WHPrivate4OBJ.intY = intResultY;
+				blnMoveWHP4 = false;
+			}
+			if(blnMoveWHP5){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WHPrivate5OBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WHPrivate5OBJ.intY = intResultY;
+				blnMoveWHP5 = false;
+			}
+			if(blnMoveWHP6){
+				intResultX = evt.getX();
+				intResultY = evt.getY();
+				intResultX = intResultX - 10;
+				intModX = intResultX/70;
+				intResultX = intModX * 70 + 13;
+				thepanel.WHPrivate6OBJ.intX = intResultX;
+				intResultY = intResultY - 80;
+				intModY = intResultY/70;
+				intResultY = intModY * 70 + 105;
+				thepanel.WHPrivate6OBJ.intY = intResultY;
+				blnMoveWHP6 = false;
+			}
 		}
 		
 	}
 	
 	boolean blnMoveWH1L = false;
 	boolean blnMoveWH2L = false;
+	boolean blnMoveWHCap = false;
+	boolean blnMoveWHCol = false;
+	boolean blnMoveWH1S = false;
+	boolean blnMoveWH2S = false;
+	boolean blnMoveWH3S = false;
+	boolean blnMoveWH4S = false;
+	boolean blnMoveWH5S = false;
+	boolean blnMoveWHM = false;
+	boolean blnMoveWHF = false;
+	boolean blnMoveWHLC = false;
+	boolean blnMoveWHSer = false;
+	boolean blnMoveWHSpy1 = false;
+	boolean blnMoveWHSpy2 = false;
+	boolean blnMoveWHP1 = false;
+	boolean blnMoveWHP2 = false;
+	boolean blnMoveWHP3 = false;
+	boolean blnMoveWHP4 = false;
+	boolean blnMoveWHP5 = false;
+	boolean blnMoveWHP6 = false;
 	
 	// METHODS - MOUSELISTENER (Mouse Pressed)
 	public void mousePressed(MouseEvent evt){
@@ -298,6 +563,63 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		}
 		if(evt.getX() > thepanel.WH2LieutenantOBJ.intX && evt.getX() < thepanel.WH2LieutenantOBJ.intX + 65 && evt.getY() > thepanel.WH2LieutenantOBJ.intY && evt.getY() < thepanel.WH2LieutenantOBJ.intY + 20){
 			blnMoveWH2L = true;
+		}
+		if(evt.getX() > thepanel.WHCaptainOBJ.intX && evt.getX() < thepanel.WHCaptainOBJ.intX + 65 && evt.getY() > thepanel.WHCaptainOBJ.intY && evt.getY() < thepanel.WHCaptainOBJ.intY + 20){
+			blnMoveWHCap = true;
+		}
+		if(evt.getX() > thepanel.WHColonelOBJ.intX && evt.getX() < thepanel.WHColonelOBJ.intX + 65 && evt.getY() > thepanel.WHColonelOBJ.intY && evt.getY() < thepanel.WHColonelOBJ.intY + 20){
+			blnMoveWHCol = true;
+		}
+		if(evt.getX() > thepanel.WH1StarOBJ.intX && evt.getX() < thepanel.WH1StarOBJ.intX + 65 && evt.getY() > thepanel.WH1StarOBJ.intY && evt.getY() < thepanel.WH1StarOBJ.intY + 20){
+			blnMoveWH1S = true;
+		}
+		if(evt.getX() > thepanel.WH2StarOBJ.intX && evt.getX() < thepanel.WH2StarOBJ.intX + 65 && evt.getY() > thepanel.WH2StarOBJ.intY && evt.getY() < thepanel.WH2StarOBJ.intY + 20){
+			blnMoveWH2S = true;
+		}
+		if(evt.getX() > thepanel.WH3StarOBJ.intX && evt.getX() < thepanel.WH3StarOBJ.intX + 65 && evt.getY() > thepanel.WH3StarOBJ.intY && evt.getY() < thepanel.WH3StarOBJ.intY + 20){
+			blnMoveWH3S = true;
+		}
+		if(evt.getX() > thepanel.WH4StarOBJ.intX && evt.getX() < thepanel.WH4StarOBJ.intX + 65 && evt.getY() > thepanel.WH4StarOBJ.intY && evt.getY() < thepanel.WH4StarOBJ.intY + 20){
+			blnMoveWH4S = true;
+		}
+		if(evt.getX() > thepanel.WH5StarOBJ.intX && evt.getX() < thepanel.WH5StarOBJ.intX + 65 && evt.getY() > thepanel.WH5StarOBJ.intY && evt.getY() < thepanel.WH5StarOBJ.intY + 20){
+			blnMoveWH5S = true;
+		}
+		if(evt.getX() > thepanel.WHMajorOBJ.intX && evt.getX() < thepanel.WHMajorOBJ.intX + 65 && evt.getY() > thepanel.WHMajorOBJ.intY && evt.getY() < thepanel.WHMajorOBJ.intY + 20){
+			blnMoveWHM = true;
+		}
+		if(evt.getX() > thepanel.WHFlagOBJ.intX && evt.getX() < thepanel.WHFlagOBJ.intX + 65 && evt.getY() > thepanel.WHFlagOBJ.intY && evt.getY() < thepanel.WHFlagOBJ.intY + 20){
+			blnMoveWHF = true;
+		}
+		if(evt.getX() > thepanel.WHLColonelOBJ.intX && evt.getX() < thepanel.WHLColonelOBJ.intX + 65 && evt.getY() > thepanel.WHLColonelOBJ.intY && evt.getY() < thepanel.WHLColonelOBJ.intY + 20){
+			blnMoveWHLC = true;
+		}
+		if(evt.getX() > thepanel.WHSergeantOBJ.intX && evt.getX() < thepanel.WHSergeantOBJ.intX + 65 && evt.getY() > thepanel.WHSergeantOBJ.intY && evt.getY() < thepanel.WHSergeantOBJ.intY + 20){
+			blnMoveWHSer = true;
+		}
+		if(evt.getX() > thepanel.WHSpy1OBJ.intX && evt.getX() < thepanel.WHSpy1OBJ.intX + 65 && evt.getY() > thepanel.WHSpy1OBJ.intY && evt.getY() < thepanel.WHSpy1OBJ.intY + 20){
+			blnMoveWHSpy1 = true;
+		}
+		if(evt.getX() > thepanel.WHSpy2OBJ.intX && evt.getX() < thepanel.WHSpy2OBJ.intX + 65 && evt.getY() > thepanel.WHSpy2OBJ.intY && evt.getY() < thepanel.WHSpy2OBJ.intY + 20){
+			blnMoveWHSpy2 = true;
+		}
+		if(evt.getX() > thepanel.WHPrivate1OBJ.intX && evt.getX() < thepanel.WHPrivate1OBJ.intX + 65 && evt.getY() > thepanel.WHPrivate1OBJ.intY && evt.getY() < thepanel.WHPrivate1OBJ.intY + 20){
+			blnMoveWHP1 = true;
+		}
+		if(evt.getX() > thepanel.WHPrivate2OBJ.intX && evt.getX() < thepanel.WHPrivate2OBJ.intX + 65 && evt.getY() > thepanel.WHPrivate2OBJ.intY && evt.getY() < thepanel.WHPrivate2OBJ.intY + 20){
+			blnMoveWHP2 = true;
+		}
+		if(evt.getX() > thepanel.WHPrivate3OBJ.intX && evt.getX() < thepanel.WHPrivate3OBJ.intX + 65 && evt.getY() > thepanel.WHPrivate3OBJ.intY && evt.getY() < thepanel.WHPrivate3OBJ.intY + 20){
+			blnMoveWHP3 = true;
+		}
+		if(evt.getX() > thepanel.WHPrivate4OBJ.intX && evt.getX() < thepanel.WHPrivate4OBJ.intX + 65 && evt.getY() > thepanel.WHPrivate4OBJ.intY && evt.getY() < thepanel.WHPrivate4OBJ.intY + 20){
+			blnMoveWHP4 = true;
+		}
+		if(evt.getX() > thepanel.WHPrivate5OBJ.intX && evt.getX() < thepanel.WHPrivate5OBJ.intX + 65 && evt.getY() > thepanel.WHPrivate5OBJ.intY && evt.getY() < thepanel.WHPrivate5OBJ.intY + 20){
+			blnMoveWHP5 = true;
+		}
+		if(evt.getX() > thepanel.WHPrivate6OBJ.intX && evt.getX() < thepanel.WHPrivate6OBJ.intX + 65 && evt.getY() > thepanel.WHPrivate6OBJ.intY && evt.getY() < thepanel.WHPrivate6OBJ.intY + 20){
+			blnMoveWHP6 = true;
 		}
 	}
 	
@@ -324,6 +646,82 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			if(blnMoveWH2L){
 				thepanel.WH2LieutenantOBJ.intX = evt.getX();
 				thepanel.WH2LieutenantOBJ.intY = evt.getY();
+			}
+			if(blnMoveWHCap){
+				thepanel.WHCaptainOBJ.intX = evt.getX();
+				thepanel.WHCaptainOBJ.intY = evt.getY();
+			}
+			if(blnMoveWHCol){
+				thepanel.WHColonelOBJ.intX = evt.getX();
+				thepanel.WHColonelOBJ.intY = evt.getY();
+			}
+			if(blnMoveWH1S){
+				thepanel.WH1StarOBJ.intX = evt.getX();
+				thepanel.WH1StarOBJ.intY = evt.getY();
+			}
+			if(blnMoveWH2S){
+				thepanel.WH2StarOBJ.intX = evt.getX();
+				thepanel.WH2StarOBJ.intY = evt.getY();
+			}
+			if(blnMoveWH3S){
+				thepanel.WH3StarOBJ.intX = evt.getX();
+				thepanel.WH3StarOBJ.intY = evt.getY();
+			}
+			if(blnMoveWH4S){
+				thepanel.WH4StarOBJ.intX = evt.getX();
+				thepanel.WH4StarOBJ.intY = evt.getY();
+			}
+			if(blnMoveWH5S){
+				thepanel.WH5StarOBJ.intX = evt.getX();
+				thepanel.WH5StarOBJ.intY = evt.getY();
+			}
+			if(blnMoveWHM){
+				thepanel.WHMajorOBJ.intX = evt.getX();
+				thepanel.WHMajorOBJ.intY = evt.getY();
+			}
+			if(blnMoveWHF){
+				thepanel.WHFlagOBJ.intX = evt.getX();
+				thepanel.WHFlagOBJ.intY = evt.getY();
+			}
+			if(blnMoveWHLC){
+				thepanel.WHLColonelOBJ.intX = evt.getX();
+				thepanel.WHLColonelOBJ.intY = evt.getY();
+			}
+			if(blnMoveWHSer){
+				thepanel.WHSergeantOBJ.intX = evt.getX();
+				thepanel.WHSergeantOBJ.intY = evt.getY();
+			}
+			if(blnMoveWHSpy1){
+				thepanel.WHSpy1OBJ.intX = evt.getX();
+				thepanel.WHSpy1OBJ.intY = evt.getY();
+			}
+			if(blnMoveWHSpy2){
+				thepanel.WHSpy2OBJ.intX = evt.getX();
+				thepanel.WHSpy2OBJ.intY = evt.getY();
+			}
+			if(blnMoveWHP1){
+				thepanel.WHPrivate1OBJ.intX = evt.getX();
+				thepanel.WHPrivate1OBJ.intY = evt.getY();
+			}
+			if(blnMoveWHP2){
+				thepanel.WHPrivate2OBJ.intX = evt.getX();
+				thepanel.WHPrivate2OBJ.intY = evt.getY();
+			}
+			if(blnMoveWHP3){
+				thepanel.WHPrivate3OBJ.intX = evt.getX();
+				thepanel.WHPrivate3OBJ.intY = evt.getY();
+			}
+			if(blnMoveWHP4){
+				thepanel.WHPrivate4OBJ.intX = evt.getX();
+				thepanel.WHPrivate4OBJ.intY = evt.getY();
+			}
+			if(blnMoveWHP5){
+				thepanel.WHPrivate5OBJ.intX = evt.getX();
+				thepanel.WHPrivate5OBJ.intY = evt.getY();
+			}
+			if(blnMoveWHP6){
+				thepanel.WHPrivate6OBJ.intX = evt.getX();
+				thepanel.WHPrivate6OBJ.intY = evt.getY();
 			}
 		}
 	}
