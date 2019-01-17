@@ -1,7 +1,7 @@
 // Game of the Generals [Demo]
 // Created by: Angelica C. F. Manansala, Ivan Lau, Caitlin Kwan
 // Created on: December 21, 2018
-// Last Updated: January 15, 2019
+// Last Updated: January 16, 2019
 
 import javax.swing.*;
 import java.awt.*;
@@ -61,51 +61,99 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 	// PIECES
 		// BLACK PIECES
 		rank BLFlagOBJ = new rank(true,0,345,642,-1,-1);
-		rank BLPrivate1OBJ = new rank(true,1,77,664,null,null);
-		rank BLPrivate2OBJ = new rank(true,1,144,664,null,null);
-		rank BLPrivate3OBJ = new rank(true,1,211,664,null,null);
-		rank BLPrivate4OBJ = new rank(true,1,278,664,null,null);
-		rank BLPrivate5OBJ = new rank(true,1,345,664,null,null);
-		rank BLPrivate6OBJ = new rank(true,1,412,664,null,null);
-		rank BLSpy1OBJ = new rank(true,2,10,686,null,null);
-		rank BLSpy2OBJ = new rank(true,2,546,664,null,null);
-		rank BLSergeantOBJ = new rank(true,3,479,664,null,null);
-		rank BLLColonelOBJ = new rank(true,3,479,642,null,null);
-		rank BL2LieutenantOBJ = new rank(true,4,77,642,null,null);
-		rank BL1LieutenantOBJ = new rank(true,5,10,642,null,null);
-		rank BLCaptainOBJ = new rank(true,6,144,642,null,null);
-		rank BLColonelOBJ = new rank(true,9,211,642,null,null);
-		rank BL1StarOBJ = new rank(true,10,10,664,null,null);
-		rank BL2StarOBJ = new rank(true,11,77,686,null,null);
-		rank BL3StarOBJ = new rank(true,12,144,686,null,null);
-		rank BL4StarOBJ = new rank(true,13,412,642,null,null);
-		rank BL5StarOBJ = new rank(true,14,278,642,null,null);
-		rank BLMajorOBJ = new rank(true,15,546,642,null,null);
+		rank BLPrivate1OBJ = new rank(true,1,77,664,-1,-1);
+		rank BLPrivate2OBJ = new rank(true,1,144,664,-1,-1);
+		rank BLPrivate3OBJ = new rank(true,1,211,664,-1,-1);
+		rank BLPrivate4OBJ = new rank(true,1,278,664,-1,-1);
+		rank BLPrivate5OBJ = new rank(true,1,345,664,-1,-1);
+		rank BLPrivate6OBJ = new rank(true,1,412,664,-1,-1);
+		rank BLSpy1OBJ = new rank(true,2,10,686,-1,-1);
+		rank BLSpy2OBJ = new rank(true,2,546,664,-1,-1);
+		rank BLSergeantOBJ = new rank(true,3,479,664,-1,-1);
+		rank BLLColonelOBJ = new rank(true,3,479,642,-1,-1);
+		rank BL2LieutenantOBJ = new rank(true,4,77,642,-1,-1);
+		rank BL1LieutenantOBJ = new rank(true,5,10,642,-1,-1);
+		rank BLCaptainOBJ = new rank(true,6,144,642,-1,-1);
+		rank BLColonelOBJ = new rank(true,9,211,642,-1,-1);
+		rank BL1StarOBJ = new rank(true,10,10,664,-1,-1);
+		rank BL2StarOBJ = new rank(true,11,77,686,-1,-1);
+		rank BL3StarOBJ = new rank(true,12,144,686,-1,-1);
+		rank BL4StarOBJ = new rank(true,13,412,642,-1,-1);
+		rank BL5StarOBJ = new rank(true,14,278,642,-1,-1);
+		rank BLMajorOBJ = new rank(true,15,546,642,-1,-1);
 		
 		// WHITE PIECES
-		rank WHFlagOBJ = new rank(true,0,345,642,null,null);
-		rank WHPrivate1OBJ = new rank(true,1,77,664,null,null);
-		rank WHPrivate2OBJ = new rank(true,1,144,664,null,null);
-		rank WHPrivate3OBJ = new rank(true,1,211,664,null,null);
-		rank WHPrivate4OBJ = new rank(true,1,278,664,null,null);
-		rank WHPrivate5OBJ = new rank(true,1,345,664,null,null);
-		rank WHPrivate6OBJ = new rank(true,1,412,664,null,null);
-		rank WHSpy1OBJ = new rank(true,2,10,686,null,null);
-		rank WHSpy2OBJ = new rank(true,2,546,664,null,null);
-		rank WHSergeantOBJ = new rank(true,3,479,664,null,null);
-		rank WHLColonelOBJ = new rank(true,3,479,642,null,null);
-		rank WH2LieutenantOBJ = new rank(true,4,77,642,null,null);
-		rank WH1LieutenantOBJ = new rank(true,5,10,642,null,null);
-		rank WHCaptainOBJ = new rank(true,6,144,642,null,null);
-		rank WHColonelOBJ = new rank(true,9,211,642,null,null);
-		rank WH1StarOBJ = new rank(true,10,10,664,null,null);
-		rank WH2StarOBJ = new rank(true,11,77,686,null,null);
-		rank WH3StarOBJ = new rank(true,12,144,686,null,null);
-		rank WH4StarOBJ = new rank(true,13,412,642,null,null);
-		rank WH5StarOBJ = new rank(true,14,278,642,null,null);
-		rank WHMajorOBJ = new rank(true,15,546,642,null,null);
+		rank WHFlagOBJ = new rank(true,0,345,642,-1,-1);
+		rank WHPrivate1OBJ = new rank(true,1,77,664,-1,-1);
+		rank WHPrivate2OBJ = new rank(true,1,144,664,-1,-1);
+		rank WHPrivate3OBJ = new rank(true,1,211,664,-1,-1);
+		rank WHPrivate4OBJ = new rank(true,1,278,664,-1,-1);
+		rank WHPrivate5OBJ = new rank(true,1,345,664,-1,-1);
+		rank WHPrivate6OBJ = new rank(true,1,412,664,-1,-1);
+		rank WHSpy1OBJ = new rank(true,2,10,686,-1,-1);
+		rank WHSpy2OBJ = new rank(true,2,546,664,-1,-1);
+		rank WHSergeantOBJ = new rank(true,3,479,664,-1,-1);
+		rank WHLColonelOBJ = new rank(true,3,479,642,-1,-1);
+		rank WH2LieutenantOBJ = new rank(true,4,77,642,-1,-1);
+		rank WH1LieutenantOBJ = new rank(true,5,10,642,-1,-1);
+		rank WHCaptainOBJ = new rank(true,6,144,642,-1,-1);
+		rank WHColonelOBJ = new rank(true,9,211,642,-1,-1);
+		rank WH1StarOBJ = new rank(true,10,10,664,-1,-1);
+		rank WH2StarOBJ = new rank(true,11,77,686,-1,-1);
+		rank WH3StarOBJ = new rank(true,12,144,686,-1,-1);
+		rank WH4StarOBJ = new rank(true,13,412,642,-1,-1);
+		rank WH5StarOBJ = new rank(true,14,278,642,-1,-1);
+		rank WHMajorOBJ = new rank(true,15,546,642,-1,-1);
 		
-		// END PICES
+		//Opponent Piece Images
+		
+		// White's view of black pieces
+		opponentpiece WHBLFlag = new opponentpiece(-1,-1);
+		opponentpiece WHBLPrivate1 = new opponentpiece(-1,-1);
+		opponentpiece WHBLPrivate2 = new opponentpiece(-1,-1);
+		opponentpiece WHBLPrivate3 = new opponentpiece(-1,-1);
+		opponentpiece WHBLPrivate4 = new opponentpiece(-1,-1);
+		opponentpiece WHBLPrivate5 = new opponentpiece(-1,-1);
+		opponentpiece WHBLPrivate6 = new opponentpiece(-1,-1);
+		opponentpiece WHBLSpy1 = new opponentpiece(-1,-1);
+		opponentpiece WHBLSpy2 = new opponentpiece(-1,-1);
+		opponentpiece WHBLSergeant = new opponentpiece(-1,-1);
+		opponentpiece WHBLLColonel = new opponentpiece(-1,-1);
+		opponentpiece WHBL2Lieutenant = new opponentpiece(-1,-1);
+		opponentpiece WHBL1Lieutenant = new opponentpiece(-1,-1);
+		opponentpiece WHBLCaptain = new opponentpiece(-1,-1);
+		opponentpiece WHBLColonel = new opponentpiece(-1,-1);
+		opponentpiece WHBL1Star = new opponentpiece(-1,-1);
+		opponentpiece WHBL2Star = new opponentpiece(-1,-1);
+		opponentpiece WHBL3Star = new opponentpiece(-1,-1);
+		opponentpiece WHBL4Star = new opponentpiece(-1,-1);
+		opponentpiece WHBL5Star = new opponentpiece(-1,-1);
+		opponentpiece WHBLMajor = new opponentpiece(-1,-1);
+		
+		//Black's view of white pieces
+		opponentpiece BLWHFlag = new opponentpiece(-1,-1);
+		opponentpiece BLWHPrivate1 = new opponentpiece(-1,-1);
+		opponentpiece BLWHPrivate2 = new opponentpiece(-1,-1);
+		opponentpiece BLWHPrivate3 = new opponentpiece(-1,-1);
+		opponentpiece BLWHPrivate4 = new opponentpiece(-1,-1);
+		opponentpiece BLWHPrivate5 = new opponentpiece(-1,-1);
+		opponentpiece BLWHPrivate6 = new opponentpiece(-1,-1);
+		opponentpiece BLWHSpy1 = new opponentpiece(-1,-1);
+		opponentpiece BLWHSpy2 = new opponentpiece(-1,-1);
+		opponentpiece BLWHSergeant = new opponentpiece(-1,-1);
+		opponentpiece BLWHLColonel = new opponentpiece(-1,-1);
+		opponentpiece BLWH2Lieutenant = new opponentpiece(-1,-1);
+		opponentpiece BLWH1Lieutenant = new opponentpiece(-1,-1);
+		opponentpiece BLWHCaptain = new opponentpiece(-1,-1);
+		opponentpiece BLWHColonel = new opponentpiece(-1,-1);
+		opponentpiece BLWH1Star = new opponentpiece(-1,-1);
+		opponentpiece BLWH2Star = new opponentpiece(-1,-1);
+		opponentpiece BLWH3Star = new opponentpiece(-1,-1);
+		opponentpiece BLWH4Star = new opponentpiece(-1,-1);
+		opponentpiece BLWH5Star = new opponentpiece(-1,-1);
+		opponentpiece BLWHMajor = new opponentpiece(-1,-1);
+		
+	// END PIECES
 	
 	// METHODS
 	public void paintComponent(Graphics g){
