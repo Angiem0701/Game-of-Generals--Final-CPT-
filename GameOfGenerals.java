@@ -42,6 +42,9 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	
 	JButton sReadyButton = new JButton();
 	
+	JButton wDoneSetUp  = new JButton();
+	JButton bDoneSetUp = new JButton();
+	
 	SuperSocketMaster ssm;
 	
 	
@@ -70,6 +73,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	
 	rank strWBoard[][] = new rank[9][8];
 	rank strBBoard[][] = new rank[9][8];
+	
+	int intReady = 0;
 	
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -		
 	
@@ -191,17 +196,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			
 			blnSettingUp = true;
 			
+			wDoneSetUp.setVisible(true);
+			
+			
 		}
 		
 		if(evt.getSource() == chatBoxSend){
 			ssm.sendText("Sent: " + chatBoxSend.getText());
 			chatBoxReceive.append("Me: " + chatBoxSend.getText() + "\n");
 			chatBoxSend.setText("");
-		}else if(evt.getSource() == ssm){
+		}
+		
+		if(evt.getSource() == ssm){
 			String strData = ssm.readText();
 			int intDataLength = strData.length();
 			if(strData.substring(0,6).equals("Sent: ")){
 				chatBoxReceive.append("Opponent: " + strData.substring(6,intDataLength) + "\n");
+			}
+			if(strData.substring(0,7).equals("Ready: ")){
+				intReady = Integer.parseInt(strData.substring(7,8));
+				System.out.println(intReady);
 			}
 		}
 		
@@ -218,7 +232,31 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			
 			blnSettingUp = true;
 			
+			bDoneSetUp.setVisible(true);
+			
 		}
+		
+		if(evt.getSource() == bDoneSetUp){
+			intReady = intReady + 1;
+			ssm.sendText("Ready: " + intReady);
+			bDoneSetUp.setVisible(false);
+			System.out.println(intReady);
+			
+			blnSettingUp = false;
+			
+			//ssm.sendText("WHFlag","thepanel.);
+			
+		}
+		if(evt.getSource() == wDoneSetUp){
+			intReady = intReady + 1;
+			ssm.sendText("Ready: " + intReady);
+			wDoneSetUp.setVisible(false);
+			System.out.println(intReady);
+			
+			blnSettingUp = false;
+			
+		}
+		
 
 	}
 	
@@ -1039,7 +1077,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				
 				//System.out.println(strWBoard[3][3].intRank);
 				//System.out.println(strWBoard[3][5].intRank);
-				// ^^testing array
+				//^^testing array
 			}
 			if(blnMoveBLP6){
 				intResultX = evt.getX();
@@ -1524,6 +1562,16 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		sReadyButton.setVisible(false);
 		sReadyButton.addActionListener(this);
 		
+		wDoneSetUp = new JButton("Ready");
+		wDoneSetUp.setBounds(211,686,65,20);
+		wDoneSetUp.setVisible(false);
+		wDoneSetUp.addActionListener(this);
+		
+		bDoneSetUp = new JButton("Ready");
+		bDoneSetUp.setBounds(211,686,65,20);
+		bDoneSetUp.setVisible(false);
+		bDoneSetUp.addActionListener(this);
+		
 		thepanel.add(StartGameButton);
 		thepanel.add(HelpButton);
 		thepanel.add(CreateServerButton);
@@ -1543,6 +1591,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		thepanel.add(chatBoxSend);
 		thepanel.add(chatBoxScroll);
 		thepanel.add(sReadyButton);
+		thepanel.add(wDoneSetUp);
+		thepanel.add(bDoneSetUp);
 		
 		theframe.setContentPane(thepanel);
 		theframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
