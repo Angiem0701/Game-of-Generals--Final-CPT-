@@ -213,10 +213,16 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			if(strData.substring(0,6).equals("Sent: ")){
 				chatBoxReceive.append("Opponent: " + strData.substring(6,intDataLength) + "\n");
 			}
-			if(strData.substring(0,7).equals("Ready: ")){
+			else if(strData.substring(0,7).equals("Ready: ")){
 				intReady = Integer.parseInt(strData.substring(7,8));
-				System.out.println(intReady);
+				System.out.println("Ready: " + intReady);
+			}else{
+				String[] splitData = strData.split(",");
+				
+				//if(splitData[0] = 
+				
 			}
+			
 		}
 		
 		if(evt.getSource() == sReadyButton){
@@ -240,18 +246,53 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			intReady = intReady + 1;
 			ssm.sendText("Ready: " + intReady);
 			bDoneSetUp.setVisible(false);
-			System.out.println(intReady);
+			System.out.println("Ready: " + intReady);
 			
 			blnSettingUp = false;
+			String sendLine;
 			
-			//ssm.sendText("WHFlag","thepanel.);
+			sendLine = "Setup" + "," + "BLFlag" + "," + ""+thepanel.BLFlagOBJ.intArrayX + "," + ""+thepanel.BLFlagOBJ.intArrayY;
+			ssm.sendText(sendLine);
+			sendLine = "Setup" + "," + "BLPrivate1" + "," + ""+thepanel.BLPrivate1OBJ.intArrayX + "," + ""+thepanel.BLPrivate1OBJ.intArrayY;
+			ssm.sendText(sendLine);
+			sendLine = "Setup" + "," + "BLPrivate2" + "," + ""+thepanel.BLPrivate2OBJ.intArrayX + "," + ""+thepanel.BLPrivate2OBJ.intArrayY;
+			ssm.sendText(sendLine);
+			sendLine = "Setup" + "," + "BLPrivate3" + "," + ""+thepanel.BLPrivate3OBJ.intArrayX + "," + ""+thepanel.BLPrivate3OBJ.intArrayY;
+			ssm.sendText(sendLine);
+			sendLine = "Setup" + "," + "BLPrivate4" + "," + ""+thepanel.BLPrivate4OBJ.intArrayX + "," + ""+thepanel.BLPrivate4OBJ.intArrayY;
+			ssm.sendText(sendLine);
+			sendLine = "Setup" + "," + "BLPrivate5" + "," + ""+thepanel.BLPrivate5OBJ.intArrayX + "," + ""+thepanel.BLPrivate5OBJ.intArrayY;
+			ssm.sendText(sendLine);
+			sendLine = "Setup" + "," + "BLPrivate6" + "," + ""+thepanel.BLPrivate6OBJ.intArrayX + "," + ""+thepanel.BLPrivate6OBJ.intArrayY;
+			ssm.sendText(sendLine);
+			sendLine = "Setup" + "," + "BLSpy1" + "," + ""+thepanel.BLSpy1OBJ.intArrayX + "," + ""+thepanel.BLSpy1OBJ.intArrayY;
+			ssm.sendText(sendLine);
+			sendLine = "Setup" + "," + "BLSpy2" + "," + ""+thepanel.BLSpy2OBJ.intArrayX + "," + ""+thepanel.BLSpy2OBJ.intArrayY;
+			ssm.sendText(sendLine);
+			sendLine = "Setup" + "," + "BLSergeant" + "," + ""+thepanel.BLSergeantOBJ.intArrayX + "," + ""+thepanel.BLSergeantOBJ.intArrayY;
+			ssm.sendText(sendLine);
+			sendLine = "Setup" + "," + "BLLColonel" + "," + ""+thepanel.BLLColonelOBJ.intArrayX + "," + ""+thepanel.BLLColonelOBJ.intArrayY;
+			ssm.sendText(sendLine);
+			sendLine = "Setup" + "," + "BL2Lieutenant" + "," + ""+thepanel.BL2LieutenantOBJ.intArrayX + "," + ""+thepanel.BL2LieutenantOBJ.intY;
+			ssm.sendText(sendLine);
+			sendLine = "Setup" + "," + "BL1Lieutenant" + "," + ""+thepanel.BL1LieutenantOBJ.intArrayX + "," + ""+thepanel.BL1LieutenantOBJ.intArrayY;
+			ssm.sendText(sendLine);
+			sendLine = "Setup" + "," + "BLCaptain" + "," + ""+thepanel.BLCaptainOBJ.intArrayX + ""+thepanel.BLCaptainOBJ.intArrayY;
+			ssm.sendText(sendLine);
+			sendLine = "Setup" + "," + "BLColonel" + "," + ""+thepanel.BLColonelOBJ.intArrayX + "," + ""+thepanel.BLColonelOBJ.intArrayY;
+			ssm.sendText("Setup","BL1Star",thepanel.BL1StarOBJ.intX,thepanel.BL1StarOBJ.intY);
+			ssm.sendText("Setup","BL2Star",thepanel.BL2StarOBJ.intX,thepanel.BL2StarOBJ.intY);
+			ssm.sendText("Setup","BL3Star",thepanel.BL3StarOBJ.intX,thepanel.BL3StarOBJ.intY);
+			ssm.sendText("Setup","BL4Star",thepanel.BL4StarOBJ.intX,thepanel.BL4StarOBJ.intY);
+			ssm.sendText("Setup","BL5Star",thepanel.BL5StarOBJ.intX,thepanel.BL5StarOBJ.intY);
+			ssm.sendText("Setup","BLMajor",thepanel.BLMajorOBJ.intX,thepanel.BLMajorOBJ.intY);
 			
 		}
 		if(evt.getSource() == wDoneSetUp){
 			intReady = intReady + 1;
 			ssm.sendText("Ready: " + intReady);
 			wDoneSetUp.setVisible(false);
-			System.out.println(intReady);
+			System.out.println("Ready: " + intReady);
 			
 			blnSettingUp = false;
 			
@@ -299,18 +340,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WH1LieutenantOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WH1LieutenantOBJ.intY = intResultY;
 				blnMoveWH1L = false;
 				strWBoard[intModX][intModY] = thepanel.WH1LieutenantOBJ;
 				thepanel.WH1LieutenantOBJ.intArrayX = intModX;
 				thepanel.WH1LieutenantOBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WH1LieutenantOBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WH1LieutenantOBJ;
 				thepanel.BLWH1Lieutenant.intArrayX = intModX;
 				thepanel.BLWH1Lieutenant.intArrayY = intModY;
 			}
@@ -318,18 +367,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WH2LieutenantOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WH2LieutenantOBJ.intY = intResultY;
 				blnMoveWH2L = false;
 				strWBoard[intModX][intModY] = thepanel.WH2LieutenantOBJ;
 				thepanel.WH2LieutenantOBJ.intArrayX = intModX;
 				thepanel.WH2LieutenantOBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WH2LieutenantOBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WH2LieutenantOBJ;
 				thepanel.BLWH2Lieutenant.intArrayX = intModX;
 				thepanel.BLWH2Lieutenant.intArrayY = intModY;
 			}
@@ -337,18 +394,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WHCaptainOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WHCaptainOBJ.intY = intResultY;
 				blnMoveWHCap = false;
 				strWBoard[intModX][intModY] = thepanel.WHCaptainOBJ;
 				thepanel.WHCaptainOBJ.intArrayX = intModX;
 				thepanel.WHCaptainOBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WHCaptainOBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WHCaptainOBJ;
 				thepanel.BLWHCaptain.intArrayX = intModX;
 				thepanel.BLWHCaptain.intArrayY = intModY;
 			}
@@ -356,18 +421,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WHColonelOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WHColonelOBJ.intY = intResultY;
 				blnMoveWHCol = false;
 				strWBoard[intModX][intModY] = thepanel.WHColonelOBJ;
 				thepanel.WHColonelOBJ.intArrayX = intModX;
 				thepanel.WHColonelOBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WHColonelOBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WHColonelOBJ;
 				thepanel.BLWHColonel.intArrayX = intModX;
 				thepanel.BLWHColonel.intArrayY = intModY;
 			}
@@ -375,18 +448,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WH1StarOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WH1StarOBJ.intY = intResultY;
 				blnMoveWH1S = false;
 				strWBoard[intModX][intModY] = thepanel.WH1StarOBJ;
 				thepanel.WH1StarOBJ.intArrayX = intModX;
 				thepanel.WH1StarOBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WH1StarOBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WH1StarOBJ;
 				thepanel.BLWH1Star.intArrayX = intModX;
 				thepanel.BLWH1Star.intArrayY = intModY;
 			}
@@ -394,18 +475,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WH2StarOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WH2StarOBJ.intY = intResultY;
 				blnMoveWH2S = false;
 				strWBoard[intModX][intModY] = thepanel.WH2StarOBJ;
 				thepanel.WH2StarOBJ.intArrayX = intModX;
 				thepanel.WH2StarOBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WH2StarOBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WH2StarOBJ;
 				thepanel.BLWH2Star.intArrayX = intModX;
 				thepanel.BLWH2Star.intArrayY = intModY;
 			}
@@ -413,18 +502,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WH3StarOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WH3StarOBJ.intY = intResultY;
 				blnMoveWH3S = false;
 				strWBoard[intModX][intModY] = thepanel.WH3StarOBJ;
 				thepanel.WH3StarOBJ.intArrayX = intModX;
 				thepanel.WH3StarOBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WH3StarOBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WH3StarOBJ;
 				thepanel.BLWH3Star.intArrayX = intModX;
 				thepanel.BLWH3Star.intArrayY = intModY;
 			}
@@ -432,18 +529,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WH4StarOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WH4StarOBJ.intY = intResultY;
 				blnMoveWH4S = false;
 				strWBoard[intModX][intModY] = thepanel.WH4StarOBJ;
 				thepanel.WH4StarOBJ.intArrayX = intModX;
 				thepanel.WH4StarOBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WH4StarOBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WH4StarOBJ;
 				thepanel.BLWH4Star.intArrayX = intModX;
 				thepanel.BLWH4Star.intArrayY = intModY;
 			}
@@ -451,18 +556,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WH5StarOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WH5StarOBJ.intY = intResultY;
 				blnMoveWH5S = false;
 				strWBoard[intModX][intModY] = thepanel.WH5StarOBJ;
 				thepanel.WH5StarOBJ.intArrayX = intModX;
 				thepanel.WH5StarOBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WH5StarOBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WH5StarOBJ;
 				thepanel.BLWH5Star.intArrayX = intModX;
 				thepanel.BLWH5Star.intArrayY = intModY;
 			}
@@ -470,18 +583,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WHMajorOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WHMajorOBJ.intY = intResultY;
 				blnMoveWHM = false;
 				strWBoard[intModX][intModY] = thepanel.WHMajorOBJ;
 				thepanel.WHMajorOBJ.intArrayX = intModX;
 				thepanel.WHMajorOBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WHMajorOBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WHMajorOBJ;
 				thepanel.BLWHMajor.intArrayX = intModX;
 				thepanel.BLWHMajor.intArrayY = intModY;
 			}
@@ -489,18 +610,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WHFlagOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WHFlagOBJ.intY = intResultY;
 				blnMoveWHF = false;
 				strWBoard[intModX][intModY] = thepanel.WHFlagOBJ;
 				thepanel.WHFlagOBJ.intArrayX = intModX;
 				thepanel.WHFlagOBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WHFlagOBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WHFlagOBJ;
 				thepanel.BLWHFlag.intArrayX = intModX;
 				thepanel.BLWHFlag.intArrayY = intModY;
 			}
@@ -508,18 +637,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WHLColonelOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WHLColonelOBJ.intY = intResultY;
 				blnMoveWHLC = false;
 				strWBoard[intModX][intModY] = thepanel.WHLColonelOBJ;
 				thepanel.WHLColonelOBJ.intArrayX = intModX;
 				thepanel.WHLColonelOBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WHLColonelOBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WHLColonelOBJ;
 				thepanel.BLWHLColonel.intArrayX = intModX;
 				thepanel.BLWHLColonel.intArrayY = intModY;
 			}
@@ -527,18 +664,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WHSergeantOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WHSergeantOBJ.intY = intResultY;
 				blnMoveWHSer = false;
 				strWBoard[intModX][intModY] = thepanel.WHSergeantOBJ;
 				thepanel.WHSergeantOBJ.intArrayX = intModX;
 				thepanel.WHSergeantOBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WHSergeantOBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WHSergeantOBJ;
 				thepanel.BLWHSergeant.intArrayX = intModX;
 				thepanel.BLWHSergeant.intArrayY = intModY;
 			}
@@ -546,18 +691,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WHSpy1OBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WHSpy1OBJ.intY = intResultY;
 				blnMoveWHSpy1 = false;
 				strWBoard[intModX][intModY] = thepanel.WHSpy1OBJ;
 				thepanel.WHSpy1OBJ.intArrayX = intModX;
 				thepanel.WHSpy1OBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WHSpy1OBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WHSpy1OBJ;
 				thepanel.BLWHSpy1.intArrayX = intModX;
 				thepanel.BLWHSpy1.intArrayY = intModY;
 			}
@@ -565,18 +718,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WHSpy2OBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WHSpy2OBJ.intY = intResultY;
 				blnMoveWHSpy2 = false;
 				strWBoard[intModX][intModY] = thepanel.WHSpy2OBJ;
 				thepanel.WHSpy2OBJ.intArrayX = intModX;
 				thepanel.WHSpy2OBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WHSpy2OBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WHSpy2OBJ;
 				thepanel.BLWHSpy2.intArrayX = intModX;
 				thepanel.BLWHSpy2.intArrayY = intModY;
 			}
@@ -584,18 +745,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WHPrivate1OBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WHPrivate1OBJ.intY = intResultY;
 				blnMoveWHP1 = false;
 				strWBoard[intModX][intModY] = thepanel.WHPrivate1OBJ;
 				thepanel.WHPrivate1OBJ.intArrayX = intModX;
 				thepanel.WHPrivate1OBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WHPrivate1OBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WHPrivate1OBJ;
 				thepanel.BLWHPrivate1.intArrayX = intModX;
 				thepanel.BLWHPrivate1.intArrayY = intModY;
 			}
@@ -603,18 +772,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WHPrivate2OBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WHPrivate2OBJ.intY = intResultY;
 				blnMoveWHP2 = false;
 				strWBoard[intModX][intModY] = thepanel.WHPrivate2OBJ;
 				thepanel.WHPrivate2OBJ.intArrayX = intModX;
 				thepanel.WHPrivate2OBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WHPrivate2OBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WHPrivate2OBJ;
 				thepanel.BLWHPrivate2.intArrayX = intModX;
 				thepanel.BLWHPrivate2.intArrayY = intModY;
 			}
@@ -622,18 +799,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WHPrivate3OBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WHPrivate3OBJ.intY = intResultY;
 				blnMoveWHP3 = false;
 				strWBoard[intModX][intModY] = thepanel.WHPrivate3OBJ;
 				thepanel.WHPrivate3OBJ.intArrayX = intModX;
 				thepanel.WHPrivate3OBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WHPrivate3OBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WHPrivate3OBJ;
 				thepanel.BLWHPrivate3.intArrayX = intModX;
 				thepanel.BLWHPrivate3.intArrayY = intModY;
 			}
@@ -641,18 +826,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WHPrivate4OBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WHPrivate4OBJ.intY = intResultY;
 				blnMoveWHP4 = false;
 				strWBoard[intModX][intModY] = thepanel.WHPrivate4OBJ;
 				thepanel.WHPrivate4OBJ.intArrayX = intModX;
 				thepanel.WHPrivate4OBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WHPrivate4OBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WHPrivate4OBJ;
 				thepanel.BLWHPrivate4.intArrayX = intModX;
 				thepanel.BLWHPrivate4.intArrayY = intModY;
 			}
@@ -660,18 +853,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WHPrivate5OBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WHPrivate5OBJ.intY = intResultY;
 				blnMoveWHP5 = false;
 				strWBoard[intModX][intModY] = thepanel.WHPrivate5OBJ;
 				thepanel.WHPrivate5OBJ.intArrayX = intModX;
 				thepanel.WHPrivate5OBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WHPrivate5OBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WHPrivate5OBJ;
 				thepanel.BLWHPrivate5.intArrayX = intModX;
 				thepanel.BLWHPrivate5.intArrayY = intModY;
 			}
@@ -679,18 +880,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.WHPrivate6OBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.WHPrivate6OBJ.intY = intResultY;
 				blnMoveWHP6 = false;
 				strWBoard[intModX][intModY] = thepanel.WHPrivate6OBJ;
 				thepanel.WHPrivate6OBJ.intArrayX = intModX;
 				thepanel.WHPrivate6OBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.WHPrivate6OBJ;
+				strBBoard[intModX][7-intModY] = thepanel.WHPrivate6OBJ;
 				thepanel.BLWHPrivate6.intArrayX = intModX;
 				thepanel.BLWHPrivate6.intArrayY = intModY;
 			}
@@ -699,18 +908,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BL1LieutenantOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BL1LieutenantOBJ.intY = intResultY;
 				blnMoveBL1L = false;
 				strBBoard[intModX][intModY] = thepanel.BL1LieutenantOBJ;
 				thepanel.BL1LieutenantOBJ.intArrayX = intModX;
 				thepanel.BL1LieutenantOBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BL1LieutenantOBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BL1LieutenantOBJ;
 				thepanel.WHBL1Lieutenant.intArrayX = intModX;
 				thepanel.WHBL1Lieutenant.intArrayY = intModY;
 			}
@@ -718,18 +935,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BL2LieutenantOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BL2LieutenantOBJ.intY = intResultY;
 				blnMoveBL2L = false;
 				strBBoard[intModX][intModY] = thepanel.BL2LieutenantOBJ;
 				thepanel.BL2LieutenantOBJ.intArrayX = intModX;
 				thepanel.BL2LieutenantOBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BL2LieutenantOBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BL2LieutenantOBJ;
 				thepanel.WHBL2Lieutenant.intArrayX = intModX;
 				thepanel.WHBL2Lieutenant.intArrayY = intModY;
 			}
@@ -737,18 +962,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BLCaptainOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BLCaptainOBJ.intY = intResultY;
 				blnMoveBLCap = false;
 				strBBoard[intModX][intModY] = thepanel.BLCaptainOBJ;
 				thepanel.BLCaptainOBJ.intArrayX = intModX;
 				thepanel.BLCaptainOBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BLCaptainOBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BLCaptainOBJ;
 				thepanel.WHBLCaptain.intArrayX = intModX;
 				thepanel.WHBLCaptain.intArrayY = intModY;
 			}
@@ -756,18 +989,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BLColonelOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BLColonelOBJ.intY = intResultY;
 				blnMoveBLCol = false;
 				strBBoard[intModX][intModY] = thepanel.BLColonelOBJ;
 				thepanel.BLColonelOBJ.intArrayX = intModX;
 				thepanel.BLColonelOBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BLColonelOBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BLColonelOBJ;
 				thepanel.WHBLColonel.intArrayX = intModX;
 				thepanel.WHBLColonel.intArrayY = intModY;
 			}
@@ -775,18 +1016,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BL1StarOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BL1StarOBJ.intY = intResultY;
 				blnMoveBL1S = false;
 				strBBoard[intModX][intModY] = thepanel.BL1StarOBJ;
 				thepanel.BL1StarOBJ.intArrayX = intModX;
 				thepanel.BL1StarOBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BL1StarOBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BL1StarOBJ;
 				thepanel.WHBL1Star.intArrayX = intModX;
 				thepanel.WHBL1Star.intArrayY = intModY;
 			}
@@ -794,18 +1043,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BL2StarOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BL2StarOBJ.intY = intResultY;
 				blnMoveBL2S = false;
 				strBBoard[intModX][intModY] = thepanel.BL2StarOBJ;
 				thepanel.BL2StarOBJ.intArrayX = intModX;
 				thepanel.BL2StarOBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BL2StarOBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BL2StarOBJ;
 				thepanel.WHBL2Star.intArrayX = intModX;
 				thepanel.WHBL2Star.intArrayY = intModY;
 			}
@@ -813,18 +1070,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BL3StarOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BL3StarOBJ.intY = intResultY;
 				blnMoveBL3S = false;
 				strBBoard[intModX][intModY] = thepanel.BL3StarOBJ;
 				thepanel.BL3StarOBJ.intArrayX = intModX;
 				thepanel.BL3StarOBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BL3StarOBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BL3StarOBJ;
 				thepanel.WHBL3Star.intArrayX = intModX;
 				thepanel.WHBL3Star.intArrayY = intModY;
 			}
@@ -832,18 +1097,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BL4StarOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BL4StarOBJ.intY = intResultY;
 				blnMoveBL4S = false;
 				strBBoard[intModX][intModY] = thepanel.BL4StarOBJ;
 				thepanel.BL4StarOBJ.intArrayX = intModX;
 				thepanel.BL4StarOBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BL4StarOBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BL4StarOBJ;
 				thepanel.WHBL4Star.intArrayX = intModX;
 				thepanel.WHBL4Star.intArrayY = intModY;
 			}
@@ -851,18 +1124,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BL5StarOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BL5StarOBJ.intY = intResultY;
 				blnMoveBL5S = false;
 				strBBoard[intModX][intModY] = thepanel.BL5StarOBJ;
 				thepanel.BL5StarOBJ.intArrayX = intModX;
 				thepanel.BL5StarOBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BL5StarOBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BL5StarOBJ;
 				thepanel.WHBL5Star.intArrayX = intModX;
 				thepanel.WHBL5Star.intArrayY = intModY;
 			}
@@ -870,18 +1151,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BLMajorOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BLMajorOBJ.intY = intResultY;
 				blnMoveBLM = false;
 				strBBoard[intModX][intModY] = thepanel.BLMajorOBJ;
 				thepanel.BLMajorOBJ.intArrayX = intModX;
 				thepanel.BLMajorOBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BLMajorOBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BLMajorOBJ;
 				thepanel.WHBLMajor.intArrayX = intModX;
 				thepanel.WHBLMajor.intArrayY = intModY;
 			}
@@ -889,18 +1178,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BLFlagOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BLFlagOBJ.intY = intResultY;
 				blnMoveBLF = false;
 				strBBoard[intModX][intModY] = thepanel.BLFlagOBJ;
 				thepanel.BLFlagOBJ.intArrayX = intModX;
 				thepanel.BLFlagOBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BLFlagOBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BLFlagOBJ;
 				thepanel.WHBLFlag.intArrayX = intModX;
 				thepanel.WHBLFlag.intArrayY = intModY;
 			}
@@ -908,18 +1205,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BLLColonelOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BLLColonelOBJ.intY = intResultY;
 				blnMoveBLLC = false;
 				strBBoard[intModX][intModY] = thepanel.BLLColonelOBJ;
 				thepanel.BLLColonelOBJ.intArrayX = intModX;
 				thepanel.BLLColonelOBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BLLColonelOBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BLLColonelOBJ;
 				thepanel.WHBLLColonel.intArrayX = intModX;
 				thepanel.WHBLLColonel.intArrayY = intModY;
 			}
@@ -927,18 +1232,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BLSergeantOBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BLSergeantOBJ.intY = intResultY;
 				blnMoveBLSer = false;
 				strBBoard[intModX][intModY] = thepanel.BLSergeantOBJ;
 				thepanel.BLSergeantOBJ.intArrayX = intModX;
 				thepanel.BLSergeantOBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BLSergeantOBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BLSergeantOBJ;
 				thepanel.WHBLSergeant.intArrayX = intModX;
 				thepanel.WHBLSergeant.intArrayY = intModY;
 			}
@@ -946,18 +1259,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BLSpy1OBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BLSpy1OBJ.intY = intResultY;
 				blnMoveBLSpy1 = false;
 				strBBoard[intModX][intModY] = thepanel.BLSpy1OBJ;
 				thepanel.BLSpy1OBJ.intArrayX = intModX;
 				thepanel.BLSpy1OBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BLSpy1OBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BLSpy1OBJ;
 				thepanel.WHBLSpy1.intArrayX = intModX;
 				thepanel.WHBLSpy1.intArrayY = intModY;
 			}
@@ -965,18 +1286,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BLSpy2OBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BLSpy2OBJ.intY = intResultY;
 				blnMoveBLSpy2 = false;
 				strBBoard[intModX][intModY] = thepanel.BLSpy2OBJ;
 				thepanel.BLSpy2OBJ.intArrayX = intModX;
 				thepanel.BLSpy2OBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BLSpy2OBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BLSpy2OBJ;
 				thepanel.WHBLSpy2.intArrayX = intModX;
 				thepanel.WHBLSpy2.intArrayY = intModY;
 			}
@@ -984,18 +1313,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BLPrivate1OBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BLPrivate1OBJ.intY = intResultY;
 				blnMoveBLP1 = false;
 				strBBoard[intModX][intModY] = thepanel.BLPrivate1OBJ;
 				thepanel.BLPrivate1OBJ.intArrayX = intModX;
 				thepanel.BLPrivate1OBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BLPrivate1OBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BLPrivate1OBJ;
 				thepanel.WHBLPrivate1.intArrayX = intModX;
 				thepanel.WHBLPrivate1.intArrayY = intModY;
 			}
@@ -1003,18 +1340,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BLPrivate2OBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BLPrivate2OBJ.intY = intResultY;
 				blnMoveBLP2 = false;
 				strBBoard[intModX][intModY] = thepanel.BLPrivate2OBJ;
 				thepanel.BLPrivate2OBJ.intArrayX = intModX;
 				thepanel.BLPrivate2OBJ.intArrayY = intModY;
-				strBBoard[intModX][8-intModY] = thepanel.BLPrivate2OBJ;
+				strBBoard[intModX][7-intModY] = thepanel.BLPrivate2OBJ;
 				thepanel.WHBLPrivate2.intArrayX = intModX;
 				thepanel.WHBLPrivate2.intArrayY = intModY;
 			}
@@ -1022,18 +1367,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BLPrivate3OBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BLPrivate3OBJ.intY = intResultY;
 				blnMoveBLP3 = false;
 				strBBoard[intModX][intModY] = thepanel.BLPrivate3OBJ;
 				thepanel.BLPrivate3OBJ.intArrayX = intModX;
 				thepanel.BLPrivate3OBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BLPrivate3OBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BLPrivate3OBJ;
 				thepanel.WHBLPrivate3.intArrayX = intModX;
 				thepanel.WHBLPrivate3.intArrayY = intModY;
 			}
@@ -1041,18 +1394,26 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BLPrivate4OBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BLPrivate4OBJ.intY = intResultY;
 				blnMoveBLP4 = false;
 				strBBoard[intModX][intModY] = thepanel.BLPrivate4OBJ;
 				thepanel.BLPrivate4OBJ.intArrayX = intModX;
 				thepanel.BLPrivate4OBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BLPrivate4OBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BLPrivate4OBJ;
 				thepanel.WHBLPrivate4.intArrayX = intModX;
 				thepanel.WHBLPrivate4.intArrayY = intModY;
 			}
@@ -1060,41 +1421,53 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BLPrivate5OBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
 				intResultY = intModY * 70 + 105;
 				thepanel.BLPrivate5OBJ.intY = intResultY;
 				blnMoveBLP5 = false;
 				strBBoard[intModX][intModY] = thepanel.BLPrivate5OBJ;
 				thepanel.BLPrivate5OBJ.intArrayX = intModX;
 				thepanel.BLPrivate5OBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BLPrivate5OBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BLPrivate5OBJ;
 				thepanel.WHBLPrivate5.intArrayX = intModX;
-				thepanel.WHBLPrivate5.intArrayY = intModY;
-				
-				//System.out.println(strWBoard[3][3].intRank);
-				//System.out.println(strWBoard[3][5].intRank);
-				//^^testing array
+				thepanel.WHBLPrivate5.intArrayY = intModY;				
 			}
 			if(blnMoveBLP6){
 				intResultX = evt.getX();
 				intResultY = evt.getY();
 				intResultX = intResultX - 10;
-				intModX = intResultX/70;
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
 				intResultX = intModX * 70 + 13;
 				thepanel.BLPrivate6OBJ.intX = intResultX;
 				intResultY = intResultY - 80;
-				intModY = intResultY/70;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}				
 				intResultY = intModY * 70 + 105;
 				thepanel.BLPrivate6OBJ.intY = intResultY;
 				blnMoveBLP6 = false;
 				strBBoard[intModX][intModY] = thepanel.BLPrivate6OBJ;
 				thepanel.BLPrivate6OBJ.intArrayX = intModX;
 				thepanel.BLPrivate6OBJ.intArrayY = intModY;
-				strWBoard[intModX][8-intModY] = thepanel.BLPrivate6OBJ;
+				strWBoard[intModX][7-intModY] = thepanel.BLPrivate6OBJ;
 				thepanel.WHBLPrivate6.intArrayX = intModX;
 				thepanel.WHBLPrivate6.intArrayY = intModY;
 			}
