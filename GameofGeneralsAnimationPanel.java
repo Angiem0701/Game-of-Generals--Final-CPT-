@@ -50,6 +50,8 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 	BufferedImage Black;
 	BufferedImage White;
 	
+	BufferedImage legend;
+	
 	boolean blnStart = false;
 	boolean blnPlay = false;
 	
@@ -106,55 +108,7 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 		rank WH4StarOBJ = new rank(true,13,412,642,-1,-1);
 		rank WH5StarOBJ = new rank(true,14,278,642,-1,-1);
 		rank WHMajorOBJ = new rank(true,15,546,642,-1,-1);
-		
-		//Opponent Piece Images
-		
-		// White's view of black pieces
-		//opponentpiece WHBLFlag = new opponentpiece(-1,-1);
-		//opponentpiece WHBLPrivate1 = new opponentpiece(-1,-1);
-		//opponentpiece WHBLPrivate2 = new opponentpiece(-1,-1);
-		//opponentpiece WHBLPrivate3 = new opponentpiece(-1,-1);
-		//opponentpiece WHBLPrivate4 = new opponentpiece(-1,-1);
-		//opponentpiece WHBLPrivate5 = new opponentpiece(-1,-1);
-		//opponentpiece WHBLPrivate6 = new opponentpiece(-1,-1);
-		//opponentpiece WHBLSpy1 = new opponentpiece(-1,-1);
-		//opponentpiece WHBLSpy2 = new opponentpiece(-1,-1);
-		//opponentpiece WHBLSergeant = new opponentpiece(-1,-1);
-		//opponentpiece WHBLLColonel = new opponentpiece(-1,-1);
-		//opponentpiece WHBL2Lieutenant = new opponentpiece(-1,-1);
-		//opponentpiece WHBL1Lieutenant = new opponentpiece(-1,-1);
-		//opponentpiece WHBLCaptain = new opponentpiece(-1,-1);
-		//opponentpiece WHBLColonel = new opponentpiece(-1,-1);
-		//opponentpiece WHBL1Star = new opponentpiece(-1,-1);
-		//opponentpiece WHBL2Star = new opponentpiece(-1,-1);
-		//opponentpiece WHBL3Star = new opponentpiece(-1,-1);
-		//opponentpiece WHBL4Star = new opponentpiece(-1,-1);
-		//opponentpiece WHBL5Star = new opponentpiece(-1,-1);
-		//opponentpiece WHBLMajor = new opponentpiece(-1,-1);
-		
-		////Black's view of white pieces
-		//opponentpiece BLWHFlag = new opponentpiece(-1,-1);
-		//opponentpiece BLWHPrivate1 = new opponentpiece(-1,-1);
-		//opponentpiece BLWHPrivate2 = new opponentpiece(-1,-1);
-		//opponentpiece BLWHPrivate3 = new opponentpiece(-1,-1);
-		//opponentpiece BLWHPrivate4 = new opponentpiece(-1,-1);
-		//opponentpiece BLWHPrivate5 = new opponentpiece(-1,-1);
-		//opponentpiece BLWHPrivate6 = new opponentpiece(-1,-1);
-		//opponentpiece BLWHSpy1 = new opponentpiece(-1,-1);
-		//opponentpiece BLWHSpy2 = new opponentpiece(-1,-1);
-		//opponentpiece BLWHSergeant = new opponentpiece(-1,-1);
-		//opponentpiece BLWHLColonel = new opponentpiece(-1,-1);
-		//opponentpiece BLWH2Lieutenant = new opponentpiece(-1,-1);
-		//opponentpiece BLWH1Lieutenant = new opponentpiece(-1,-1);
-		//opponentpiece BLWHCaptain = new opponentpiece(-1,-1);
-		//opponentpiece BLWHColonel = new opponentpiece(-1,-1);
-		//opponentpiece BLWH1Star = new opponentpiece(-1,-1);
-		//opponentpiece BLWH2Star = new opponentpiece(-1,-1);
-		//opponentpiece BLWH3Star = new opponentpiece(-1,-1);
-		//opponentpiece BLWH4Star = new opponentpiece(-1,-1);
-		//opponentpiece BLWH5Star = new opponentpiece(-1,-1);
-		//opponentpiece BLWHMajor = new opponentpiece(-1,-1);
-		
+				
 	// END PIECES
 	
 	// METHODS
@@ -170,6 +124,7 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 			g.setColor(new Color(165, 178, 198));
 			g.fillRect(0,0,1280,720);
 			g.drawImage(gameBoard,10,80,630,560,null);
+			g.drawImage(legend,650,40,300,400,null);
 		}
 		
 		if(blnClientView){
@@ -325,6 +280,8 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 			
 			Black = ImageIO.read(new File("Black.png"));
 			White = ImageIO.read(new File("White.png"));
+			
+			legend = ImageIO.read(new File("GoGlegend.png"));
 			
 		}catch(IOException e){
 			System.out.println("Unable to load image");

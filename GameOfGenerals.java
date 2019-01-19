@@ -720,9 +720,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WH1LieutenantOBJ;
 				thepanel.WH1LieutenantOBJ.intArrayX = intModX;
 				thepanel.WH1LieutenantOBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WH1LieutenantOBJ;
-				//thepanel.BLWH1Lieutenant.intArrayX = intModX;
-				//thepanel.BLWH1Lieutenant.intArrayY = intModY;
 			}
 			if(blnMoveWH2L){
 				try{strWBoard[thepanel.WH2LieutenantOBJ.intArrayX][thepanel.WH2LieutenantOBJ.intArrayY] = null;
@@ -750,9 +747,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WH2LieutenantOBJ;
 				thepanel.WH2LieutenantOBJ.intArrayX = intModX;
 				thepanel.WH2LieutenantOBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WH2LieutenantOBJ;
-				//thepanel.BLWH2Lieutenant.intArrayX = intModX;
-				//thepanel.BLWH2Lieutenant.intArrayY = intModY;
 			}
 			if(blnMoveWHCap){
 				try{strWBoard[thepanel.WHCaptainOBJ.intArrayX][thepanel.WHCaptainOBJ.intArrayY] = null;
@@ -780,9 +774,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[8-intModX][intModY] = thepanel.WHCaptainOBJ;
 				thepanel.WHCaptainOBJ.intArrayX = intModX;
 				thepanel.WHCaptainOBJ.intArrayY = intModY;
-				//strBBoard[intModX][7-intModY] = thepanel.WHCaptainOBJ;
-				//thepanel.BLWHCaptain.intArrayX = intModX;
-				//thepanel.BLWHCaptain.intArrayY = intModY;
 			}
 			if(blnMoveWHCol){
 				try{strWBoard[thepanel.WHColonelOBJ.intArrayX][thepanel.WHColonelOBJ.intArrayY] = null;
@@ -810,9 +801,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WHColonelOBJ;
 				thepanel.WHColonelOBJ.intArrayX = intModX;
 				thepanel.WHColonelOBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WHColonelOBJ;
-				//thepanel.BLWHColonel.intArrayX = intModX;
-				//thepanel.BLWHColonel.intArrayY = intModY;
 			}
 			if(blnMoveWH1S){
 				try{strWBoard[thepanel.WH1StarOBJ.intArrayX][thepanel.WH1StarOBJ.intArrayY] = null;
@@ -840,9 +828,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WH1StarOBJ;
 				thepanel.WH1StarOBJ.intArrayX = intModX;
 				thepanel.WH1StarOBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WH1StarOBJ;
-				//thepanel.BLWH1Star.intArrayX = intModX;
-				//thepanel.BLWH1Star.intArrayY = intModY;
 			}
 			if(blnMoveWH2S){
 				try{strWBoard[thepanel.WH2StarOBJ.intArrayX][thepanel.WH2StarOBJ.intArrayY] = null;
@@ -870,9 +855,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WH2StarOBJ;
 				thepanel.WH2StarOBJ.intArrayX = intModX;
 				thepanel.WH2StarOBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WH2StarOBJ;
-				//thepanel.BLWH2Star.intArrayX = intModX;
-				//thepanel.BLWH2Star.intArrayY = intModY;
 			}
 			if(blnMoveWH3S){
 				try{strWBoard[thepanel.WH3StarOBJ.intArrayX][thepanel.WH3StarOBJ.intArrayY] = null;
@@ -900,9 +882,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WH3StarOBJ;
 				thepanel.WH3StarOBJ.intArrayX = intModX;
 				thepanel.WH3StarOBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WH3StarOBJ;
-				//thepanel.BLWH3Star.intArrayX = intModX;
-				//thepanel.BLWH3Star.intArrayY = intModY;
 			}
 			if(blnMoveWH4S){
 				try{strWBoard[thepanel.WH4StarOBJ.intArrayX][thepanel.WH4StarOBJ.intArrayY] = null;
@@ -930,9 +909,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WH4StarOBJ;
 				thepanel.WH4StarOBJ.intArrayX = intModX;
 				thepanel.WH4StarOBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WH4StarOBJ;
-				//thepanel.BLWH4Star.intArrayX = intModX;
-				//thepanel.BLWH4Star.intArrayY = intModY;
 			}
 			if(blnMoveWH5S){
 				try{strWBoard[thepanel.WH5StarOBJ.intArrayX][thepanel.WH5StarOBJ.intArrayY] = null;
@@ -960,9 +936,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WH5StarOBJ;
 				thepanel.WH5StarOBJ.intArrayX = intModX;
 				thepanel.WH5StarOBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WH5StarOBJ;
-				//thepanel.BLWH5Star.intArrayX = intModX;
-				//thepanel.BLWH5Star.intArrayY = intModY;
 			}
 			if(blnMoveWHM){
 				try{strWBoard[thepanel.WHMajorOBJ.intArrayX][thepanel.WHMajorOBJ.intArrayY] = null;
@@ -990,9 +963,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WHMajorOBJ;
 				thepanel.WHMajorOBJ.intArrayX = intModX;
 				thepanel.WHMajorOBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WHMajorOBJ;
-				//thepanel.BLWHMajor.intArrayX = intModX;
-				//thepanel.BLWHMajor.intArrayY = intModY;
 			}
 			if(blnMoveWHF){
 				try{strWBoard[thepanel.WHFlagOBJ.intArrayX][thepanel.WHFlagOBJ.intArrayY] = null;
@@ -1020,9 +990,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WHFlagOBJ;
 				thepanel.WHFlagOBJ.intArrayX = intModX;
 				thepanel.WHFlagOBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WHFlagOBJ;
-				//thepanel.BLWHFlag.intArrayX = intModX;
-				//thepanel.BLWHFlag.intArrayY = intModY;
 			}
 			if(blnMoveWHLC){
 				try{strWBoard[thepanel.WHLColonelOBJ.intArrayX][thepanel.WHLColonelOBJ.intArrayY] = null;
@@ -1050,9 +1017,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WHLColonelOBJ;
 				thepanel.WHLColonelOBJ.intArrayX = intModX;
 				thepanel.WHLColonelOBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WHLColonelOBJ;
-				//thepanel.BLWHLColonel.intArrayX = intModX;
-				//thepanel.BLWHLColonel.intArrayY = intModY;
 			}
 			if(blnMoveWHSer){
 				try{strWBoard[thepanel.WHSergeantOBJ.intArrayX][thepanel.WHSergeantOBJ.intArrayY] = null;
@@ -1080,9 +1044,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WHSergeantOBJ;
 				thepanel.WHSergeantOBJ.intArrayX = intModX;
 				thepanel.WHSergeantOBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WHSergeantOBJ;
-				//thepanel.BLWHSergeant.intArrayX = intModX;
-				//thepanel.BLWHSergeant.intArrayY = intModY;
 			}
 			if(blnMoveWHSpy1){
 				try{strWBoard[thepanel.WHSpy1OBJ.intArrayX][thepanel.WHSpy1OBJ.intArrayY] = null;
@@ -1110,9 +1071,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WHSpy1OBJ;
 				thepanel.WHSpy1OBJ.intArrayX = intModX;
 				thepanel.WHSpy1OBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WHSpy1OBJ;
-				//thepanel.BLWHSpy1.intArrayX = intModX;
-				//thepanel.BLWHSpy1.intArrayY = intModY;
 			}
 			if(blnMoveWHSpy2){
 				try{strWBoard[thepanel.WHSpy2OBJ.intArrayX][thepanel.WHSpy2OBJ.intArrayY] = null;
@@ -1140,9 +1098,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WHSpy2OBJ;
 				thepanel.WHSpy2OBJ.intArrayX = intModX;
 				thepanel.WHSpy2OBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WHSpy2OBJ;
-				//thepanel.BLWHSpy2.intArrayX = intModX;
-				//thepanel.BLWHSpy2.intArrayY = intModY;
 			}
 			if(blnMoveWHP1){
 				try{strWBoard[thepanel.WHPrivate1OBJ.intArrayX][thepanel.WHPrivate1OBJ.intArrayY] = null;
@@ -1170,9 +1125,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WHPrivate1OBJ;
 				thepanel.WHPrivate1OBJ.intArrayX = intModX;
 				thepanel.WHPrivate1OBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WHPrivate1OBJ;
-				//thepanel.BLWHPrivate1.intArrayX = intModX;
-				//thepanel.BLWHPrivate1.intArrayY = intModY;
 			}
 			if(blnMoveWHP2){
 				try{strWBoard[thepanel.WHPrivate2OBJ.intArrayX][thepanel.WHPrivate2OBJ.intArrayY] = null;
@@ -1200,9 +1152,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WHPrivate2OBJ;
 				thepanel.WHPrivate2OBJ.intArrayX = intModX;
 				thepanel.WHPrivate2OBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WHPrivate2OBJ;
-				//thepanel.BLWHPrivate2.intArrayX = intModX;
-				//thepanel.BLWHPrivate2.intArrayY = intModY;
 			}
 			if(blnMoveWHP3){
 				try{strWBoard[thepanel.WHPrivate3OBJ.intArrayX][thepanel.WHPrivate3OBJ.intArrayY] = null;
@@ -1230,9 +1179,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WHPrivate3OBJ;
 				thepanel.WHPrivate3OBJ.intArrayX = intModX;
 				thepanel.WHPrivate3OBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WHPrivate3OBJ;
-				//thepanel.BLWHPrivate3.intArrayX = intModX;
-				//thepanel.BLWHPrivate3.intArrayY = intModY;
 			}
 			if(blnMoveWHP4){
 				try{strWBoard[thepanel.WHPrivate4OBJ.intArrayX][thepanel.WHPrivate4OBJ.intArrayY] = null;
@@ -1260,9 +1206,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WHPrivate4OBJ;
 				thepanel.WHPrivate4OBJ.intArrayX = intModX;
 				thepanel.WHPrivate4OBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WHPrivate4OBJ;
-				//thepanel.BLWHPrivate4.intArrayX = intModX;
-				//thepanel.BLWHPrivate4.intArrayY = intModY;
 			}
 			if(blnMoveWHP5){
 				try{strWBoard[thepanel.WHPrivate5OBJ.intArrayX][thepanel.WHPrivate5OBJ.intArrayY] = null;
@@ -1290,9 +1233,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WHPrivate5OBJ;
 				thepanel.WHPrivate5OBJ.intArrayX = intModX;
 				thepanel.WHPrivate5OBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WHPrivate5OBJ;
-				//thepanel.BLWHPrivate5.intArrayX = intModX;
-				//thepanel.BLWHPrivate5.intArrayY = intModY;
 			}
 			if(blnMoveWHP6){
 				try{strWBoard[thepanel.WHPrivate6OBJ.intArrayX][thepanel.WHPrivate6OBJ.intArrayY] = null;
@@ -1320,9 +1260,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strWBoard[intModX][intModY] = thepanel.WHPrivate6OBJ;
 				thepanel.WHPrivate6OBJ.intArrayX = intModX;
 				thepanel.WHPrivate6OBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.WHPrivate6OBJ;
-				//thepanel.BLWHPrivate6.intArrayX = intModX;
-				//thepanel.BLWHPrivate6.intArrayY = intModY;
 			}
 			
 			if(blnMoveBL1L){
@@ -1351,9 +1288,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BL1LieutenantOBJ;
 				thepanel.BL1LieutenantOBJ.intArrayX = intModX;
 				thepanel.BL1LieutenantOBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BL1LieutenantOBJ;
-				//thepanel.WHBL1Lieutenant.intArrayX = intModX;
-				//thepanel.WHBL1Lieutenant.intArrayY = intModY;
 			}
 			if(blnMoveBL2L){
 				try{strBBoard[thepanel.BL2LieutenantOBJ.intArrayX][thepanel.BL2LieutenantOBJ.intArrayY] = null;
@@ -1381,9 +1315,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BL2LieutenantOBJ;
 				thepanel.BL2LieutenantOBJ.intArrayX = intModX;
 				thepanel.BL2LieutenantOBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BL2LieutenantOBJ;
-				//thepanel.WHBL2Lieutenant.intArrayX = intModX;
-				//thepanel.WHBL2Lieutenant.intArrayY = intModY;
 			}
 			if(blnMoveBLCap){
 				try{strBBoard[thepanel.BLCaptainOBJ.intArrayX][thepanel.BLCaptainOBJ.intArrayY] = null;
@@ -1411,9 +1342,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BLCaptainOBJ;
 				thepanel.BLCaptainOBJ.intArrayX = intModX;
 				thepanel.BLCaptainOBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BLCaptainOBJ;
-				//thepanel.WHBLCaptain.intArrayX = intModX;
-				//thepanel.WHBLCaptain.intArrayY = intModY;
 			}
 			if(blnMoveBLCol){
 				try{strBBoard[thepanel.BLColonelOBJ.intArrayX][thepanel.BLColonelOBJ.intArrayY] = null;
@@ -1441,9 +1369,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BLColonelOBJ;
 				thepanel.BLColonelOBJ.intArrayX = intModX;
 				thepanel.BLColonelOBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BLColonelOBJ;
-				//thepanel.WHBLColonel.intArrayX = intModX;
-				//thepanel.WHBLColonel.intArrayY = intModY;
 			}
 			if(blnMoveBL1S){
 				try{strBBoard[thepanel.BL1StarOBJ.intArrayX][thepanel.BL1StarOBJ.intArrayY] = null;
@@ -1471,9 +1396,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BL1StarOBJ;
 				thepanel.BL1StarOBJ.intArrayX = intModX;
 				thepanel.BL1StarOBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BL1StarOBJ;
-				//thepanel.WHBL1Star.intArrayX = intModX;
-				//thepanel.WHBL1Star.intArrayY = intModY;
 			}
 			if(blnMoveBL2S){
 				try{strBBoard[thepanel.BL2StarOBJ.intArrayX][thepanel.BL2StarOBJ.intArrayY] = null;
@@ -1501,9 +1423,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BL2StarOBJ;
 				thepanel.BL2StarOBJ.intArrayX = intModX;
 				thepanel.BL2StarOBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BL2StarOBJ;
-				//thepanel.WHBL2Star.intArrayX = intModX;
-				//thepanel.WHBL2Star.intArrayY = intModY;
 			}
 			if(blnMoveBL3S){
 				try{strBBoard[thepanel.BL3StarOBJ.intArrayX][thepanel.BL3StarOBJ.intArrayY] = null;
@@ -1531,9 +1450,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BL3StarOBJ;
 				thepanel.BL3StarOBJ.intArrayX = intModX;
 				thepanel.BL3StarOBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BL3StarOBJ;
-				//thepanel.WHBL3Star.intArrayX = intModX;
-				//thepanel.WHBL3Star.intArrayY = intModY;
 			}
 			if(blnMoveBL4S){
 				try{strBBoard[thepanel.BL4StarOBJ.intArrayX][thepanel.BL4StarOBJ.intArrayY] = null;
@@ -1561,9 +1477,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BL4StarOBJ;
 				thepanel.BL4StarOBJ.intArrayX = intModX;
 				thepanel.BL4StarOBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BL4StarOBJ;
-				//thepanel.WHBL4Star.intArrayX = intModX;
-				//thepanel.WHBL4Star.intArrayY = intModY;
 			}
 			if(blnMoveBL5S){
 				try{strBBoard[thepanel.BL5StarOBJ.intArrayX][thepanel.BL5StarOBJ.intArrayY] = null;
@@ -1591,9 +1504,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BL5StarOBJ;
 				thepanel.BL5StarOBJ.intArrayX = intModX;
 				thepanel.BL5StarOBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BL5StarOBJ;
-				//thepanel.WHBL5Star.intArrayX = intModX;
-				//thepanel.WHBL5Star.intArrayY = intModY;
 			}
 			if(blnMoveBLM){
 				try{strBBoard[thepanel.BLMajorOBJ.intArrayX][thepanel.BLMajorOBJ.intArrayY] = null;
@@ -1621,9 +1531,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BLMajorOBJ;
 				thepanel.BLMajorOBJ.intArrayX = intModX;
 				thepanel.BLMajorOBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BLMajorOBJ;
-				//thepanel.WHBLMajor.intArrayX = intModX;
-				//thepanel.WHBLMajor.intArrayY = intModY;
 			}
 			if(blnMoveBLF){
 				try{strBBoard[thepanel.BLFlagOBJ.intArrayX][thepanel.BLFlagOBJ.intArrayY] = null;
@@ -1651,9 +1558,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BLFlagOBJ;
 				thepanel.BLFlagOBJ.intArrayX = intModX;
 				thepanel.BLFlagOBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BLFlagOBJ;
-				//thepanel.WHBLFlag.intArrayX = intModX;
-				//thepanel.WHBLFlag.intArrayY = intModY;
 			}
 			if(blnMoveBLLC){
 				try{strBBoard[thepanel.BLLColonelOBJ.intArrayX][thepanel.BLLColonelOBJ.intArrayY] = null;
@@ -1681,9 +1585,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BLLColonelOBJ;
 				thepanel.BLLColonelOBJ.intArrayX = intModX;
 				thepanel.BLLColonelOBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BLLColonelOBJ;
-				//thepanel.WHBLLColonel.intArrayX = intModX;
-				//thepanel.WHBLLColonel.intArrayY = intModY;
 			}
 			if(blnMoveBLSer){
 				try{strBBoard[thepanel.BLSergeantOBJ.intArrayX][thepanel.BLSergeantOBJ.intArrayY] = null;
@@ -1711,9 +1612,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BLSergeantOBJ;
 				thepanel.BLSergeantOBJ.intArrayX = intModX;
 				thepanel.BLSergeantOBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BLSergeantOBJ;
-				//thepanel.WHBLSergeant.intArrayX = intModX;
-				//thepanel.WHBLSergeant.intArrayY = intModY;
 			}
 			if(blnMoveBLSpy1){
 				try{strBBoard[thepanel.BLSpy1OBJ.intArrayX][thepanel.BLSpy1OBJ.intArrayY] = null;
@@ -1741,9 +1639,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BLSpy1OBJ;
 				thepanel.BLSpy1OBJ.intArrayX = intModX;
 				thepanel.BLSpy1OBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BLSpy1OBJ;
-				//thepanel.WHBLSpy1.intArrayX = intModX;
-				//thepanel.WHBLSpy1.intArrayY = intModY;
 			}
 			if(blnMoveBLSpy2){
 				try{strBBoard[thepanel.BLSpy2OBJ.intArrayX][thepanel.BLSpy2OBJ.intArrayY] = null;
@@ -1771,9 +1666,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BLSpy2OBJ;
 				thepanel.BLSpy2OBJ.intArrayX = intModX;
 				thepanel.BLSpy2OBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BLSpy2OBJ;
-				//thepanel.WHBLSpy2.intArrayX = intModX;
-				//thepanel.WHBLSpy2.intArrayY = intModY;
 			}
 			if(blnMoveBLP1){
 				try{strBBoard[thepanel.BLPrivate1OBJ.intArrayX][thepanel.BLPrivate1OBJ.intArrayY] = null;
@@ -1801,9 +1693,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BLPrivate1OBJ;
 				thepanel.BLPrivate1OBJ.intArrayX = intModX;
 				thepanel.BLPrivate1OBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BLPrivate1OBJ;
-				//thepanel.WHBLPrivate1.intArrayX = intModX;
-				//thepanel.WHBLPrivate1.intArrayY = intModY;
 			}
 			if(blnMoveBLP2){
 				try{strBBoard[thepanel.BLPrivate2OBJ.intArrayX][thepanel.BLPrivate2OBJ.intArrayY] = null;
@@ -1831,9 +1720,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BLPrivate2OBJ;
 				thepanel.BLPrivate2OBJ.intArrayX = intModX;
 				thepanel.BLPrivate2OBJ.intArrayY = intModY;
-				//strBBoard[8-intModX][7-intModY] = thepanel.BLPrivate2OBJ;
-				//thepanel.WHBLPrivate2.intArrayX = intModX;
-				//thepanel.WHBLPrivate2.intArrayY = intModY;
 			}
 			if(blnMoveBLP3){
 				try{strBBoard[thepanel.BLPrivate3OBJ.intArrayX][thepanel.BLPrivate3OBJ.intArrayY] = null;
@@ -1861,9 +1747,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BLPrivate3OBJ;
 				thepanel.BLPrivate3OBJ.intArrayX = intModX;
 				thepanel.BLPrivate3OBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BLPrivate3OBJ;
-				//thepanel.WHBLPrivate3.intArrayX = intModX;
-				//thepanel.WHBLPrivate3.intArrayY = intModY;
 			}
 			if(blnMoveBLP4){
 				try{strBBoard[thepanel.BLPrivate4OBJ.intArrayX][thepanel.BLPrivate4OBJ.intArrayY] = null;
@@ -1891,9 +1774,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BLPrivate4OBJ;
 				thepanel.BLPrivate4OBJ.intArrayX = intModX;
 				thepanel.BLPrivate4OBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BLPrivate4OBJ;
-				//thepanel.WHBLPrivate4.intArrayX = intModX;
-				//thepanel.WHBLPrivate4.intArrayY = intModY;
 			}
 			if(blnMoveBLP5){
 				try{strBBoard[thepanel.BLPrivate5OBJ.intArrayX][thepanel.BLPrivate5OBJ.intArrayY] = null;
@@ -1920,10 +1800,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				blnMoveBLP5 = false;
 				strBBoard[intModX][intModY] = thepanel.BLPrivate5OBJ;
 				thepanel.BLPrivate5OBJ.intArrayX = intModX;
-				thepanel.BLPrivate5OBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BLPrivate5OBJ;
-				//thepanel.WHBLPrivate5.intArrayX = intModX;
-				//thepanel.WHBLPrivate5.intArrayY = intModY;				
+				thepanel.BLPrivate5OBJ.intArrayY = intModY;			
 			}
 			if(blnMoveBLP6){
 				try{strBBoard[thepanel.BLPrivate6OBJ.intArrayX][thepanel.BLPrivate6OBJ.intArrayY] = null;
@@ -1951,9 +1828,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 				strBBoard[intModX][intModY] = thepanel.BLPrivate6OBJ;
 				thepanel.BLPrivate6OBJ.intArrayX = intModX;
 				thepanel.BLPrivate6OBJ.intArrayY = intModY;
-				//strWBoard[8-intModX][7-intModY] = thepanel.BLPrivate6OBJ;
-				//thepanel.WHBLPrivate6.intArrayX = intModX;
-				//thepanel.WHBLPrivate6.intArrayY = intModY;
 			}
 			
 		}
