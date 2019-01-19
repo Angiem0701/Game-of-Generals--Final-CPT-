@@ -1,7 +1,7 @@
 // Game of the Generals [Demo]
 // Created by: Angelica C. F. Manansala, Ivan Lau, Caitlin Kwan
 // Created on: December 21, 2018
-// Last Updated: January 16, 2019
+// Last Updated: January 19, 2019
 
 import javax.swing.*;
 import java.awt.*;
@@ -55,6 +55,8 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 	
 	boolean blnClientView = false;
 	boolean blnServerView = false;
+	
+	int intReady = 0;
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
 
 
@@ -108,50 +110,50 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 		//Opponent Piece Images
 		
 		// White's view of black pieces
-		opponentpiece WHBLFlag = new opponentpiece(-1,-1);
-		opponentpiece WHBLPrivate1 = new opponentpiece(-1,-1);
-		opponentpiece WHBLPrivate2 = new opponentpiece(-1,-1);
-		opponentpiece WHBLPrivate3 = new opponentpiece(-1,-1);
-		opponentpiece WHBLPrivate4 = new opponentpiece(-1,-1);
-		opponentpiece WHBLPrivate5 = new opponentpiece(-1,-1);
-		opponentpiece WHBLPrivate6 = new opponentpiece(-1,-1);
-		opponentpiece WHBLSpy1 = new opponentpiece(-1,-1);
-		opponentpiece WHBLSpy2 = new opponentpiece(-1,-1);
-		opponentpiece WHBLSergeant = new opponentpiece(-1,-1);
-		opponentpiece WHBLLColonel = new opponentpiece(-1,-1);
-		opponentpiece WHBL2Lieutenant = new opponentpiece(-1,-1);
-		opponentpiece WHBL1Lieutenant = new opponentpiece(-1,-1);
-		opponentpiece WHBLCaptain = new opponentpiece(-1,-1);
-		opponentpiece WHBLColonel = new opponentpiece(-1,-1);
-		opponentpiece WHBL1Star = new opponentpiece(-1,-1);
-		opponentpiece WHBL2Star = new opponentpiece(-1,-1);
-		opponentpiece WHBL3Star = new opponentpiece(-1,-1);
-		opponentpiece WHBL4Star = new opponentpiece(-1,-1);
-		opponentpiece WHBL5Star = new opponentpiece(-1,-1);
-		opponentpiece WHBLMajor = new opponentpiece(-1,-1);
+		//opponentpiece WHBLFlag = new opponentpiece(-1,-1);
+		//opponentpiece WHBLPrivate1 = new opponentpiece(-1,-1);
+		//opponentpiece WHBLPrivate2 = new opponentpiece(-1,-1);
+		//opponentpiece WHBLPrivate3 = new opponentpiece(-1,-1);
+		//opponentpiece WHBLPrivate4 = new opponentpiece(-1,-1);
+		//opponentpiece WHBLPrivate5 = new opponentpiece(-1,-1);
+		//opponentpiece WHBLPrivate6 = new opponentpiece(-1,-1);
+		//opponentpiece WHBLSpy1 = new opponentpiece(-1,-1);
+		//opponentpiece WHBLSpy2 = new opponentpiece(-1,-1);
+		//opponentpiece WHBLSergeant = new opponentpiece(-1,-1);
+		//opponentpiece WHBLLColonel = new opponentpiece(-1,-1);
+		//opponentpiece WHBL2Lieutenant = new opponentpiece(-1,-1);
+		//opponentpiece WHBL1Lieutenant = new opponentpiece(-1,-1);
+		//opponentpiece WHBLCaptain = new opponentpiece(-1,-1);
+		//opponentpiece WHBLColonel = new opponentpiece(-1,-1);
+		//opponentpiece WHBL1Star = new opponentpiece(-1,-1);
+		//opponentpiece WHBL2Star = new opponentpiece(-1,-1);
+		//opponentpiece WHBL3Star = new opponentpiece(-1,-1);
+		//opponentpiece WHBL4Star = new opponentpiece(-1,-1);
+		//opponentpiece WHBL5Star = new opponentpiece(-1,-1);
+		//opponentpiece WHBLMajor = new opponentpiece(-1,-1);
 		
-		//Black's view of white pieces
-		opponentpiece BLWHFlag = new opponentpiece(-1,-1);
-		opponentpiece BLWHPrivate1 = new opponentpiece(-1,-1);
-		opponentpiece BLWHPrivate2 = new opponentpiece(-1,-1);
-		opponentpiece BLWHPrivate3 = new opponentpiece(-1,-1);
-		opponentpiece BLWHPrivate4 = new opponentpiece(-1,-1);
-		opponentpiece BLWHPrivate5 = new opponentpiece(-1,-1);
-		opponentpiece BLWHPrivate6 = new opponentpiece(-1,-1);
-		opponentpiece BLWHSpy1 = new opponentpiece(-1,-1);
-		opponentpiece BLWHSpy2 = new opponentpiece(-1,-1);
-		opponentpiece BLWHSergeant = new opponentpiece(-1,-1);
-		opponentpiece BLWHLColonel = new opponentpiece(-1,-1);
-		opponentpiece BLWH2Lieutenant = new opponentpiece(-1,-1);
-		opponentpiece BLWH1Lieutenant = new opponentpiece(-1,-1);
-		opponentpiece BLWHCaptain = new opponentpiece(-1,-1);
-		opponentpiece BLWHColonel = new opponentpiece(-1,-1);
-		opponentpiece BLWH1Star = new opponentpiece(-1,-1);
-		opponentpiece BLWH2Star = new opponentpiece(-1,-1);
-		opponentpiece BLWH3Star = new opponentpiece(-1,-1);
-		opponentpiece BLWH4Star = new opponentpiece(-1,-1);
-		opponentpiece BLWH5Star = new opponentpiece(-1,-1);
-		opponentpiece BLWHMajor = new opponentpiece(-1,-1);
+		////Black's view of white pieces
+		//opponentpiece BLWHFlag = new opponentpiece(-1,-1);
+		//opponentpiece BLWHPrivate1 = new opponentpiece(-1,-1);
+		//opponentpiece BLWHPrivate2 = new opponentpiece(-1,-1);
+		//opponentpiece BLWHPrivate3 = new opponentpiece(-1,-1);
+		//opponentpiece BLWHPrivate4 = new opponentpiece(-1,-1);
+		//opponentpiece BLWHPrivate5 = new opponentpiece(-1,-1);
+		//opponentpiece BLWHPrivate6 = new opponentpiece(-1,-1);
+		//opponentpiece BLWHSpy1 = new opponentpiece(-1,-1);
+		//opponentpiece BLWHSpy2 = new opponentpiece(-1,-1);
+		//opponentpiece BLWHSergeant = new opponentpiece(-1,-1);
+		//opponentpiece BLWHLColonel = new opponentpiece(-1,-1);
+		//opponentpiece BLWH2Lieutenant = new opponentpiece(-1,-1);
+		//opponentpiece BLWH1Lieutenant = new opponentpiece(-1,-1);
+		//opponentpiece BLWHCaptain = new opponentpiece(-1,-1);
+		//opponentpiece BLWHColonel = new opponentpiece(-1,-1);
+		//opponentpiece BLWH1Star = new opponentpiece(-1,-1);
+		//opponentpiece BLWH2Star = new opponentpiece(-1,-1);
+		//opponentpiece BLWH3Star = new opponentpiece(-1,-1);
+		//opponentpiece BLWH4Star = new opponentpiece(-1,-1);
+		//opponentpiece BLWH5Star = new opponentpiece(-1,-1);
+		//opponentpiece BLWHMajor = new opponentpiece(-1,-1);
 		
 	// END PIECES
 	
@@ -195,30 +197,31 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 			g.drawImage(WH2Star,WH2StarOBJ.intX,WH2StarOBJ.intY,65,20,null);
 			g.drawImage(WH3Star,WH3StarOBJ.intX,WH3StarOBJ.intY,65,20,null);
 			
-			g.drawImage(Black,10,10,65,20,null);
-			g.drawImage(Black,77,10,65,20,null);
-			g.drawImage(Black,144,10,65,20,null);
-			g.drawImage(Black,211,10,65,20,null);
-			g.drawImage(Black,278,10,65,20,null);
-			g.drawImage(Black,345,10,65,20,null);
-			g.drawImage(Black,412,10,65,20,null);
-			g.drawImage(Black,479,10,65,20,null);
-			g.drawImage(Black,546,10,65,20,null);
-			
-			g.drawImage(Black,10,32,65,20,null);
-			g.drawImage(Black,77,32,65,20,null);
-			g.drawImage(Black,144,32,65,20,null);
-			g.drawImage(Black,211,32,65,20,null);
-			g.drawImage(Black,278,32,65,20,null);
-			g.drawImage(Black,345,32,65,20,null);
-			g.drawImage(Black,412,32,65,20,null);
-			g.drawImage(Black,479,32,65,20,null);
-			g.drawImage(Black,546,32,65,20,null);
-			
-			g.drawImage(Black,10,54,65,20,null);
-			g.drawImage(Black,77,54,65,20,null);
-			g.drawImage(Black,144,54,65,20,null);
-			
+			if(intReady == 2){
+				g.drawImage(Black,BLFlagOBJ.intArrayX * 70 + 13,BLFlagOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BLPrivate1OBJ.intArrayX * 70 + 13,BLPrivate1OBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BLPrivate2OBJ.intArrayX*70 + 13,BLPrivate2OBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BLPrivate3OBJ.intArrayX*70 + 13,BLPrivate3OBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BLPrivate4OBJ.intArrayX*70 + 13,BLPrivate4OBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BLPrivate5OBJ.intArrayX*70 + 13,BLPrivate5OBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BLPrivate6OBJ.intArrayX*70 + 13,BLPrivate6OBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BLSpy1OBJ.intArrayX*70 + 13,BLSpy1OBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BLSpy2OBJ.intArrayX*70 + 13,BLSpy2OBJ.intArrayY*70 + 105,65,20,null);
+				
+				g.drawImage(Black,BLSergeantOBJ.intArrayX*70 + 13,BLSergeantOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BLLColonelOBJ.intArrayX*70 + 13,BLLColonelOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BL2LieutenantOBJ.intArrayX*70 + 13,BL2LieutenantOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BL1LieutenantOBJ.intArrayX*70 + 13,BL1LieutenantOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BLCaptainOBJ.intArrayX*70 + 13,BLCaptainOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BLColonelOBJ.intArrayX*70 + 13,BLColonelOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BL1StarOBJ.intArrayX*70 + 13,BL1StarOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BL2StarOBJ.intArrayX*70 + 13,BL2StarOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BL3StarOBJ.intArrayX*70 + 13,BL3StarOBJ.intArrayY*70 + 105,65,20,null);
+				
+				g.drawImage(Black,BL4StarOBJ.intArrayX*70 + 13,BL4StarOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BL5StarOBJ.intArrayX*70 + 13,BL5StarOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(Black,BLMajorOBJ.intArrayX*70 + 13,BLMajorOBJ.intArrayY*70 + 105,65,20,null);
+			}			
 		}else if(blnServerView){
 			g.drawImage(BL1Lieutenant,BL1LieutenantOBJ.intX,BL1LieutenantOBJ.intY,65,20,null);
 			g.drawImage(BL2Lieutenant,BL2LieutenantOBJ.intX,BL2LieutenantOBJ.intY,65,20,null);
@@ -244,30 +247,31 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 			g.drawImage(BL2Star,BL2StarOBJ.intX,BL2StarOBJ.intY,65,20,null);
 			g.drawImage(BL3Star,BL3StarOBJ.intX,BL3StarOBJ.intY,65,20,null);
 			
-			g.drawImage(White,10,10,65,20,null);
-			g.drawImage(White,77,10,65,20,null);
-			g.drawImage(White,144,10,65,20,null);
-			g.drawImage(White,211,10,65,20,null);
-			g.drawImage(White,278,10,65,20,null);
-			g.drawImage(White,345,10,65,20,null);
-			g.drawImage(White,412,10,65,20,null);
-			g.drawImage(White,479,10,65,20,null);
-			g.drawImage(White,546,10,65,20,null);
-			
-			g.drawImage(White,10,32,65,20,null);
-			g.drawImage(White,77,32,65,20,null);
-			g.drawImage(White,144,32,65,20,null);
-			g.drawImage(White,211,32,65,20,null);
-			g.drawImage(White,278,32,65,20,null);
-			g.drawImage(White,345,32,65,20,null);
-			g.drawImage(White,412,32,65,20,null);
-			g.drawImage(White,479,32,65,20,null);
-			g.drawImage(White,546,32,65,20,null);
-			
-			g.drawImage(White,10,54,65,20,null);
-			g.drawImage(White,77,54,65,20,null);
-			g.drawImage(White,144,54,65,20,null);
-			
+			if(intReady == 2){
+				g.drawImage(White,WHFlagOBJ.intArrayX*70 + 13,WHFlagOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WHPrivate1OBJ.intArrayX*70 + 13,WHPrivate1OBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WHPrivate2OBJ.intArrayX*70 + 13,WHPrivate2OBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WHPrivate3OBJ.intArrayX*70 + 13,WHPrivate3OBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WHPrivate4OBJ.intArrayX*70 + 13,WHPrivate4OBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WHPrivate5OBJ.intArrayX*70 + 13,WHPrivate5OBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WHPrivate6OBJ.intArrayX*70 + 13,WHPrivate6OBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WHSpy1OBJ.intArrayX*70 + 13,WHSpy1OBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WHSpy2OBJ.intArrayX*70 + 13,WHSpy2OBJ.intArrayY*70 + 105,65,20,null);
+				
+				g.drawImage(White,WHSergeantOBJ.intArrayX*70 + 13,WHSergeantOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WHLColonelOBJ.intArrayX*70 + 13,WHLColonelOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WH2LieutenantOBJ.intArrayX*70 + 13,WH2LieutenantOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WH1LieutenantOBJ.intArrayX*70 + 13,WH1LieutenantOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WHCaptainOBJ.intArrayX*70 + 13,WHCaptainOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WHColonelOBJ.intArrayX*70 + 13,WHColonelOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WH1StarOBJ.intArrayX*70 + 13,WH1StarOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WH2StarOBJ.intArrayX*70 + 13,WH2StarOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WH3StarOBJ.intArrayX*70 + 13,WH3StarOBJ.intArrayY*70 + 105,65,20,null);
+				
+				g.drawImage(White,WH4StarOBJ.intArrayX*70 + 13,WH4StarOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WH5StarOBJ.intArrayX*70 + 13,WH5StarOBJ.intArrayY*70 + 105,65,20,null);
+				g.drawImage(White,WHMajorOBJ.intArrayX*70 + 13,WHMajorOBJ.intArrayY*70 + 105,65,20,null);
+			}
 			
 		}
 		

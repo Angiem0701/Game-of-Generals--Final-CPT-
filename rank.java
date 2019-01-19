@@ -1,5 +1,8 @@
-//made by Ivan on Jan 8, 2019
-//updated on Jan 9, 2019
+// Game of the Generals [Demo]
+// Created by: Angelica C. F. Manansala, Ivan Lau, Caitlin Kwan
+// Created on: January 8, 2018
+// Last Updated: January 19, 2019
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
