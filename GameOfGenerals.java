@@ -215,6 +215,11 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			else if(strData.substring(0,7).equals("Ready: ")){
 				thepanel.intReady = Integer.parseInt(strData.substring(7,8));
 				System.out.println("Ready: " + thepanel.intReady);
+				if(thepanel.intReady == 2){
+					thepanel.strWhosTurn = "White";
+				}
+			}else if(strData.substring(0,10).equals("WhosTurn: ")){
+				thepanel.strWhosTurn = strData.substring(10,intDataLength);
 			}else{
 				String[] splitData = strData.split(",");
 				System.out.println(strData);
@@ -558,6 +563,9 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			ssm.sendText("Ready: " + thepanel.intReady);
 			bDoneSetUp.setVisible(false);
 			System.out.println("Ready: " + thepanel.intReady);
+			if(thepanel.intReady == 2){
+				thepanel.strWhosTurn = "White";
+			}
 			
 			blnSettingUp = false;
 			
@@ -609,6 +617,9 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			ssm.sendText("Ready: " + thepanel.intReady);
 			wDoneSetUp.setVisible(false);
 			System.out.println("Ready: " + thepanel.intReady);
+			if(thepanel.intReady == 2){
+				thepanel.strWhosTurn = "White";
+			}
 			
 			blnSettingUp = false;
 			
@@ -2200,7 +2211,16 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			
 		}
 	}
-
+	
+	public void changeTurn(){
+		if(thepanel.strWhosTurn.equals("White")){
+			thepanel.strWhosTurn.equals("Black");
+		}else{
+			thepanel.strWhosTurn.equals("White");
+		}
+		ssm.sendText("WhosTurn: " + thepanel.strWhosTurn);
+	}
+	
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	
 	// CONSTRUCTOR

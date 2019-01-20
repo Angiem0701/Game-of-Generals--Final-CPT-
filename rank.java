@@ -60,8 +60,7 @@ public class rank{
 		blnAlive = false;
 		//set array as null, i think
 	}
-	public void placepiece(){
-	}
+	
 	//constructor
 	public rank(boolean blnAlive, int intRank, int intX, int intY, int intArrayX, int intArrayY){
 		this.blnAlive = blnAlive;
