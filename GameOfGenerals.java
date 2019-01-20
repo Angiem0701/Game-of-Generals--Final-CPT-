@@ -689,1145 +689,1064 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	// METHODS - MOUSELISTENER (Mouse Released)
 	public void mouseReleased(MouseEvent evt){
 		if(blnSettingUp){
-			int intResultX;
-			int intResultY;
+			int intResultX = evt.getX() - 10;
+			int intResultY = evt.getY() - 80;
 			int intModX;
 			int intModY;
 			
 			if(blnMoveWH1L){
-				try{strWBoard[thepanel.WH1LieutenantOBJ.intArrayX][thepanel.WH1LieutenantOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WH1LieutenantOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WH1LieutenantOBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WH1LieutenantOBJ.intArrayX][thepanel.WH1LieutenantOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WH1LieutenantOBJ.intX = intResultX;
+					thepanel.WH1LieutenantOBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WH1LieutenantOBJ;
+					thepanel.WH1LieutenantOBJ.intArrayX = intModX;
+					thepanel.WH1LieutenantOBJ.intArrayY = intModY;
+				}else{
+					//if white or black
+				}
 				blnMoveWH1L = false;
-				strWBoard[intModX][intModY] = thepanel.WH1LieutenantOBJ;
-				thepanel.WH1LieutenantOBJ.intArrayX = intModX;
-				thepanel.WH1LieutenantOBJ.intArrayY = intModY;
 			}
 			if(blnMoveWH2L){
-				try{strWBoard[thepanel.WH2LieutenantOBJ.intArrayX][thepanel.WH2LieutenantOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WH2LieutenantOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WH2LieutenantOBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WH2LieutenantOBJ.intArrayX][thepanel.WH2LieutenantOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WH2LieutenantOBJ.intX = intResultX;
+					thepanel.WH2LieutenantOBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WH2LieutenantOBJ;
+					thepanel.WH2LieutenantOBJ.intArrayX = intModX;
+					thepanel.WH2LieutenantOBJ.intArrayY = intModY;
+				}
 				blnMoveWH2L = false;
-				strWBoard[intModX][intModY] = thepanel.WH2LieutenantOBJ;
-				thepanel.WH2LieutenantOBJ.intArrayX = intModX;
-				thepanel.WH2LieutenantOBJ.intArrayY = intModY;
 			}
 			if(blnMoveWHCap){
-				try{strWBoard[thepanel.WHCaptainOBJ.intArrayX][thepanel.WHCaptainOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WHCaptainOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WHCaptainOBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WHCaptainOBJ.intArrayX][thepanel.WHCaptainOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WHCaptainOBJ.intX = intResultX;
+					thepanel.WHCaptainOBJ.intY = intResultY;
+					strWBoard[8-intModX][intModY] = thepanel.WHCaptainOBJ;
+					thepanel.WHCaptainOBJ.intArrayX = intModX;
+					thepanel.WHCaptainOBJ.intArrayY = intModY;
+				}
 				blnMoveWHCap = false;
-				strWBoard[8-intModX][intModY] = thepanel.WHCaptainOBJ;
-				thepanel.WHCaptainOBJ.intArrayX = intModX;
-				thepanel.WHCaptainOBJ.intArrayY = intModY;
 			}
 			if(blnMoveWHCol){
 				try{strWBoard[thepanel.WHColonelOBJ.intArrayX][thepanel.WHColonelOBJ.intArrayY] = null;
 				}catch(ArrayIndexOutOfBoundsException e){
 				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WHColonelOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WHColonelOBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WHCaptainOBJ.intArrayX][thepanel.WHCaptainOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WHColonelOBJ.intX = intResultX;
+					thepanel.WHColonelOBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WHColonelOBJ;
+					thepanel.WHColonelOBJ.intArrayX = intModX;
+					thepanel.WHColonelOBJ.intArrayY = intModY;
+				}
 				blnMoveWHCol = false;
-				strWBoard[intModX][intModY] = thepanel.WHColonelOBJ;
-				thepanel.WHColonelOBJ.intArrayX = intModX;
-				thepanel.WHColonelOBJ.intArrayY = intModY;
 			}
 			if(blnMoveWH1S){
-				try{strWBoard[thepanel.WH1StarOBJ.intArrayX][thepanel.WH1StarOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WH1StarOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WH1StarOBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WH1StarOBJ.intArrayX][thepanel.WH1StarOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WH1StarOBJ.intX = intResultX;
+					thepanel.WH1StarOBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WH1StarOBJ;
+					thepanel.WH1StarOBJ.intArrayX = intModX;
+					thepanel.WH1StarOBJ.intArrayY = intModY;
+				}
 				blnMoveWH1S = false;
-				strWBoard[intModX][intModY] = thepanel.WH1StarOBJ;
-				thepanel.WH1StarOBJ.intArrayX = intModX;
-				thepanel.WH1StarOBJ.intArrayY = intModY;
 			}
 			if(blnMoveWH2S){
-				try{strWBoard[thepanel.WH2StarOBJ.intArrayX][thepanel.WH2StarOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WH2StarOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WH2StarOBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WH2StarOBJ.intArrayX][thepanel.WH2StarOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WH2StarOBJ.intX = intResultX;
+					thepanel.WH2StarOBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WH2StarOBJ;
+					thepanel.WH2StarOBJ.intArrayX = intModX;
+					thepanel.WH2StarOBJ.intArrayY = intModY;
+				}
 				blnMoveWH2S = false;
-				strWBoard[intModX][intModY] = thepanel.WH2StarOBJ;
-				thepanel.WH2StarOBJ.intArrayX = intModX;
-				thepanel.WH2StarOBJ.intArrayY = intModY;
 			}
 			if(blnMoveWH3S){
-				try{strWBoard[thepanel.WH3StarOBJ.intArrayX][thepanel.WH3StarOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WH3StarOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WH3StarOBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WH3StarOBJ.intArrayX][thepanel.WH3StarOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WH3StarOBJ.intX = intResultX;
+					thepanel.WH3StarOBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WH3StarOBJ;
+					thepanel.WH3StarOBJ.intArrayX = intModX;
+					thepanel.WH3StarOBJ.intArrayY = intModY;
+				}
 				blnMoveWH3S = false;
-				strWBoard[intModX][intModY] = thepanel.WH3StarOBJ;
-				thepanel.WH3StarOBJ.intArrayX = intModX;
-				thepanel.WH3StarOBJ.intArrayY = intModY;
 			}
 			if(blnMoveWH4S){
-				try{strWBoard[thepanel.WH4StarOBJ.intArrayX][thepanel.WH4StarOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WH4StarOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WH4StarOBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WH4StarOBJ.intArrayX][thepanel.WH4StarOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WH4StarOBJ.intX = intResultX;
+					thepanel.WH4StarOBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WH4StarOBJ;
+					thepanel.WH4StarOBJ.intArrayX = intModX;
+					thepanel.WH4StarOBJ.intArrayY = intModY;
+				}
 				blnMoveWH4S = false;
-				strWBoard[intModX][intModY] = thepanel.WH4StarOBJ;
-				thepanel.WH4StarOBJ.intArrayX = intModX;
-				thepanel.WH4StarOBJ.intArrayY = intModY;
 			}
 			if(blnMoveWH5S){
-				try{strWBoard[thepanel.WH5StarOBJ.intArrayX][thepanel.WH5StarOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WH5StarOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WH5StarOBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WH5StarOBJ.intArrayX][thepanel.WH5StarOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WH5StarOBJ.intX = intResultX;
+					thepanel.WH5StarOBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WH5StarOBJ;
+					thepanel.WH5StarOBJ.intArrayX = intModX;
+					thepanel.WH5StarOBJ.intArrayY = intModY;
+				}
 				blnMoveWH5S = false;
-				strWBoard[intModX][intModY] = thepanel.WH5StarOBJ;
-				thepanel.WH5StarOBJ.intArrayX = intModX;
-				thepanel.WH5StarOBJ.intArrayY = intModY;
 			}
 			if(blnMoveWHM){
-				try{strWBoard[thepanel.WHMajorOBJ.intArrayX][thepanel.WHMajorOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WHMajorOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WHMajorOBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WHMajorOBJ.intArrayX][thepanel.WHMajorOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WHMajorOBJ.intX = intResultX;
+					thepanel.WHMajorOBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WHMajorOBJ;
+					thepanel.WHMajorOBJ.intArrayX = intModX;
+					thepanel.WHMajorOBJ.intArrayY = intModY;
+				}
 				blnMoveWHM = false;
-				strWBoard[intModX][intModY] = thepanel.WHMajorOBJ;
-				thepanel.WHMajorOBJ.intArrayX = intModX;
-				thepanel.WHMajorOBJ.intArrayY = intModY;
 			}
 			if(blnMoveWHF){
+				if(intResultX >= 70){
+					intModX = intResultX/70;
+				}else{
+					intModX = 0;
+				}
+				intResultX = intModX * 70 + 13;
+				if(intResultY >= 70){
+					intModY = intResultY/70;
+				}else{
+					intModY = 0;
+				}
+				intResultY = intModY * 70 + 105;
 				try{strWBoard[thepanel.WHFlagOBJ.intArrayX][thepanel.WHFlagOBJ.intArrayY] = null;
 				}catch(ArrayIndexOutOfBoundsException e){
 				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
-				if(intResultX >= 70){
-					intModX = intResultX/70;
-				}else{
-					intModX = 0;
-				}
-				intResultX = intModX * 70 + 13;
 				thepanel.WHFlagOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
-				if(intResultY >= 70){
-					intModY = intResultY/70;
-				}else{
-					intModY = 0;
-				}
-				intResultY = intModY * 70 + 105;
 				thepanel.WHFlagOBJ.intY = intResultY;
-				blnMoveWHF = false;
 				strWBoard[intModX][intModY] = thepanel.WHFlagOBJ;
 				thepanel.WHFlagOBJ.intArrayX = intModX;
 				thepanel.WHFlagOBJ.intArrayY = intModY;
+				blnMoveWHF = false;
 			}
 			if(blnMoveWHLC){
-				try{strWBoard[thepanel.WHLColonelOBJ.intArrayX][thepanel.WHLColonelOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WHLColonelOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WHLColonelOBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WHLColonelOBJ.intArrayX][thepanel.WHLColonelOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WHLColonelOBJ.intX = intResultX;
+					thepanel.WHLColonelOBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WHLColonelOBJ;
+					thepanel.WHLColonelOBJ.intArrayX = intModX;
+					thepanel.WHLColonelOBJ.intArrayY = intModY;
+				}
 				blnMoveWHLC = false;
-				strWBoard[intModX][intModY] = thepanel.WHLColonelOBJ;
-				thepanel.WHLColonelOBJ.intArrayX = intModX;
-				thepanel.WHLColonelOBJ.intArrayY = intModY;
 			}
 			if(blnMoveWHSer){
-				try{strWBoard[thepanel.WHSergeantOBJ.intArrayX][thepanel.WHSergeantOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WHSergeantOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WHSergeantOBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WHSergeantOBJ.intArrayX][thepanel.WHSergeantOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WHSergeantOBJ.intX = intResultX;
+					thepanel.WHSergeantOBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WHSergeantOBJ;
+					thepanel.WHSergeantOBJ.intArrayX = intModX;
+					thepanel.WHSergeantOBJ.intArrayY = intModY;
+				}
 				blnMoveWHSer = false;
-				strWBoard[intModX][intModY] = thepanel.WHSergeantOBJ;
-				thepanel.WHSergeantOBJ.intArrayX = intModX;
-				thepanel.WHSergeantOBJ.intArrayY = intModY;
 			}
 			if(blnMoveWHSpy1){
-				try{strWBoard[thepanel.WHSpy1OBJ.intArrayX][thepanel.WHSpy1OBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WHSpy1OBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WHSpy1OBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WHSpy1OBJ.intArrayX][thepanel.WHSpy1OBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WHSpy1OBJ.intX = intResultX;
+					thepanel.WHSpy1OBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WHSpy1OBJ;
+					thepanel.WHSpy1OBJ.intArrayX = intModX;
+					thepanel.WHSpy1OBJ.intArrayY = intModY;
+				}
 				blnMoveWHSpy1 = false;
-				strWBoard[intModX][intModY] = thepanel.WHSpy1OBJ;
-				thepanel.WHSpy1OBJ.intArrayX = intModX;
-				thepanel.WHSpy1OBJ.intArrayY = intModY;
 			}
 			if(blnMoveWHSpy2){
-				try{strWBoard[thepanel.WHSpy2OBJ.intArrayX][thepanel.WHSpy2OBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WHSpy2OBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WHSpy2OBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WHSpy2OBJ.intArrayX][thepanel.WHSpy2OBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WHSpy2OBJ.intX = intResultX;
+					thepanel.WHSpy2OBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WHSpy2OBJ;
+					thepanel.WHSpy2OBJ.intArrayX = intModX;
+					thepanel.WHSpy2OBJ.intArrayY = intModY;
+				}
 				blnMoveWHSpy2 = false;
-				strWBoard[intModX][intModY] = thepanel.WHSpy2OBJ;
-				thepanel.WHSpy2OBJ.intArrayX = intModX;
-				thepanel.WHSpy2OBJ.intArrayY = intModY;
 			}
 			if(blnMoveWHP1){
-				try{strWBoard[thepanel.WHPrivate1OBJ.intArrayX][thepanel.WHPrivate1OBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WHPrivate1OBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WHPrivate1OBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WHPrivate1OBJ.intArrayX][thepanel.WHPrivate1OBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WHPrivate1OBJ.intX = intResultX;
+					thepanel.WHPrivate1OBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WHPrivate1OBJ;
+					thepanel.WHPrivate1OBJ.intArrayX = intModX;
+					thepanel.WHPrivate1OBJ.intArrayY = intModY;
+				}
 				blnMoveWHP1 = false;
-				strWBoard[intModX][intModY] = thepanel.WHPrivate1OBJ;
-				thepanel.WHPrivate1OBJ.intArrayX = intModX;
-				thepanel.WHPrivate1OBJ.intArrayY = intModY;
 			}
 			if(blnMoveWHP2){
-				try{strWBoard[thepanel.WHPrivate2OBJ.intArrayX][thepanel.WHPrivate2OBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WHPrivate2OBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WHPrivate2OBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WHPrivate2OBJ.intArrayX][thepanel.WHPrivate2OBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WHPrivate2OBJ.intX = intResultX;
+					thepanel.WHPrivate2OBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WHPrivate2OBJ;
+					thepanel.WHPrivate2OBJ.intArrayX = intModX;
+					thepanel.WHPrivate2OBJ.intArrayY = intModY;
+				}
 				blnMoveWHP2 = false;
-				strWBoard[intModX][intModY] = thepanel.WHPrivate2OBJ;
-				thepanel.WHPrivate2OBJ.intArrayX = intModX;
-				thepanel.WHPrivate2OBJ.intArrayY = intModY;
 			}
 			if(blnMoveWHP3){
-				try{strWBoard[thepanel.WHPrivate3OBJ.intArrayX][thepanel.WHPrivate3OBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WHPrivate3OBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WHPrivate3OBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WHPrivate3OBJ.intArrayX][thepanel.WHPrivate3OBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WHPrivate3OBJ.intX = intResultX;
+					thepanel.WHPrivate3OBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WHPrivate3OBJ;
+					thepanel.WHPrivate3OBJ.intArrayX = intModX;
+					thepanel.WHPrivate3OBJ.intArrayY = intModY;
+				}
 				blnMoveWHP3 = false;
-				strWBoard[intModX][intModY] = thepanel.WHPrivate3OBJ;
-				thepanel.WHPrivate3OBJ.intArrayX = intModX;
-				thepanel.WHPrivate3OBJ.intArrayY = intModY;
 			}
 			if(blnMoveWHP4){
-				try{strWBoard[thepanel.WHPrivate4OBJ.intArrayX][thepanel.WHPrivate4OBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WHPrivate4OBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WHPrivate4OBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WHPrivate4OBJ.intArrayX][thepanel.WHPrivate4OBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WHPrivate4OBJ.intX = intResultX;
+					thepanel.WHPrivate4OBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WHPrivate4OBJ;
+					thepanel.WHPrivate4OBJ.intArrayX = intModX;
+					thepanel.WHPrivate4OBJ.intArrayY = intModY;
+				}
 				blnMoveWHP4 = false;
-				strWBoard[intModX][intModY] = thepanel.WHPrivate4OBJ;
-				thepanel.WHPrivate4OBJ.intArrayX = intModX;
-				thepanel.WHPrivate4OBJ.intArrayY = intModY;
 			}
 			if(blnMoveWHP5){
-				try{strWBoard[thepanel.WHPrivate5OBJ.intArrayX][thepanel.WHPrivate5OBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WHPrivate5OBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WHPrivate5OBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WHPrivate5OBJ.intArrayX][thepanel.WHPrivate5OBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WHPrivate5OBJ.intX = intResultX;
+					thepanel.WHPrivate5OBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WHPrivate5OBJ;
+					thepanel.WHPrivate5OBJ.intArrayX = intModX;
+					thepanel.WHPrivate5OBJ.intArrayY = intModY;
+				}
 				blnMoveWHP5 = false;
-				strWBoard[intModX][intModY] = thepanel.WHPrivate5OBJ;
-				thepanel.WHPrivate5OBJ.intArrayX = intModX;
-				thepanel.WHPrivate5OBJ.intArrayY = intModY;
 			}
 			if(blnMoveWHP6){
-				try{strWBoard[thepanel.WHPrivate6OBJ.intArrayX][thepanel.WHPrivate6OBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.WHPrivate6OBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.WHPrivate6OBJ.intY = intResultY;
+				if(strWBoard[intModX][intModY] == null){
+					try{strWBoard[thepanel.WHPrivate6OBJ.intArrayX][thepanel.WHPrivate6OBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.WHPrivate6OBJ.intX = intResultX;
+					thepanel.WHPrivate6OBJ.intY = intResultY;
+					strWBoard[intModX][intModY] = thepanel.WHPrivate6OBJ;
+					thepanel.WHPrivate6OBJ.intArrayX = intModX;
+					thepanel.WHPrivate6OBJ.intArrayY = intModY;
+				}
 				blnMoveWHP6 = false;
-				strWBoard[intModX][intModY] = thepanel.WHPrivate6OBJ;
-				thepanel.WHPrivate6OBJ.intArrayX = intModX;
-				thepanel.WHPrivate6OBJ.intArrayY = intModY;
 			}
 			
 			if(blnMoveBL1L){
-				try{strBBoard[thepanel.BL1LieutenantOBJ.intArrayX][thepanel.BL1LieutenantOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BL1LieutenantOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BL1LieutenantOBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BL1LieutenantOBJ.intArrayX][thepanel.BL1LieutenantOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BL1LieutenantOBJ.intX = intResultX;
+					thepanel.BL1LieutenantOBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BL1LieutenantOBJ;
+					thepanel.BL1LieutenantOBJ.intArrayX = intModX;
+					thepanel.BL1LieutenantOBJ.intArrayY = intModY;
+				}
 				blnMoveBL1L = false;
-				strBBoard[intModX][intModY] = thepanel.BL1LieutenantOBJ;
-				thepanel.BL1LieutenantOBJ.intArrayX = intModX;
-				thepanel.BL1LieutenantOBJ.intArrayY = intModY;
 			}
 			if(blnMoveBL2L){
-				try{strBBoard[thepanel.BL2LieutenantOBJ.intArrayX][thepanel.BL2LieutenantOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BL2LieutenantOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BL2LieutenantOBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BL2LieutenantOBJ.intArrayX][thepanel.BL2LieutenantOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BL2LieutenantOBJ.intX = intResultX;
+					thepanel.BL2LieutenantOBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BL2LieutenantOBJ;
+					thepanel.BL2LieutenantOBJ.intArrayX = intModX;
+					thepanel.BL2LieutenantOBJ.intArrayY = intModY;
+				}
 				blnMoveBL2L = false;
-				strBBoard[intModX][intModY] = thepanel.BL2LieutenantOBJ;
-				thepanel.BL2LieutenantOBJ.intArrayX = intModX;
-				thepanel.BL2LieutenantOBJ.intArrayY = intModY;
 			}
 			if(blnMoveBLCap){
-				try{strBBoard[thepanel.BLCaptainOBJ.intArrayX][thepanel.BLCaptainOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BLCaptainOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BLCaptainOBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BLCaptainOBJ.intArrayX][thepanel.BLCaptainOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BLCaptainOBJ.intX = intResultX;
+					thepanel.BLCaptainOBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BLCaptainOBJ;
+					thepanel.BLCaptainOBJ.intArrayX = intModX;
+					thepanel.BLCaptainOBJ.intArrayY = intModY;
+				}
 				blnMoveBLCap = false;
-				strBBoard[intModX][intModY] = thepanel.BLCaptainOBJ;
-				thepanel.BLCaptainOBJ.intArrayX = intModX;
-				thepanel.BLCaptainOBJ.intArrayY = intModY;
 			}
 			if(blnMoveBLCol){
-				try{strBBoard[thepanel.BLColonelOBJ.intArrayX][thepanel.BLColonelOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BLColonelOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BLColonelOBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BLColonelOBJ.intArrayX][thepanel.BLColonelOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BLColonelOBJ.intX = intResultX;
+					thepanel.BLColonelOBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BLColonelOBJ;
+					thepanel.BLColonelOBJ.intArrayX = intModX;
+					thepanel.BLColonelOBJ.intArrayY = intModY;
+				}
 				blnMoveBLCol = false;
-				strBBoard[intModX][intModY] = thepanel.BLColonelOBJ;
-				thepanel.BLColonelOBJ.intArrayX = intModX;
-				thepanel.BLColonelOBJ.intArrayY = intModY;
 			}
 			if(blnMoveBL1S){
-				try{strBBoard[thepanel.BL1StarOBJ.intArrayX][thepanel.BL1StarOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BL1StarOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BL1StarOBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BL1StarOBJ.intArrayX][thepanel.BL1StarOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BL1StarOBJ.intX = intResultX;
+					thepanel.BL1StarOBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BL1StarOBJ;
+					thepanel.BL1StarOBJ.intArrayX = intModX;
+					thepanel.BL1StarOBJ.intArrayY = intModY;
+				}
 				blnMoveBL1S = false;
-				strBBoard[intModX][intModY] = thepanel.BL1StarOBJ;
-				thepanel.BL1StarOBJ.intArrayX = intModX;
-				thepanel.BL1StarOBJ.intArrayY = intModY;
 			}
 			if(blnMoveBL2S){
-				try{strBBoard[thepanel.BL2StarOBJ.intArrayX][thepanel.BL2StarOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BL2StarOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BL2StarOBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BL2StarOBJ.intArrayX][thepanel.BL2StarOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BL2StarOBJ.intX = intResultX;
+					thepanel.BL2StarOBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BL2StarOBJ;
+					thepanel.BL2StarOBJ.intArrayX = intModX;
+					thepanel.BL2StarOBJ.intArrayY = intModY;
+				}
 				blnMoveBL2S = false;
-				strBBoard[intModX][intModY] = thepanel.BL2StarOBJ;
-				thepanel.BL2StarOBJ.intArrayX = intModX;
-				thepanel.BL2StarOBJ.intArrayY = intModY;
 			}
 			if(blnMoveBL3S){
-				try{strBBoard[thepanel.BL3StarOBJ.intArrayX][thepanel.BL3StarOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BL3StarOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BL3StarOBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BL3StarOBJ.intArrayX][thepanel.BL3StarOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BL3StarOBJ.intX = intResultX;
+					thepanel.BL3StarOBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BL3StarOBJ;
+					thepanel.BL3StarOBJ.intArrayX = intModX;
+					thepanel.BL3StarOBJ.intArrayY = intModY;
+				}
 				blnMoveBL3S = false;
-				strBBoard[intModX][intModY] = thepanel.BL3StarOBJ;
-				thepanel.BL3StarOBJ.intArrayX = intModX;
-				thepanel.BL3StarOBJ.intArrayY = intModY;
 			}
 			if(blnMoveBL4S){
-				try{strBBoard[thepanel.BL4StarOBJ.intArrayX][thepanel.BL4StarOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BL4StarOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BL4StarOBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BL4StarOBJ.intArrayX][thepanel.BL4StarOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BL4StarOBJ.intX = intResultX;
+					thepanel.BL4StarOBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BL4StarOBJ;
+					thepanel.BL4StarOBJ.intArrayX = intModX;
+					thepanel.BL4StarOBJ.intArrayY = intModY;
+				}
 				blnMoveBL4S = false;
-				strBBoard[intModX][intModY] = thepanel.BL4StarOBJ;
-				thepanel.BL4StarOBJ.intArrayX = intModX;
-				thepanel.BL4StarOBJ.intArrayY = intModY;
 			}
 			if(blnMoveBL5S){
-				try{strBBoard[thepanel.BL5StarOBJ.intArrayX][thepanel.BL5StarOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BL5StarOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BL5StarOBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BL5StarOBJ.intArrayX][thepanel.BL5StarOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BL5StarOBJ.intX = intResultX;
+					thepanel.BL5StarOBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BL5StarOBJ;
+					thepanel.BL5StarOBJ.intArrayX = intModX;
+					thepanel.BL5StarOBJ.intArrayY = intModY;
+				}
 				blnMoveBL5S = false;
-				strBBoard[intModX][intModY] = thepanel.BL5StarOBJ;
-				thepanel.BL5StarOBJ.intArrayX = intModX;
-				thepanel.BL5StarOBJ.intArrayY = intModY;
 			}
 			if(blnMoveBLM){
-				try{strBBoard[thepanel.BLMajorOBJ.intArrayX][thepanel.BLMajorOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BLMajorOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BLMajorOBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BLMajorOBJ.intArrayX][thepanel.BLMajorOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BLMajorOBJ.intX = intResultX;
+					thepanel.BLMajorOBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BLMajorOBJ;
+					thepanel.BLMajorOBJ.intArrayX = intModX;
+					thepanel.BLMajorOBJ.intArrayY = intModY;
+				}
 				blnMoveBLM = false;
-				strBBoard[intModX][intModY] = thepanel.BLMajorOBJ;
-				thepanel.BLMajorOBJ.intArrayX = intModX;
-				thepanel.BLMajorOBJ.intArrayY = intModY;
 			}
 			if(blnMoveBLF){
-				try{strBBoard[thepanel.BLFlagOBJ.intArrayX][thepanel.BLFlagOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BLFlagOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BLFlagOBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BLFlagOBJ.intArrayX][thepanel.BLFlagOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BLFlagOBJ.intX = intResultX;
+					thepanel.BLFlagOBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BLFlagOBJ;
+					thepanel.BLFlagOBJ.intArrayX = intModX;
+					thepanel.BLFlagOBJ.intArrayY = intModY;
+				}
 				blnMoveBLF = false;
-				strBBoard[intModX][intModY] = thepanel.BLFlagOBJ;
-				thepanel.BLFlagOBJ.intArrayX = intModX;
-				thepanel.BLFlagOBJ.intArrayY = intModY;
 			}
 			if(blnMoveBLLC){
-				try{strBBoard[thepanel.BLLColonelOBJ.intArrayX][thepanel.BLLColonelOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BLLColonelOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BLLColonelOBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BLLColonelOBJ.intArrayX][thepanel.BLLColonelOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BLLColonelOBJ.intX = intResultX;
+					thepanel.BLLColonelOBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BLLColonelOBJ;
+					thepanel.BLLColonelOBJ.intArrayX = intModX;
+					thepanel.BLLColonelOBJ.intArrayY = intModY;
+				}
 				blnMoveBLLC = false;
-				strBBoard[intModX][intModY] = thepanel.BLLColonelOBJ;
-				thepanel.BLLColonelOBJ.intArrayX = intModX;
-				thepanel.BLLColonelOBJ.intArrayY = intModY;
 			}
 			if(blnMoveBLSer){
-				try{strBBoard[thepanel.BLSergeantOBJ.intArrayX][thepanel.BLSergeantOBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BLSergeantOBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BLSergeantOBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BLSergeantOBJ.intArrayX][thepanel.BLSergeantOBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BLSergeantOBJ.intX = intResultX;
+					thepanel.BLSergeantOBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BLSergeantOBJ;
+					thepanel.BLSergeantOBJ.intArrayX = intModX;
+					thepanel.BLSergeantOBJ.intArrayY = intModY;
+				}
 				blnMoveBLSer = false;
-				strBBoard[intModX][intModY] = thepanel.BLSergeantOBJ;
-				thepanel.BLSergeantOBJ.intArrayX = intModX;
-				thepanel.BLSergeantOBJ.intArrayY = intModY;
 			}
 			if(blnMoveBLSpy1){
-				try{strBBoard[thepanel.BLSpy1OBJ.intArrayX][thepanel.BLSpy1OBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BLSpy1OBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BLSpy1OBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BLSpy1OBJ.intArrayX][thepanel.BLSpy1OBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BLSpy1OBJ.intX = intResultX;
+					thepanel.BLSpy1OBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BLSpy1OBJ;
+					thepanel.BLSpy1OBJ.intArrayX = intModX;
+					thepanel.BLSpy1OBJ.intArrayY = intModY;
+				}
 				blnMoveBLSpy1 = false;
-				strBBoard[intModX][intModY] = thepanel.BLSpy1OBJ;
-				thepanel.BLSpy1OBJ.intArrayX = intModX;
-				thepanel.BLSpy1OBJ.intArrayY = intModY;
 			}
 			if(blnMoveBLSpy2){
-				try{strBBoard[thepanel.BLSpy2OBJ.intArrayX][thepanel.BLSpy2OBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BLSpy2OBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BLSpy2OBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BLSpy2OBJ.intArrayX][thepanel.BLSpy2OBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BLSpy2OBJ.intX = intResultX;
+					thepanel.BLSpy2OBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BLSpy2OBJ;
+					thepanel.BLSpy2OBJ.intArrayX = intModX;
+					thepanel.BLSpy2OBJ.intArrayY = intModY;
+				}
 				blnMoveBLSpy2 = false;
-				strBBoard[intModX][intModY] = thepanel.BLSpy2OBJ;
-				thepanel.BLSpy2OBJ.intArrayX = intModX;
-				thepanel.BLSpy2OBJ.intArrayY = intModY;
 			}
 			if(blnMoveBLP1){
-				try{strBBoard[thepanel.BLPrivate1OBJ.intArrayX][thepanel.BLPrivate1OBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BLPrivate1OBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BLPrivate1OBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BLPrivate1OBJ.intArrayX][thepanel.BLPrivate1OBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BLPrivate1OBJ.intX = intResultX;
+					thepanel.BLPrivate1OBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BLPrivate1OBJ;
+					thepanel.BLPrivate1OBJ.intArrayX = intModX;
+					thepanel.BLPrivate1OBJ.intArrayY = intModY;
+				}
 				blnMoveBLP1 = false;
-				strBBoard[intModX][intModY] = thepanel.BLPrivate1OBJ;
-				thepanel.BLPrivate1OBJ.intArrayX = intModX;
-				thepanel.BLPrivate1OBJ.intArrayY = intModY;
 			}
 			if(blnMoveBLP2){
-				try{strBBoard[thepanel.BLPrivate2OBJ.intArrayX][thepanel.BLPrivate2OBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BLPrivate2OBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BLPrivate2OBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BLPrivate2OBJ.intArrayX][thepanel.BLPrivate2OBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BLPrivate2OBJ.intX = intResultX;
+					thepanel.BLPrivate2OBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BLPrivate2OBJ;
+					thepanel.BLPrivate2OBJ.intArrayX = intModX;
+					thepanel.BLPrivate2OBJ.intArrayY = intModY;
+				}
 				blnMoveBLP2 = false;
-				strBBoard[intModX][intModY] = thepanel.BLPrivate2OBJ;
-				thepanel.BLPrivate2OBJ.intArrayX = intModX;
-				thepanel.BLPrivate2OBJ.intArrayY = intModY;
 			}
 			if(blnMoveBLP3){
-				try{strBBoard[thepanel.BLPrivate3OBJ.intArrayX][thepanel.BLPrivate3OBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BLPrivate3OBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BLPrivate3OBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BLPrivate3OBJ.intArrayX][thepanel.BLPrivate3OBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BLPrivate3OBJ.intX = intResultX;
+					thepanel.BLPrivate3OBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BLPrivate3OBJ;
+					thepanel.BLPrivate3OBJ.intArrayX = intModX;
+					thepanel.BLPrivate3OBJ.intArrayY = intModY;
+				}
 				blnMoveBLP3 = false;
-				strBBoard[intModX][intModY] = thepanel.BLPrivate3OBJ;
-				thepanel.BLPrivate3OBJ.intArrayX = intModX;
-				thepanel.BLPrivate3OBJ.intArrayY = intModY;
 			}
 			if(blnMoveBLP4){
-				try{strBBoard[thepanel.BLPrivate4OBJ.intArrayX][thepanel.BLPrivate4OBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BLPrivate4OBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BLPrivate4OBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BLPrivate4OBJ.intArrayX][thepanel.BLPrivate4OBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BLPrivate4OBJ.intX = intResultX;
+					thepanel.BLPrivate4OBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BLPrivate4OBJ;
+					thepanel.BLPrivate4OBJ.intArrayX = intModX;
+					thepanel.BLPrivate4OBJ.intArrayY = intModY;
+				}
 				blnMoveBLP4 = false;
-				strBBoard[intModX][intModY] = thepanel.BLPrivate4OBJ;
-				thepanel.BLPrivate4OBJ.intArrayX = intModX;
-				thepanel.BLPrivate4OBJ.intArrayY = intModY;
 			}
 			if(blnMoveBLP5){
-				try{strBBoard[thepanel.BLPrivate5OBJ.intArrayX][thepanel.BLPrivate5OBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BLPrivate5OBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}
 				intResultY = intModY * 70 + 105;
-				thepanel.BLPrivate5OBJ.intY = intResultY;
-				blnMoveBLP5 = false;
-				strBBoard[intModX][intModY] = thepanel.BLPrivate5OBJ;
-				thepanel.BLPrivate5OBJ.intArrayX = intModX;
-				thepanel.BLPrivate5OBJ.intArrayY = intModY;			
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BLPrivate5OBJ.intArrayX][thepanel.BLPrivate5OBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BLPrivate5OBJ.intX = intResultX;
+					thepanel.BLPrivate5OBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BLPrivate5OBJ;
+					thepanel.BLPrivate5OBJ.intArrayX = intModX;
+					thepanel.BLPrivate5OBJ.intArrayY = intModY;	
+				}
+				blnMoveBLP5 = false;		
 			}
 			if(blnMoveBLP6){
-				try{strBBoard[thepanel.BLPrivate6OBJ.intArrayX][thepanel.BLPrivate6OBJ.intArrayY] = null;
-				}catch(ArrayIndexOutOfBoundsException e){
-				}
-				intResultX = evt.getX();
-				intResultY = evt.getY();
-				intResultX = intResultX - 10;
 				if(intResultX >= 70){
 					intModX = intResultX/70;
 				}else{
 					intModX = 0;
 				}
 				intResultX = intModX * 70 + 13;
-				thepanel.BLPrivate6OBJ.intX = intResultX;
-				intResultY = intResultY - 80;
 				if(intResultY >= 70){
 					intModY = intResultY/70;
 				}else{
 					intModY = 0;
 				}				
 				intResultY = intModY * 70 + 105;
-				thepanel.BLPrivate6OBJ.intY = intResultY;
+				if(strBBoard[intModX][intModY] == null){
+					try{strBBoard[thepanel.BLPrivate6OBJ.intArrayX][thepanel.BLPrivate6OBJ.intArrayY] = null;
+					}catch(ArrayIndexOutOfBoundsException e){
+					}
+					thepanel.BLPrivate6OBJ.intX = intResultX;
+					thepanel.BLPrivate6OBJ.intY = intResultY;
+					strBBoard[intModX][intModY] = thepanel.BLPrivate6OBJ;
+					thepanel.BLPrivate6OBJ.intArrayX = intModX;
+					thepanel.BLPrivate6OBJ.intArrayY = intModY;
+				}
 				blnMoveBLP6 = false;
-				strBBoard[intModX][intModY] = thepanel.BLPrivate6OBJ;
-				thepanel.BLPrivate6OBJ.intArrayX = intModX;
-				thepanel.BLPrivate6OBJ.intArrayY = intModY;
 			}
 			
 		}
