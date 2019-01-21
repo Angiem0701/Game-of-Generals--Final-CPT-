@@ -42,6 +42,9 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	JButton wDoneSetUp  = new JButton();
 	JButton bDoneSetUp = new JButton();
 	
+	JTextArea BriefRules = new JTextArea();
+	JScrollPane BriefRulesScroll = new JScrollPane();
+	
 	SuperSocketMaster ssm;
 	
 	
@@ -555,6 +558,9 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			blnSettingUp = true;
 			
 			bDoneSetUp.setVisible(true);
+			
+			BriefRules.setVisible(true);
+			BriefRulesScroll.setVisible(true);
 			
 		}
 		
@@ -2971,6 +2977,15 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		bDoneSetUp.setBounds(211,686,65,20);
 		bDoneSetUp.setVisible(false);
 		bDoneSetUp.addActionListener(this);
+		
+		BriefRules = new JTextArea();
+		BriefRules.setLineWrap(true);
+		BriefRules.setWrapStyleWord(true);
+		BriefRules.setVisible(false);
+		BriefRulesScroll = new JScrollPane(BriefRules);
+		BriefRulesScroll.setSize(100,50);
+		BriefRulesScroll.setLocation(390,50);
+		BriefRulesScroll.setVisible(false);
 		
 		thepanel.add(StartGameButton);
 		thepanel.add(HelpButton);
