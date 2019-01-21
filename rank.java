@@ -18,24 +18,77 @@ public class rank{
 	boolean blnGameEnd = false;
 	int intArrayX;
 	int intArrayY;
+	String strSide;
 	
 	
 	//methods
-	public int moveforwards(){
-		intY = intY - 1;
-		return intY;
+	public void moveForward(){
+		if(strSide.equals("Black")){
+			if(strBBoard[intArrayX][intArrayY + 1] == null){
+				this.intY = this.intY - 70;
+				this.intArrayY = this.intArrayY - 1;
+				strBBoard[intArrayX][intArrayY] = rank;
+			}else{
+				if(strBBoard[intArrayX][intArrayY + 1].intRank == intRank){
+					blnAlive = false;
+					strBBoard[intArrayX][intArrayY + 1].blnAlive = false;
+					strBBoard[intArrayX][intArrayY] = null;
+					strBBoard[intArrayX][intArrayY + 1] = null;
+				}else if(strBBoard[intArrayX][intArrayY + 1].intRank == 2 && intRank == 1){
+					strBBoard[intArrayX][intArrayY + 1].blnAlive = false; //White Wins
+				}else if(strBBoard[intArrayX][intArrayY + 1].intRank == 1 && intRank == 2){
+					WHFlagOBJ.blnAlive = false; //Black wins
+				}else if(strBBoard[intArrayX][intArrayY + 1].intRank < intRank){
+					strBBoard[intArrayX][intArrayY + 1].blnAlive = false;
+					this.intY = this.intY - 70;
+					this.intArrayY = this.intArrayY - 1;
+					strBBoard[intArrayX][intArrayY] = rank;
+				}else if(strBBoard[intArrayX][intArrayY + 1].intRank > intRank){
+					blnAlive = false;
+					strBBoard[intArrayX][intArrayY] = null;
+				}
+			}
+			
+			//ssm.sendText();
+			
+		}else{ // if from White side
+			if(strWBoard[intArrayX][intArrayY + 1] == null){
+				this.intY = this.intY - 70;
+				this.intArrayY = this.intArrayY - 1;
+				strWBoard[intArrayX][intArrayY] = rank;
+			}else{
+				if(strWBoard[intArrayX][intArrayY + 1].intRank == intRank){
+					blnAlive = false;
+					strWBoard[intArrayX][intArrayY + 1].blnAlive = false;
+					strWBoard[intArrayX][intArrayY] = null;
+					strWBoard[intArrayX][intArrayY + 1] = null;
+				}else if(strWBoard[intArrayX][intArrayY + 1].intRank == 2 && intRank == 1){
+					strWBoard[intArrayX][intArrayY + 1].blnAlive = false; //Black Wins
+				}else if(strWBoard[intArrayX][intArrayY + 1].intRank == 1 && intRank == 2){
+					BLFlagOBJ.blnAlive = false; //White wins
+				}else if(strWBoard[intArrayX][intArrayY + 1].intRank < intRank){
+					strWBoard[intArrayX][intArrayY + 1].blnAlive = false;
+					this.intY = this.intY - 70;
+					this.intArrayY = this.intArrayY - 1;
+					strWBoard[intArrayX][intArrayY] = rank;
+				}else if(strWBoard[intArrayX][intArrayY + 1].intRank > intRank){
+					blnAlive = false;
+					strWBoard[intArrayX][intArrayY] = null;
+				}
+			}
+		}
 	}
-	public int movebackwards(){
-		intY = intY + 1;
-		return intY;
+	public void moveBackward(){
+		this.intY = this.intY + 70;
+		this.intArrayY = this.intArrayY + 1;
 	}
-	public int moveleft(){
-		intX = intX - 1;
-		return intX;
+	public void moveLeft(){
+		this.intX = this.intX - 70;
+		this.intArrayX = this.intArrayX - 1;
 	}
-	public int moveright(){
-		intX = intX + 1;
-		return intX;
+	public void moveRight(){
+		this.intX = this.intX + 70;
+		this.intArrayX = this.intArrayX + 1;
 	}
 	public int attack(){
 		//if(intRank > intEnemyRank){
@@ -62,13 +115,14 @@ public class rank{
 	}
 	
 	//constructor
-	public rank(boolean blnAlive, int intRank, int intX, int intY, int intArrayX, int intArrayY){
+	public rank(boolean blnAlive, int intRank, int intX, int intY, int intArrayX, int intArrayY, String strSide){
 		this.blnAlive = blnAlive;
 		this.intRank = intRank;
 		this.intX = intX;
 		this.intY = intY;
 		this.intArrayX = intArrayX;
 		this.intArrayY = intArrayY;
+		this.strSide = strSide;
 		
 	}
 }

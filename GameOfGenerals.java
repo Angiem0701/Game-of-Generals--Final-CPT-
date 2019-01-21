@@ -569,48 +569,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			
 			blnSettingUp = false;
 			
-			sendLine = "Setup" + "," + "BLFlag" + "," + ""+thepanel.BLFlagOBJ.intArrayX + "," + ""+thepanel.BLFlagOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BLPrivate1" + "," + ""+thepanel.BLPrivate1OBJ.intArrayX + "," + ""+thepanel.BLPrivate1OBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BLPrivate2" + "," + ""+thepanel.BLPrivate2OBJ.intArrayX + "," + ""+thepanel.BLPrivate2OBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BLPrivate3" + "," + ""+thepanel.BLPrivate3OBJ.intArrayX + "," + ""+thepanel.BLPrivate3OBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BLPrivate4" + "," + ""+thepanel.BLPrivate4OBJ.intArrayX + "," + ""+thepanel.BLPrivate4OBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BLPrivate5" + "," + ""+thepanel.BLPrivate5OBJ.intArrayX + "," + ""+thepanel.BLPrivate5OBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BLPrivate6" + "," + ""+thepanel.BLPrivate6OBJ.intArrayX + "," + ""+thepanel.BLPrivate6OBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BLSpy1" + "," + ""+thepanel.BLSpy1OBJ.intArrayX + "," + ""+thepanel.BLSpy1OBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BLSpy2" + "," + ""+thepanel.BLSpy2OBJ.intArrayX + "," + ""+thepanel.BLSpy2OBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BLSergeant" + "," + ""+thepanel.BLSergeantOBJ.intArrayX + "," + ""+thepanel.BLSergeantOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BLLColonel" + "," + ""+thepanel.BLLColonelOBJ.intArrayX + "," + ""+thepanel.BLLColonelOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BL2Lieutenant" + "," + ""+thepanel.BL2LieutenantOBJ.intArrayX + "," + ""+thepanel.BL2LieutenantOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BL1Lieutenant" + "," + ""+thepanel.BL1LieutenantOBJ.intArrayX + "," + ""+thepanel.BL1LieutenantOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BLCaptain" + "," + ""+thepanel.BLCaptainOBJ.intArrayX + "," + ""+thepanel.BLCaptainOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BLColonel" + "," + ""+thepanel.BLColonelOBJ.intArrayX + "," + ""+thepanel.BLColonelOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BL1Star" + "," + ""+thepanel.BL1StarOBJ.intArrayX + "," + ""+thepanel.BL1StarOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BL2Star" + "," + ""+thepanel.BL2StarOBJ.intArrayX + "," + ""+thepanel.BL2StarOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BL3Star" + "," + ""+thepanel.BL3StarOBJ.intArrayX + "," + ""+thepanel.BL3StarOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BL4Star" + "," + ""+thepanel.BL4StarOBJ.intArrayX + "," + ""+thepanel.BL4StarOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BL5Star" + "," + ""+thepanel.BL5StarOBJ.intArrayX + "," + ""+thepanel.BL5StarOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "BLMajor" + "," + ""+thepanel.BLMajorOBJ.intArrayX + "," + ""+thepanel.BLMajorOBJ.intArrayY;
-			ssm.sendText(sendLine);
+			this.sendAllBlack();
+			
 		}
 		if(evt.getSource() == wDoneSetUp){
 			thepanel.intReady = thepanel.intReady + 1;
@@ -623,48 +583,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			
 			blnSettingUp = false;
 			
-			sendLine = "Setup" + "," + "WHFlag" + "," + ""+thepanel.WHFlagOBJ.intArrayX + "," + ""+thepanel.WHFlagOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WHPrivate1" + "," + ""+thepanel.WHPrivate1OBJ.intArrayX + "," + ""+thepanel.WHPrivate1OBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WHPrivate2" + "," + ""+thepanel.WHPrivate2OBJ.intArrayX + "," + ""+thepanel.WHPrivate2OBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WHPrivate3" + "," + ""+thepanel.WHPrivate3OBJ.intArrayX + "," + ""+thepanel.WHPrivate3OBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WHPrivate4" + "," + ""+thepanel.WHPrivate4OBJ.intArrayX + "," + ""+thepanel.WHPrivate4OBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WHPrivate5" + "," + ""+thepanel.WHPrivate5OBJ.intArrayX + "," + ""+thepanel.WHPrivate5OBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WHPrivate6" + "," + ""+thepanel.WHPrivate6OBJ.intArrayX + "," + ""+thepanel.WHPrivate6OBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WHSpy1" + "," + ""+thepanel.WHSpy1OBJ.intArrayX + "," + ""+thepanel.WHSpy1OBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WHSpy2" + "," + ""+thepanel.WHSpy2OBJ.intArrayX + "," + ""+thepanel.WHSpy2OBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WHSergeant" + "," + ""+thepanel.WHSergeantOBJ.intArrayX + "," + ""+thepanel.WHSergeantOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WHLColonel" + "," + ""+thepanel.WHLColonelOBJ.intArrayX + "," + ""+thepanel.WHLColonelOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WH2Lieutenant" + "," + ""+thepanel.WH2LieutenantOBJ.intArrayX + "," + ""+thepanel.WH2LieutenantOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WH1Lieutenant" + "," + ""+thepanel.WH1LieutenantOBJ.intArrayX + "," + ""+thepanel.WH1LieutenantOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WHCaptain" + "," + ""+thepanel.WHCaptainOBJ.intArrayX + "," + ""+thepanel.WHCaptainOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WHColonel" + "," + ""+thepanel.WHColonelOBJ.intArrayX + "," + ""+thepanel.WHColonelOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WH1Star" + "," + ""+thepanel.WH1StarOBJ.intArrayX + "," + ""+thepanel.WH1StarOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WH2Star" + "," + ""+thepanel.WH2StarOBJ.intArrayX + "," + ""+thepanel.WH2StarOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WH3Star" + "," + ""+thepanel.WH3StarOBJ.intArrayX + "," + ""+thepanel.WH3StarOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WH4Star" + "," + ""+thepanel.WH4StarOBJ.intArrayX + "," + ""+thepanel.WH4StarOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WH5Star" + "," + ""+thepanel.WH5StarOBJ.intArrayX + "," + ""+thepanel.WH5StarOBJ.intArrayY;
-			ssm.sendText(sendLine);
-			sendLine = "Setup" + "," + "WHMajor" + "," + ""+thepanel.WHMajorOBJ.intArrayX + "," + ""+thepanel.WHMajorOBJ.intArrayY;
-			ssm.sendText(sendLine);
+			this.sendAllWhite();
 		}
 		
 
@@ -679,6 +598,473 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	// METHODS - KEYLISTENER (Key Pressed)
 	public void keyPressed(KeyEvent evt){
 		System.out.println(evt.getKeyCode());
+		
+		if(blnClickBL1L){
+			if(evt.getKeyCode() == 38){
+				thepanel.BL1LieutenantOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BL1LieutenantOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BL1LieutenantOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BL1LieutenantOBJ.moveRight();
+			}
+			blnClickBL1L = false;
+		}else if(blnClickBL2L){
+			if(evt.getKeyCode() == 38){
+				thepanel.BL2LieutenantOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BL2LieutenantOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BL2LieutenantOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BL2LieutenantOBJ.moveRight();
+			}
+			blnClickBL2L = false;
+		}else if(blnClickBLCap){
+			if(evt.getKeyCode() == 38){
+				thepanel.BLCaptainOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BLCaptainOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BLCaptainOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BLCaptainOBJ.moveRight();
+			}
+			blnClickBLCap = false;
+		}else if(blnClickBLCol){
+			if(evt.getKeyCode() == 38){
+				thepanel.BLColonelOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BLColonelOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BLColonelOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BLColonelOBJ.moveRight();
+			}
+			blnClickBLCol = false;
+		}else if(blnClickBL1S){
+			if(evt.getKeyCode() == 38){
+				thepanel.BL1StarOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BL1StarOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BL1StarOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BL1StarOBJ.moveRight();
+			}
+			blnClickBL1S = false;
+		}else if(blnClickBL2S){
+			if(evt.getKeyCode() == 38){
+				thepanel.BL2StarOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BL2StarOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BL2StarOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BL2StarOBJ.moveRight();
+			}
+			blnClickBL2S = false;
+		}else if(blnClickBL3S){
+			if(evt.getKeyCode() == 38){
+				thepanel.BL3StarOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BL3StarOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BL3StarOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BL3StarOBJ.moveRight();
+			}
+			blnClickBL3S = false;
+		}else if(blnClickBL4S){
+			if(evt.getKeyCode() == 38){
+				thepanel.BL4StarOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BL4StarOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BL4StarOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BL4StarOBJ.moveRight();
+			}
+			blnClickBL4S = false;
+		}else if(blnClickBL5S){
+			if(evt.getKeyCode() == 38){
+				thepanel.BL5StarOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BL5StarOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BL5StarOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BL5StarOBJ.moveRight();
+			}
+			blnClickBL5S = false;
+		}else if(blnClickBLM){
+			if(evt.getKeyCode() == 38){
+				thepanel.BLMajorOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BLMajorOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BLMajorOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BLMajorOBJ.moveRight();
+			}
+			blnClickBLM = false;
+		}else if(blnClickBLF){
+			if(evt.getKeyCode() == 38){
+				thepanel.BLFlagOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BLFlagOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BLFlagOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BLFlagOBJ.moveRight();
+			}
+			blnClickBLF = false;
+		}else if(blnClickBLLC){
+			if(evt.getKeyCode() == 38){
+				thepanel.BLLColonelOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BLLColonelOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BLLColonelOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BLLColonelOBJ.moveRight();
+			}
+			blnClickBLLC = false;
+		}else if(blnClickBLSer){
+			if(evt.getKeyCode() == 38){
+				thepanel.BLSergeantOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BLSergeantOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BLSergeantOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BLSergeantOBJ.moveRight();
+			}
+			blnClickBLSer = false;
+		}else if(blnClickBLSpy1){
+			if(evt.getKeyCode() == 38){
+				thepanel.BLSpy1OBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BLSpy1OBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BLSpy1OBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BLSpy1OBJ.moveRight();
+			}
+			blnClickBLSpy1 = false;
+		}else if(blnClickBLSpy2){
+			if(evt.getKeyCode() == 38){
+				thepanel.BLSpy2OBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BLSpy2OBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BLSpy2OBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BLSpy2OBJ.moveRight();
+			}
+			blnClickBLSpy2 = false;
+		}else if(blnClickBLP1){
+			if(evt.getKeyCode() == 38){
+				thepanel.BLPrivate1OBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BLPrivate1OBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BLPrivate1OBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BLPrivate1OBJ.moveRight();
+			}
+			blnClickBLP1 = false;
+		}else if(blnClickBLP2){
+			if(evt.getKeyCode() == 38){
+				thepanel.BLPrivate2OBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BLPrivate2OBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BLPrivate2OBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BLPrivate2OBJ.moveRight();
+			}
+			blnClickBLP2 = false;
+		}else if(blnClickBLP3){
+			if(evt.getKeyCode() == 38){
+				thepanel.BLPrivate3OBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BLPrivate3OBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BLPrivate3OBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BLPrivate3OBJ.moveRight();
+			}
+			blnClickBLP3 = false;
+		}else if(blnClickBLP4){
+			if(evt.getKeyCode() == 38){
+				thepanel.BLPrivate4OBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BLPrivate4OBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BLPrivate4OBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BLPrivate4OBJ.moveRight();
+			}
+			blnClickBLP4 = false;
+		}else if(blnClickBLP5){
+			if(evt.getKeyCode() == 38){
+				thepanel.BLPrivate5OBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BLPrivate5OBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BLPrivate5OBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BLPrivate5OBJ.moveRight();
+			}
+			blnClickBLP5 = false;
+		}else if(blnClickBLP6){
+			if(evt.getKeyCode() == 38){
+				thepanel.BLPrivate6OBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.BLPrivate6OBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.BLPrivate6OBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.BLPrivate6OBJ.moveRight();
+			}
+			blnClickBLP6 = false;
+		}else if(blnClickWH1L){
+			if(evt.getKeyCode() == 38){
+				thepanel.WH1LieutenantOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WH1LieutenantOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WH1LieutenantOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WH1LieutenantOBJ.moveRight();
+			}
+			blnClickWH1L = false;
+		}else if(blnClickWH2L){
+			if(evt.getKeyCode() == 38){
+				thepanel.WH2LieutenantOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WH2LieutenantOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WH2LieutenantOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WH2LieutenantOBJ.moveRight();
+			}
+			blnClickWH2L = false;
+		}else if(blnClickWHCap){
+			if(evt.getKeyCode() == 38){
+				thepanel.WHCaptainOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WHCaptainOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WHCaptainOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WHCaptainOBJ.moveRight();
+			}
+			blnClickWHCap = false;
+		}else if(blnClickWHCol){
+			if(evt.getKeyCode() == 38){
+				thepanel.WHColonelOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WHColonelOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WHColonelOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WHColonelOBJ.moveRight();
+			}
+			blnClickWHCol = false;
+		}else if(blnClickWH1S){
+			if(evt.getKeyCode() == 38){
+				thepanel.WH1StarOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WH1StarOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WH1StarOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WH1StarOBJ.moveRight();
+			}
+			blnClickWH1S = false;
+		}else if(blnClickWH2S){
+			if(evt.getKeyCode() == 38){
+				thepanel.WH2StarOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WH2StarOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WH2StarOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WH2StarOBJ.moveRight();
+			}
+			blnClickWH2S = false;
+		}else if(blnClickWH3S){
+			if(evt.getKeyCode() == 38){
+				thepanel.WH3StarOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WH3StarOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WH3StarOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WH3StarOBJ.moveRight();
+			}
+			blnClickWH3S = false;
+		}else if(blnClickWH4S){
+			if(evt.getKeyCode() == 38){
+				thepanel.WH4StarOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WH4StarOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WH4StarOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WH4StarOBJ.moveRight();
+			}
+			blnClickWH4S = false;
+		}else if(blnClickWH5S){
+			if(evt.getKeyCode() == 38){
+				thepanel.WH5StarOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WH5StarOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WH5StarOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WH5StarOBJ.moveRight();
+			}
+			blnClickWH5S = false;
+		}else if(blnClickWHM){
+			if(evt.getKeyCode() == 38){
+				thepanel.WHMajorOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WHMajorOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WHMajorOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WHMajorOBJ.moveRight();
+			}
+			blnClickWHM = false;
+		}else if(blnClickWHF){
+			if(evt.getKeyCode() == 38){
+				thepanel.WHFlagOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WHFlagOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WHFlagOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WHFlagOBJ.moveRight();
+			}
+			blnClickWHF = false;
+		}else if(blnClickWHLC){
+			if(evt.getKeyCode() == 38){
+				thepanel.WHLColonelOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WHLColonelOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WHLColonelOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WHLColonelOBJ.moveRight();
+			}
+			blnClickWHLC = false;
+		}else if(blnClickWHSer){
+			if(evt.getKeyCode() == 38){
+				thepanel.WHSergeantOBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WHSergeantOBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WHSergeantOBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WHSergeantOBJ.moveRight();
+			}
+			blnClickWHSer = false;
+		}else if(blnClickWHSpy1){
+			if(evt.getKeyCode() == 38){
+				thepanel.WHSpy1OBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WHSpy1OBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WHSpy1OBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WHSpy1OBJ.moveRight();
+			}
+			blnClickWHSpy1 = false;
+		}else if(blnClickWHSpy2){
+			if(evt.getKeyCode() == 38){
+				thepanel.WHSpy2OBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WHSpy2OBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WHSpy2OBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WHSpy2OBJ.moveRight();
+			}
+			blnClickWHSpy2 = false;
+		}else if(blnClickWHP1){
+			if(evt.getKeyCode() == 38){
+				thepanel.WHPrivate1OBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WHPrivate1OBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WHPrivate1OBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WHPrivate1OBJ.moveRight();
+			}
+			blnClickWHP1 = false;
+		}else if(blnClickWHP2){
+			if(evt.getKeyCode() == 38){
+				thepanel.WHPrivate2OBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WHPrivate2OBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WHPrivate2OBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WHPrivate2OBJ.moveRight();
+			}
+			blnClickWHP2 = false;
+		}else if(blnClickWHP3){
+			if(evt.getKeyCode() == 38){
+				thepanel.WHPrivate3OBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WHPrivate3OBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WHPrivate3OBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WHPrivate3OBJ.moveRight();
+			}
+			blnClickWHP3 = false;
+		}else if(blnClickWHP4){
+			if(evt.getKeyCode() == 38){
+				thepanel.WHPrivate4OBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WHPrivate4OBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WHPrivate4OBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WHPrivate4OBJ.moveRight();
+			}
+			blnClickWHP4 = false;
+		}else if(blnClickWHP5){
+			if(evt.getKeyCode() == 38){
+				thepanel.WHPrivate5OBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WHPrivate5OBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WHPrivate5OBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WHPrivate5OBJ.moveRight();
+			}
+			blnClickWHP5 = false;
+		}else if(blnClickWHP6){
+			if(evt.getKeyCode() == 38){
+				thepanel.WHPrivate6OBJ.moveForward();
+			}else if(evt.getKeyCode() == 37){
+				thepanel.WHPrivate6OBJ.moveLeft();
+			}else if(evt.getKeyCode() == 40){
+				thepanel.WHPrivate6OBJ.moveBackward();
+			}else if(evt.getKeyCode() == 39){
+				thepanel.WHPrivate6OBJ.moveRight();
+			}
+			blnClickBLP6 = false;
+		}
+		
+		this.changeTurn();
+		
 	}	
 	
 	// METHODS - KEYLISTENER (Key Typed)
@@ -2392,6 +2778,96 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			thepanel.strWhosTurn.equals("White");
 		}
 		ssm.sendText("WhosTurn: " + thepanel.strWhosTurn);
+	}
+	
+	public void sendAllWhite(){
+		sendLine = "Setup" + "," + "WHFlag" + "," + ""+thepanel.WHFlagOBJ.intArrayX + "," + ""+thepanel.WHFlagOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WHPrivate1" + "," + ""+thepanel.WHPrivate1OBJ.intArrayX + "," + ""+thepanel.WHPrivate1OBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WHPrivate2" + "," + ""+thepanel.WHPrivate2OBJ.intArrayX + "," + ""+thepanel.WHPrivate2OBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WHPrivate3" + "," + ""+thepanel.WHPrivate3OBJ.intArrayX + "," + ""+thepanel.WHPrivate3OBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WHPrivate4" + "," + ""+thepanel.WHPrivate4OBJ.intArrayX + "," + ""+thepanel.WHPrivate4OBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WHPrivate5" + "," + ""+thepanel.WHPrivate5OBJ.intArrayX + "," + ""+thepanel.WHPrivate5OBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WHPrivate6" + "," + ""+thepanel.WHPrivate6OBJ.intArrayX + "," + ""+thepanel.WHPrivate6OBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WHSpy1" + "," + ""+thepanel.WHSpy1OBJ.intArrayX + "," + ""+thepanel.WHSpy1OBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WHSpy2" + "," + ""+thepanel.WHSpy2OBJ.intArrayX + "," + ""+thepanel.WHSpy2OBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WHSergeant" + "," + ""+thepanel.WHSergeantOBJ.intArrayX + "," + ""+thepanel.WHSergeantOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WHLColonel" + "," + ""+thepanel.WHLColonelOBJ.intArrayX + "," + ""+thepanel.WHLColonelOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WH2Lieutenant" + "," + ""+thepanel.WH2LieutenantOBJ.intArrayX + "," + ""+thepanel.WH2LieutenantOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WH1Lieutenant" + "," + ""+thepanel.WH1LieutenantOBJ.intArrayX + "," + ""+thepanel.WH1LieutenantOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WHCaptain" + "," + ""+thepanel.WHCaptainOBJ.intArrayX + "," + ""+thepanel.WHCaptainOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WHColonel" + "," + ""+thepanel.WHColonelOBJ.intArrayX + "," + ""+thepanel.WHColonelOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WH1Star" + "," + ""+thepanel.WH1StarOBJ.intArrayX + "," + ""+thepanel.WH1StarOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WH2Star" + "," + ""+thepanel.WH2StarOBJ.intArrayX + "," + ""+thepanel.WH2StarOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WH3Star" + "," + ""+thepanel.WH3StarOBJ.intArrayX + "," + ""+thepanel.WH3StarOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WH4Star" + "," + ""+thepanel.WH4StarOBJ.intArrayX + "," + ""+thepanel.WH4StarOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WH5Star" + "," + ""+thepanel.WH5StarOBJ.intArrayX + "," + ""+thepanel.WH5StarOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "WHMajor" + "," + ""+thepanel.WHMajorOBJ.intArrayX + "," + ""+thepanel.WHMajorOBJ.intArrayY;
+		ssm.sendText(sendLine);
+	}
+	
+	public void sendAllBlack(){
+		sendLine = "Setup" + "," + "BLFlag" + "," + ""+thepanel.BLFlagOBJ.intArrayX + "," + ""+thepanel.BLFlagOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BLPrivate1" + "," + ""+thepanel.BLPrivate1OBJ.intArrayX + "," + ""+thepanel.BLPrivate1OBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BLPrivate2" + "," + ""+thepanel.BLPrivate2OBJ.intArrayX + "," + ""+thepanel.BLPrivate2OBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BLPrivate3" + "," + ""+thepanel.BLPrivate3OBJ.intArrayX + "," + ""+thepanel.BLPrivate3OBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BLPrivate4" + "," + ""+thepanel.BLPrivate4OBJ.intArrayX + "," + ""+thepanel.BLPrivate4OBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BLPrivate5" + "," + ""+thepanel.BLPrivate5OBJ.intArrayX + "," + ""+thepanel.BLPrivate5OBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BLPrivate6" + "," + ""+thepanel.BLPrivate6OBJ.intArrayX + "," + ""+thepanel.BLPrivate6OBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BLSpy1" + "," + ""+thepanel.BLSpy1OBJ.intArrayX + "," + ""+thepanel.BLSpy1OBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BLSpy2" + "," + ""+thepanel.BLSpy2OBJ.intArrayX + "," + ""+thepanel.BLSpy2OBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BLSergeant" + "," + ""+thepanel.BLSergeantOBJ.intArrayX + "," + ""+thepanel.BLSergeantOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BLLColonel" + "," + ""+thepanel.BLLColonelOBJ.intArrayX + "," + ""+thepanel.BLLColonelOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BL2Lieutenant" + "," + ""+thepanel.BL2LieutenantOBJ.intArrayX + "," + ""+thepanel.BL2LieutenantOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BL1Lieutenant" + "," + ""+thepanel.BL1LieutenantOBJ.intArrayX + "," + ""+thepanel.BL1LieutenantOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BLCaptain" + "," + ""+thepanel.BLCaptainOBJ.intArrayX + "," + ""+thepanel.BLCaptainOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BLColonel" + "," + ""+thepanel.BLColonelOBJ.intArrayX + "," + ""+thepanel.BLColonelOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BL1Star" + "," + ""+thepanel.BL1StarOBJ.intArrayX + "," + ""+thepanel.BL1StarOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BL2Star" + "," + ""+thepanel.BL2StarOBJ.intArrayX + "," + ""+thepanel.BL2StarOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BL3Star" + "," + ""+thepanel.BL3StarOBJ.intArrayX + "," + ""+thepanel.BL3StarOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BL4Star" + "," + ""+thepanel.BL4StarOBJ.intArrayX + "," + ""+thepanel.BL4StarOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BL5Star" + "," + ""+thepanel.BL5StarOBJ.intArrayX + "," + ""+thepanel.BL5StarOBJ.intArrayY;
+		ssm.sendText(sendLine);
+		sendLine = "Setup" + "," + "BLMajor" + "," + ""+thepanel.BLMajorOBJ.intArrayX + "," + ""+thepanel.BLMajorOBJ.intArrayY;
+		ssm.sendText(sendLine);
 	}
 	
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
