@@ -69,6 +69,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	String strGameEnd = "1. The game ends when:"+"\n"+"- the Flag is eliminated or captured"+"\n"+"- a Flag reaches the opposite end of the board"+"\n"+"- a player resigns"+"\n"+"- both players agree on a drawn position";
 	String strGameEnd2 = "2. A Flag reaching the opposite end of the board may still be eliminated by any opposing piece occupying a square adjacent to the one reached by the Flag. In order to win, the Flag should at least be two squares or two ahead of any opposing piece.";
 	
+	String strBriefRules = "*** THE OBJECTIVE OF THE GAME ***" + "\n" + "ELIMINATE or CAPTURE the FLAG of your opponent OR successfully maneuvering your own FLAG to the opposite end of the board." + "/n" + "/n" + "*** CHALLENGING: ***" + "/n" + "When a challenge is made, the following rules of elimination apply: " + "/n" + "- A higher ranked soldier elimates a lower ranked soldier" + "/n" + "- If both soldiers are of equal ranks, they are both eliminated" + "/n" + "- A spy eliminates any officer starting from the Sergeant and above" + "/n" + "- The Flag can be eliminated or captured by any piece, including the opponent's Flag" + "/n" + "Only a Private can eliminate the Spy" + "/n" + "The Flag that moves into the same square occupied by the other Flag wins the game";
+	
 	boolean blnSettingUp;
 	
 	rank strWBoard[][] = new rank[9][8];
@@ -174,11 +176,9 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			}
 		}
 		if(evt.getSource() == enterButton){
-			
 			String strFriendIP = addFriend.getText();
 			System.out.println(strFriendIP);
 			
-		
 			ssm = new SuperSocketMaster(strFriendIP, 2468, this);
 			ssm.connect();
 			System.out.println("Server joined");
@@ -198,9 +198,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			
 			blnSettingUp = true;
 			
-			wDoneSetUp.setVisible(true);
-			
-			
+			wDoneSetUp.setVisible(true);	
 		}
 		
 		if(evt.getSource() == chatBoxSend){
@@ -2980,7 +2978,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		bDoneSetUp.setVisible(false);
 		bDoneSetUp.addActionListener(this);
 		
-		BriefRules = new JTextArea();
+		BriefRules = new JTextArea(strBriefRules);
 		BriefRules.setLineWrap(true);
 		BriefRules.setWrapStyleWord(true);
 		BriefRules.setVisible(false);
