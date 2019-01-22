@@ -198,7 +198,10 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			
 			blnSettingUp = true;
 			
-			wDoneSetUp.setVisible(true);	
+			wDoneSetUp.setVisible(true);
+			
+			theframe.requestFocus();
+			
 		}
 		
 		if(evt.getSource() == chatBoxSend){
@@ -561,6 +564,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			
 			BriefRules.setVisible(true);
 			BriefRulesScroll.setVisible(true);
+			
+			theframe.requestFocus();
 			
 		}
 		
