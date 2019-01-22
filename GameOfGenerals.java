@@ -193,6 +193,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			chatBoxReceive.setVisible(true);
 			chatBoxSend.setVisible(true);
 			chatBoxScroll.setVisible(true);
+			BriefRules.setVisible(true);
+			BriefRulesScroll.setVisible(true);
 			
 			blnSettingUp = true;
 			
@@ -2982,9 +2984,10 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		BriefRules.setLineWrap(true);
 		BriefRules.setWrapStyleWord(true);
 		BriefRules.setVisible(false);
+		BriefRules.setEditable(false);
 		BriefRulesScroll = new JScrollPane(BriefRules);
-		BriefRulesScroll.setSize(100,50);
-		BriefRulesScroll.setLocation(390,50);
+		BriefRulesScroll.setSize(300,400);
+		BriefRulesScroll.setLocation(960,40);
 		BriefRulesScroll.setVisible(false);
 		
 		thepanel.add(StartGameButton);
@@ -3008,6 +3011,8 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		thepanel.add(sReadyButton);
 		thepanel.add(wDoneSetUp);
 		thepanel.add(bDoneSetUp);
+		thepanel.add(BriefRules);
+		thepanel.add(BriefRulesScroll);
 		
 		theframe.addKeyListener(this);
 		
