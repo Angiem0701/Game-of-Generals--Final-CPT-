@@ -61,6 +61,10 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 	int intReady = 0;
 	
 	String strWhosTurn;
+	
+	boolean blnWhiteWins = false;
+	boolean blnBlackWins = false;
+	
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
 
 
@@ -130,29 +134,49 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 		}
 		
 		if(blnClientView){
-			g.drawImage(WH1Lieutenant,WH1LieutenantOBJ.intX,WH1LieutenantOBJ.intY,65,20,null);
-			g.drawImage(WH2Lieutenant,WH2LieutenantOBJ.intX,WH2LieutenantOBJ.intY,65,20,null);
-			g.drawImage(WHCaptain,WHCaptainOBJ.intX,WHCaptainOBJ.intY,65,20,null);
-			g.drawImage(WHColonel,WHColonelOBJ.intX,WHColonelOBJ.intY,65,20,null);
-			g.drawImage(WH5Star,WH5StarOBJ.intX,WH5StarOBJ.intY,65,20,null);
-			g.drawImage(WHFlag,WHFlagOBJ.intX,WHFlagOBJ.intY,65,20,null);
-			g.drawImage(WH4Star,WH4StarOBJ.intX,WH4StarOBJ.intY,65,20,null);
-			g.drawImage(WHLColonel,WHLColonelOBJ.intX,WHLColonelOBJ.intY,65,20,null);
-			g.drawImage(WHMajor,WHMajorOBJ.intX,WHMajorOBJ.intY,65,20,null);
-			
-			g.drawImage(WH1Star,WH1StarOBJ.intX,WH1StarOBJ.intY,65,20,null);
-			g.drawImage(WHPrivate,WHPrivate1OBJ.intX,WHPrivate1OBJ.intY,65,20,null); //private 1
-			g.drawImage(WHPrivate,WHPrivate2OBJ.intX,WHPrivate2OBJ.intY,65,20,null); //private 2
-			g.drawImage(WHPrivate,WHPrivate3OBJ.intX,WHPrivate3OBJ.intY,65,20,null); //private 3
-			g.drawImage(WHPrivate,WHPrivate4OBJ.intX,WHPrivate4OBJ.intY,65,20,null); //private 4
-			g.drawImage(WHPrivate,WHPrivate5OBJ.intX,WHPrivate5OBJ.intY,65,20,null); //private 5
-			g.drawImage(WHPrivate,WHPrivate6OBJ.intX,WHPrivate6OBJ.intY,65,20,null); //private 6
-			g.drawImage(WHSergeant,WHSergeantOBJ.intX,WHSergeantOBJ.intY,65,20,null);
-			g.drawImage(WHSpy,WHSpy2OBJ.intX,WHSpy2OBJ.intY,65,20,null); //spy 2
-			
-			g.drawImage(WHSpy,WHSpy1OBJ.intX,WHSpy1OBJ.intY,65,20,null); //spy 1
-			g.drawImage(WH2Star,WH2StarOBJ.intX,WH2StarOBJ.intY,65,20,null);
-			g.drawImage(WH3Star,WH3StarOBJ.intX,WH3StarOBJ.intY,65,20,null);
+			if(WH1LieutenantOBJ.blnAlive == true){
+				g.drawImage(WH1Lieutenant,WH1LieutenantOBJ.intX,WH1LieutenantOBJ.intY,65,20,null);
+			}if(WH2LieutenantOBJ.blnAlive == true){
+				g.drawImage(WH2Lieutenant,WH2LieutenantOBJ.intX,WH2LieutenantOBJ.intY,65,20,null);
+			}if(WHCaptainOBJ.blnAlive == true){
+				g.drawImage(WHCaptain,WHCaptainOBJ.intX,WHCaptainOBJ.intY,65,20,null);
+			}if(WHColonelOBJ.blnAlive == true){
+				g.drawImage(WHColonel,WHColonelOBJ.intX,WHColonelOBJ.intY,65,20,null);
+			}if(WH5StarOBJ.blnAlive == true){
+				g.drawImage(WH5Star,WH5StarOBJ.intX,WH5StarOBJ.intY,65,20,null);
+			}if(WHFlagOBJ.blnAlive == true){
+				g.drawImage(WHFlag,WHFlagOBJ.intX,WHFlagOBJ.intY,65,20,null);
+			}if(WH4StarOBJ.blnAlive == true){
+				g.drawImage(WH4Star,WH4StarOBJ.intX,WH4StarOBJ.intY,65,20,null);
+			}if(WHLColonelOBJ.blnAlive == true){
+				g.drawImage(WHLColonel,WHLColonelOBJ.intX,WHLColonelOBJ.intY,65,20,null);
+			}if(WHMajorOBJ.blnAlive == true){
+				g.drawImage(WHMajor,WHMajorOBJ.intX,WHMajorOBJ.intY,65,20,null);
+			}if(WH1StarOBJ.blnAlive == true){
+				g.drawImage(WH1Star,WH1StarOBJ.intX,WH1StarOBJ.intY,65,20,null);
+			}if(WHPrivate1OBJ.blnAlive == true){
+				g.drawImage(WHPrivate,WHPrivate1OBJ.intX,WHPrivate1OBJ.intY,65,20,null);
+			}if(WHPrivate2OBJ.blnAlive == true){
+				g.drawImage(WHPrivate,WHPrivate2OBJ.intX,WHPrivate2OBJ.intY,65,20,null);
+			}if(WHPrivate3OBJ.blnAlive == true){
+				g.drawImage(WHPrivate,WHPrivate3OBJ.intX,WHPrivate3OBJ.intY,65,20,null);
+			}if(WHPrivate4OBJ.blnAlive == true){
+				g.drawImage(WHPrivate,WHPrivate4OBJ.intX,WHPrivate4OBJ.intY,65,20,null);
+			}if(WHPrivate5OBJ.blnAlive == true){
+				g.drawImage(WHPrivate,WHPrivate5OBJ.intX,WHPrivate5OBJ.intY,65,20,null);
+			}if(WHPrivate6OBJ.blnAlive == true){
+				g.drawImage(WHPrivate,WHPrivate6OBJ.intX,WHPrivate6OBJ.intY,65,20,null);
+			}if(WHSergeantOBJ.blnAlive == true){
+				g.drawImage(WHSergeant,WHSergeantOBJ.intX,WHSergeantOBJ.intY,65,20,null);
+			}if(WHSpy2OBJ.blnAlive == true){
+				g.drawImage(WHSpy,WHSpy2OBJ.intX,WHSpy2OBJ.intY,65,20,null);
+			}if(WHSpy1OBJ.blnAlive == true){
+				g.drawImage(WHSpy,WHSpy1OBJ.intX,WHSpy1OBJ.intY,65,20,null);
+			}if(WH2StarOBJ.blnAlive == true){
+				g.drawImage(WH2Star,WH2StarOBJ.intX,WH2StarOBJ.intY,65,20,null);
+			}if(WH3StarOBJ.blnAlive == true){
+				g.drawImage(WH3Star,WH3StarOBJ.intX,WH3StarOBJ.intY,65,20,null);
+			}
 			
 			if(intReady == 2){
 				if(BLFlagOBJ.blnAlive == true){
@@ -200,29 +224,49 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 				}
 			}			
 		}else if(blnServerView){
-			g.drawImage(BL1Lieutenant,BL1LieutenantOBJ.intX,BL1LieutenantOBJ.intY,65,20,null);
-			g.drawImage(BL2Lieutenant,BL2LieutenantOBJ.intX,BL2LieutenantOBJ.intY,65,20,null);
-			g.drawImage(BLCaptain,BLCaptainOBJ.intX,BLCaptainOBJ.intY,65,20,null);
-			g.drawImage(BLColonel,BLColonelOBJ.intX,BLColonelOBJ.intY,65,20,null);
-			g.drawImage(BL5Star,BL5StarOBJ.intX,BL5StarOBJ.intY,65,20,null);
-			g.drawImage(BLFlag,BLFlagOBJ.intX,BLFlagOBJ.intY,65,20,null);
-			g.drawImage(BL4Star,BL4StarOBJ.intX,BL4StarOBJ.intY,65,20,null);
-			g.drawImage(BLLColonel,BLLColonelOBJ.intX,BLLColonelOBJ.intY,65,20,null);
-			g.drawImage(BLMajor,BLMajorOBJ.intX,BLMajorOBJ.intY,65,20,null);
-			
-			g.drawImage(BL1Star,BL1StarOBJ.intX,BL1StarOBJ.intY,65,20,null);
-			g.drawImage(BLPrivate,BLPrivate1OBJ.intX,BLPrivate1OBJ.intY,65,20,null); //private 1
-			g.drawImage(BLPrivate,BLPrivate2OBJ.intX,BLPrivate2OBJ.intY,65,20,null); //private 2
-			g.drawImage(BLPrivate,BLPrivate3OBJ.intX,BLPrivate3OBJ.intY,65,20,null); //private 3
-			g.drawImage(BLPrivate,BLPrivate4OBJ.intX,BLPrivate4OBJ.intY,65,20,null); //private 4
-			g.drawImage(BLPrivate,BLPrivate5OBJ.intX,BLPrivate5OBJ.intY,65,20,null); //private 5
-			g.drawImage(BLPrivate,BLPrivate6OBJ.intX,BLPrivate6OBJ.intY,65,20,null); //private 6
-			g.drawImage(BLSergeant,BLSergeantOBJ.intX,BLSergeantOBJ.intY,65,20,null);
-			g.drawImage(BLSpy,BLSpy2OBJ.intX,BLSpy2OBJ.intY,65,20,null); //spy 2
-			
-			g.drawImage(BLSpy,BLSpy1OBJ.intX,BLSpy1OBJ.intY,65,20,null); //spy 1
-			g.drawImage(BL2Star,BL2StarOBJ.intX,BL2StarOBJ.intY,65,20,null);
-			g.drawImage(BL3Star,BL3StarOBJ.intX,BL3StarOBJ.intY,65,20,null);
+			if(BL1LieutenantOBJ.blnAlive == true){
+				g.drawImage(BL1Lieutenant,BL1LieutenantOBJ.intX,BL1LieutenantOBJ.intY,65,20,null);
+			}if(BL2LieutenantOBJ.blnAlive == true){
+				g.drawImage(BL2Lieutenant,BL2LieutenantOBJ.intX,BL2LieutenantOBJ.intY,65,20,null);
+			}if(BLCaptainOBJ.blnAlive == true){
+				g.drawImage(BLCaptain,BLCaptainOBJ.intX,BLCaptainOBJ.intY,65,20,null);
+			}if(BLColonelOBJ.blnAlive == true){
+				g.drawImage(BLColonel,BLColonelOBJ.intX,BLColonelOBJ.intY,65,20,null);
+			}if(BL5StarOBJ.blnAlive == true){
+				g.drawImage(BL5Star,BL5StarOBJ.intX,BL5StarOBJ.intY,65,20,null);
+			}if(BLFlagOBJ.blnAlive == true){
+				g.drawImage(BLFlag,BLFlagOBJ.intX,BLFlagOBJ.intY,65,20,null);
+			}if(BL4StarOBJ.blnAlive == true){
+				g.drawImage(BL4Star,BL4StarOBJ.intX,BL4StarOBJ.intY,65,20,null);
+			}if(BLLColonelOBJ.blnAlive == true){
+				g.drawImage(BLLColonel,BLLColonelOBJ.intX,BLLColonelOBJ.intY,65,20,null);
+			}if(BLMajorOBJ.blnAlive == true){
+				g.drawImage(BLMajor,BLMajorOBJ.intX,BLMajorOBJ.intY,65,20,null);
+			}if(BL1StarOBJ.blnAlive == true){
+				g.drawImage(BL1Star,BL1StarOBJ.intX,BL1StarOBJ.intY,65,20,null);
+			}if(BLPrivate1OBJ.blnAlive == true){
+				g.drawImage(BLPrivate,BLPrivate1OBJ.intX,BLPrivate1OBJ.intY,65,20,null);
+			}if(BLPrivate2OBJ.blnAlive == true){
+				g.drawImage(BLPrivate,BLPrivate2OBJ.intX,BLPrivate2OBJ.intY,65,20,null); 
+			}if(BLPrivate3OBJ.blnAlive == true){
+				g.drawImage(BLPrivate,BLPrivate3OBJ.intX,BLPrivate3OBJ.intY,65,20,null); 
+			}if(BLPrivate4OBJ.blnAlive == true){
+				g.drawImage(BLPrivate,BLPrivate4OBJ.intX,BLPrivate4OBJ.intY,65,20,null);
+			}if(BLPrivate5OBJ.blnAlive == true){
+				g.drawImage(BLPrivate,BLPrivate5OBJ.intX,BLPrivate5OBJ.intY,65,20,null);
+			}if(BLPrivate6OBJ.blnAlive == true){
+				g.drawImage(BLPrivate,BLPrivate6OBJ.intX,BLPrivate6OBJ.intY,65,20,null); 
+			}if(BLSergeantOBJ.blnAlive == true){
+				g.drawImage(BLSergeant,BLSergeantOBJ.intX,BLSergeantOBJ.intY,65,20,null);
+			}if(BLSpy2OBJ.blnAlive == true){
+				g.drawImage(BLSpy,BLSpy2OBJ.intX,BLSpy2OBJ.intY,65,20,null); 
+			}if(BLSpy1OBJ.blnAlive == true){
+				g.drawImage(BLSpy,BLSpy1OBJ.intX,BLSpy1OBJ.intY,65,20,null);
+			}if(BL2StarOBJ.blnAlive == true){
+				g.drawImage(BL2Star,BL2StarOBJ.intX,BL2StarOBJ.intY,65,20,null);
+			}if(BL3StarOBJ.blnAlive == true){
+				g.drawImage(BL3Star,BL3StarOBJ.intX,BL3StarOBJ.intY,65,20,null);
+			}
 			
 			if(intReady == 2){
 				if(WHFlagOBJ.blnAlive == true){
@@ -272,8 +316,20 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 			
 		}
 		
-		
-		
+		if(blnWhiteWins){
+			intReady = -1;
+			g.setColor(Color.BLACK);
+			g.fillRect(0,200,1280,200);
+			g.setColor(Color.WHITE);
+			g.drawString("White Wins!",350,300);
+		}
+		if(blnBlackWins){
+			intReady = -1;
+			g.setColor(Color.BLACK);
+			g.fillRect(0,200,1280,200);
+			g.setColor(Color.WHITE);
+			g.drawString("Black Wins!",350,300);
+		}
 		
 		
 	}
