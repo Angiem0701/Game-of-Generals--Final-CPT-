@@ -1,12 +1,7 @@
-/** 
- * Game of the Generals [Demo]
- * ICS 4U1 Final CPT
- * This is a computer version of "Game of the Generals" using concepts and tools learned throughout the course
- * It enables players to play over a network through the use of Cadawas' SuperSocketMaster
- * @author Angelica C. F. Manansala, Ivan Lau, Caitlin Kwan
- * @since 2018-12-21
- * Last Updated: January 19, 2019
- */
+// Game of the Generals [Demo]
+// Created by: Angelica C. F. Manansala, Ivan Lau, Caitlin Kwan
+// Created on: December 21, 2018
+// Last Updated: January 19, 2019
 
 import java.awt.*;
 import java.awt.event.*;
@@ -51,6 +46,7 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	JScrollPane BriefRulesScroll = new JScrollPane();
 	
 	SuperSocketMaster ssm;
+	
 	
 	// Variables
 	int intPageCount = 0;
@@ -3039,10 +3035,6 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		ssm.sendText("WhosTurn: " + thepanel.strWhosTurn);
 		//Sending change turn indicator over the network
 	}
-	/**
-	 * Changes the turn after a player has moved a piece
-	 * Sends indication of a turn change over the network
-	 */
 	
 	public void sendAllWhite(){
 		//Sending array coordinates, x and y coordinates on the screen and status (alive or not) for each white piece over the network
