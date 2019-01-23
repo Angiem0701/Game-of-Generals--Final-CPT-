@@ -1,12 +1,7 @@
-/** 
- * Game of the Generals
- * ICS 4U1 Final CPT
- * This is a computer version of "Game of the Generals" using concepts and tools learned throughout the course
- * It enables players to play over a network through the use of Cadawas' SuperSocketMaster
- * @author Angelica Manansala, Ivan Lau, Caitlin Kwan
- * @since 2018-12-21
- * Last Updated: January 19, 2019
- */
+// Game of the Generals [Demo]
+// Created by: Angelica C. F. Manansala, Ivan Lau, Caitlin Kwan
+// Created on: December 21, 2018
+// Last Updated: January 19, 2019
 
 import javax.swing.*;
 import java.awt.*;
@@ -57,52 +52,17 @@ public class GameofGeneralsAnimationPanel extends JPanel{
 	
 	BufferedImage legend;
 	
-	/**
-	 * This indicates when the players are setting up the connection 
-	 */
-	
 	boolean blnStart = false;
-	
-	/**
-	 * This indicates when the players have set up a connection and can set up their pieces
-	 */
-	
 	boolean blnPlay = false;
 	
-	/**
-	 * This boolean is true if the player is the client
-	 */
-	
 	boolean blnClientView = false;
-	
-	/**
-	 * This boolean is true if the player is the server
-	 */
-	
 	boolean blnServerView = false;
-	
-	/**
-	 * This keeps track of how many players have setup their pieces and are ready to play.
-	 */
 	
 	int intReady = 0;
 	
-	/**
-	 * This keeps track of which player's turn it is
-	 */
-	
 	String strWhosTurn;
 	
-	/**
-	 * This boolean is true when White has won the game
-	 */
-	
 	boolean blnWhiteWins = false;
-	
-	/**
-	 * This boolean is true when Black has won the game
-	 */
-	
 	boolean blnBlackWins = false;
 	
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
