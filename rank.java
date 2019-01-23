@@ -11,15 +11,52 @@ public class rank{
 
 	//properties
 	//rank
-	int intRank;
-	int intX;
-	int intY;
-	boolean blnAlive = true;
-	boolean blnGameEnd = false;
-	int intArrayX;
-	int intArrayY;
-	String strSide;
 	
+	/**
+	 * This represents the rank of the piece
+	 */
+	 
+	int intRank;
+	
+	/**
+	 * This represents the x-coordinate of the piece 
+	 */
+	
+	int intX;
+	
+	/**
+	 * This represents the y-coordinate of the piece 
+	 */
+	
+	int intY;
+	
+	/**
+	 * This indicates whether the piece has been eliminated or not
+	 */
+	
+	boolean blnAlive = true;
+	
+	/**
+	 *  This represents the x-coordinate of the piece on the array, itself
+	 */
+		
+	int intArrayX;
+	
+	/**
+	 *  This represents the x-coordinate of the piece on the array, itself
+	 */
+	
+	int intArrayY;
+		
+	/**
+	 *  This represents the y-coordinate of the piece on the array, itself
+	 */
+	 	
+	String strSide;
+		
+	/**
+	 *  This indicates what side the piece is on (White or Black)
+	 */
 	
 	//methods
 	

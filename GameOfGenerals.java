@@ -1,9 +1,9 @@
 /** 
- * Game of the Generals [Demo]
+ * Game of the Generals
  * ICS 4U1 Final CPT
  * This is a computer version of "Game of the Generals" using concepts and tools learned throughout the course
  * It enables players to play over a network through the use of Cadawas' SuperSocketMaster
- * @author Angelica C. F. Manansala, Ivan Lau, Caitlin Kwan
+ * @author Angelica Manansala, Ivan Lau, Caitlin Kwan
  * @since 2018-12-21
  * Last Updated: January 19, 2019
  */
@@ -53,7 +53,15 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	SuperSocketMaster ssm;
 	
 	// Variables
+	
+	/**
+	 * This counts the number of pages (or times essentially) the player either clicks the PreviousButton, NextButton, or MainMenuButton
+	 * This dictates the text that will be shown on the HowToPlay Text Area
+	 */
+	
 	int intPageCount = 0;
+	
+	// This is the text that will be shown in the HowToPlay Text Area in the instructions
 	
 	String strObjectiveTitle = "*** THE OBJECTIVE OF THE GAME ***";
 	String strObjective = "The OBJECTIVE of the game is to ELIMINATE or CAPTURE the FLAG of your opponent. You may also win by successfully maneuvering your own FLAG to the opposite end of the board.";
@@ -75,11 +83,19 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 	
 	String strBriefRules = "*** THE OBJECTIVE OF THE GAME ***" + "\n" + "\n" + "ELIMINATE or CAPTURE the FLAG of your opponent OR successfully maneuver your own FLAG to the opposite end of the board." + "\n" + "\n" + "*** CHALLENGING: ***" + "\n" + "\n" + "When a challenge is made, the following rules of elimination apply: " + "\n" + "- A higher ranked soldier elimates a lower ranked soldier." + "\n" + "- If both soldiers are of equal ranks, they are both eliminated." + "\n" + "- A spy eliminates any officer starting from the Sergeant and above... BUT can be eliminated by facing an opposing Private." + "\n" + "- The Flag can be eliminated or captured by any piece, including the opponent's Flag." + "\n" + "\n" + "If you would like to offer your opponent some enccouragement or send a friendly message, feel free to use the chat box below :)" + "\n" + "\n" + "Good luck!";
 	
+	/**
+	 * This indicates if the players are in the process of setting up their pieces 
+	 */
+	 
 	boolean blnSettingUp;
 	
 	//Arrays~ one for server side and one from client side
 	rank strWBoard[][] = new rank[9][8];
 	rank strBBoard[][] = new rank[9][8];
+
+	/**
+	 * This is the string of text sent over the network
+	 */
 
 	String sendLine;
 	
@@ -3029,6 +3045,11 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		}
 	}
 	
+	/**
+	 * Changes the turn after a player has moved a piece
+	 * Sends indication of a turn change over the network
+	 */
+	 
 	public void changeTurn(){
 		//Method to change turn after player has moved a piece
 		if(thepanel.strWhosTurn.equals("White")){
@@ -3039,11 +3060,11 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		ssm.sendText("WhosTurn: " + thepanel.strWhosTurn);
 		//Sending change turn indicator over the network
 	}
-	/**
-	 * Changes the turn after a player has moved a piece
-	 * Sends indication of a turn change over the network
-	 */
 	
+	/**
+	 * Sends array coordinates, screen coordinates, and status (alive or not) of all white pieces across the network
+	 */
+	 
 	public void sendAllWhite(){
 		//Sending array coordinates, x and y coordinates on the screen and status (alive or not) for each white piece over the network
 		sendLine = "Setup" + "," + "WHFlag" + "," + ""+thepanel.WHFlagOBJ.intArrayX + "," + ""+thepanel.WHFlagOBJ.intArrayY + "," +thepanel.WHFlagOBJ.blnAlive;
@@ -3089,6 +3110,10 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		sendLine = "Setup" + "," + "WHMajor" + "," + ""+thepanel.WHMajorOBJ.intArrayX + "," + ""+thepanel.WHMajorOBJ.intArrayY + "," +thepanel.WHMajorOBJ.blnAlive;
 		ssm.sendText(sendLine);
 	}
+	
+	/**
+	 * Sends array coordinates, screen coordinates, and status (alive or not) of all black pieces across the network
+	 */
 	
 	public void sendAllBlack(){
 		//Sending array coordinates, x and y coordinates on the screen and status (alive or not) for each black piece over the network
@@ -3136,6 +3161,11 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		ssm.sendText(sendLine);
 	}
 	
+	/**
+	 * Method to move a piece forward for both black and white (or client and server)
+	 * Considers all possibilities for the potential scenarios (example: if both pieces are of same rank, they both die, etc.)
+	 */
+	 
 	public void moveForward(rank piece){
 		//Move forward method
 		if(piece.strSide.equals("Black")){
@@ -3232,6 +3262,11 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		}
 	}
 	
+	/**
+	 * Method to move a piece backward for both black and white (or client and server)
+	 * Considers all possibilities for the potential scenarios (example: if both pieces are of same rank, they both die, etc.)
+	 */
+	
 	public void moveBackward(rank piece){
 		//Method to move backward
 		//See moveForward() method for similar specifics
@@ -3319,6 +3354,11 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 		}
 	}
 	
+	/**
+	 * Method to move a piece a tile to the left for both black and white (or client and server)
+	 * Considers all possibilities for the potential scenarios (example: if both pieces are of same rank, they both die, etc.)
+	 */
+	
 	public void moveLeft(rank piece){
 		//Method to move left
 		//See moveForward() method for similar specifics
@@ -3398,6 +3438,11 @@ public class GameOfGenerals implements ActionListener, KeyListener, MouseListene
 			sendAllBlack();
 		}
 	}
+	
+	/**
+	 * Method to move a piece a tile to the right for both black and white (or client and server)
+	 * Considers all possibilities for the potential scenarios (example: if both pieces are of same rank, they both die, etc.)
+	 */
 	
 	public void moveRight(rank piece){
 		//Method to move right
